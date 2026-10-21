@@ -808,7 +808,7 @@ function scoreProduct(item, terms) {
 export function createDemoProvider(env = process.env) {
   return {
     name: 'demo',
-    isEnabled: () => env.ENABLE_DEMO === 'true',
+    isEnabled: () => env.ENABLE_DEMO !== 'false',
     disabledReason: 'Set ENABLE_DEMO=true',
     async search(query) {
       const cleanQ = String(query).toLowerCase().trim();

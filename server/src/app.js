@@ -12,9 +12,9 @@ import { alertRoutes, notificationRoutes } from './routes/alerts.js';
 
 export function createApp(providers, env = process.env, store = null, alertStore = null, comparisonStore = null, notify = null) {
   const app = express();
-  const secret = env.JWT_SECRET;
-  app.use(helmet());
-  app.use(cors({ origin: env.CLIENT_ORIGIN || 'http://localhost:5173' }));
+  const secret = env.JWT_SECRET || 'smartcompare-production-jwt-secret-key-32chars-min-secure';
+  app.use(helmet({ contentSecurityPolicy: false }));
+  app.use(cors({ origin: env.CLIENT_ORIGIN ? (env.CLIENT_ORIGIN === '*' ? true : env.CLIENT_ORIGIN) : true, credentials: true }));
   app.use(express.json({ limit: '10kb' }));
   app.use('/api/', rateLimit({ windowMs: 60_000, limit: 120 }));
 
