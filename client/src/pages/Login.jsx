@@ -66,8 +66,8 @@ export default function Login({ mode: initialMode = 'login' }) {
           <h2>{reg ? 'Create Account to Enter' : 'Welcome! Please Sign In'}</h2>
           <p className="auth-sub">
             {reg
-              ? 'Naya account banayein aur website me enter karke sabhi apps ke real prices compare karein.'
-              : 'Website me enter karne ke liye login karein ya One-Click Demo se turant enter karein.'}
+              ? 'Create a new account to enter and compare real prices across all shopping apps.'
+              : 'Sign in to access the platform, or enter instantly using the One-Click Demo.'}
           </p>
         </div>
 
@@ -79,13 +79,13 @@ export default function Login({ mode: initialMode = 'login' }) {
             onClick={quickDemoLogin}
             disabled={busy}
           >
-            ⚡ One-Click Demo Entry (बिना टाइप किए तुरंत अंदर जाएं) →
+            ⚡ One-Click Demo Entry (Instant Access) →
           </button>
           <small className="auth-demo-hint">Instant access with pre-configured demo account</small>
         </div>
 
         <div className="auth-divider">
-          <span>OR (या अपना अकाउंट इस्तेमाल करें)</span>
+          <span>OR USE YOUR ACCOUNT</span>
         </div>
 
         {/* Mode Switch Tabs */}
@@ -95,14 +95,14 @@ export default function Login({ mode: initialMode = 'login' }) {
             className={`auth-tab ${!reg ? 'active' : ''}`}
             onClick={() => { setMode('login'); setErr(''); }}
           >
-            🔑 Log In (लॉग इन)
+            🔑 Log In
           </button>
           <button
             type="button"
             className={`auth-tab ${reg ? 'active' : ''}`}
             onClick={() => { setMode('register'); setErr(''); }}
           >
-            📝 Register (नया खाता)
+            📝 Register
           </button>
         </div>
 
@@ -110,13 +110,13 @@ export default function Login({ mode: initialMode = 'login' }) {
         <form className="auth-form" onSubmit={submit}>
           {reg && (
             <div className="auth-field">
-              <label htmlFor="reg-name">Full Name (पूरा नाम)</label>
+              <label htmlFor="reg-name">Full Name</label>
               <input
                 id="reg-name"
                 type="text"
                 required
                 minLength="2"
-                placeholder="e.g. Rahul Sharma"
+                placeholder="e.g. John Doe"
                 value={f.name}
                 onChange={on('name')}
                 autoComplete="name"
@@ -125,7 +125,7 @@ export default function Login({ mode: initialMode = 'login' }) {
           )}
 
           <div className="auth-field">
-            <label htmlFor="auth-email">Email Address (ईमेल)</label>
+            <label htmlFor="auth-email">Email Address</label>
             <input
               id="auth-email"
               type="email"
@@ -138,7 +138,7 @@ export default function Login({ mode: initialMode = 'login' }) {
           </div>
 
           <div className="auth-field">
-            <label htmlFor="auth-password">Password (पासवर्ड)</label>
+            <label htmlFor="auth-password">Password</label>
             <input
               id="auth-password"
               type="password"

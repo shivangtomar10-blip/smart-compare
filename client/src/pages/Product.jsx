@@ -99,8 +99,8 @@ export default function Product() {
         <div className="alarm-box-head">
           <div className="alarm-icon-big">🔔</div>
           <div>
-            <h3>Set Price Alarm / Target Price Alert (मूल्य अलार्म)</h3>
-            <p>Apna manchaha target price likhiye. Jaise hi is product ka daam aapke target price tak ya usse kam hoga, turant aapke paas notification aayega!</p>
+            <h3>Set Price Alarm / Target Price Alert</h3>
+            <p>Enter your target price. As soon as this product drops to or below your target price, you will receive an instant notification!</p>
           </div>
         </div>
 
@@ -201,7 +201,7 @@ export default function Product() {
 
       {/* Quick Compare across other Indian shopping apps */}
       <div className="product-apps-compare-box">
-        <h3>Direct App Price Check (दूसरी ऐप्स पर लाइव प्राइस देखें)</h3>
+        <h3>Direct App Price Check</h3>
         <p>Check genuine real-time prices for this exact product directly on popular shopping apps:</p>
         <div className="product-app-buttons">
           <a href={`https://www.meesho.com/search?q=${encodeURIComponent(product.title)}`} target="_blank" rel="noopener noreferrer" className="app-btn-big meesho">Check on Meesho App ↗</a>

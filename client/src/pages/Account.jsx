@@ -101,7 +101,7 @@ function Alerts({ onNotificationTriggered }) {
                   {a.status === 'triggered' ? (
                     <span className="badge-triggered">🎉 Price Reached at {money(a.triggeredPrice, a.currency)}!</span>
                   ) : (
-                    <span className="badge-watching">⏳ Watching Price (अलार्म चालू)</span>
+                    <span className="badge-watching">⏳ Watching Price</span>
                   )}
                   {a.createdAt && (
                     <span style={{ color: 'var(--mut)', fontSize: '0.75rem' }}>
@@ -210,12 +210,12 @@ export default function Account({ view = 'dashboard' }) {
   if (view === 'wishlist') return <div className="wrap"><h2>Wishlist</h2><Wishlist /></div>;
   if (view === 'alerts') return (
     <div className="wrap">
-      <h2>🔔 Price Alarms & Target Alerts (मूल्य अलार्म)</h2>
+      <h2>🔔 Price Alarms & Target Alerts</h2>
       <p style={{ color: 'var(--mut)', marginTop: '-0.5rem', marginBottom: '1.5rem' }}>
         Track target prices for any product. When prices reach or drop below your target price, an instant notification is sent to you!
       </p>
       <Alerts onNotificationTriggered={handleNotifTrigger} />
-      <h3 style={{ marginTop: '2.5rem' }}>🔔 Alarm Notifications (अलार्म सूचनाएं)</h3>
+      <h3 style={{ marginTop: '2.5rem' }}>🔔 Alarm Notifications</h3>
       <Notifications onReloadTrigger={notifTrigger} />
     </div>
   );
