@@ -9,6 +9,6 @@ export function AuthProvider({ children }) {
     api.me().then(d => setUser(d.user)).catch(() => localStorage.removeItem('sc_token')).finally(() => setReady(true));
   }, []);
   const authenticate = async (mode, body) => { const d = await api.auth(mode, body); localStorage.setItem('sc_token', d.token); setUser(d.user); };
-  const logout = () => { localStorage.removeItem('sc_token'); setUser(null); };
+  const logout = () => { localStorage.removeItem('sc_token'); localStorage.removeItem('sc_local_user'); setUser(null); };
   return <Ctx.Provider value={{ user, setUser, ready, authenticate, logout }}>{children}</Ctx.Provider>;
 }
