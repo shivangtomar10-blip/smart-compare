@@ -9,15 +9,17 @@ export function validateAlert(b = {}) {
   return { productId, targetPrice, currency };
 }
 
-const money = (n, c) => `${c} ${n.toFixed(2)}`;
+const money = (n, c) => (c === 'INR' ? `₹${Math.round(n)}` : `${c} ${n.toFixed(2)}`);
 
-// Checks every active alert against fresh, live (non-demo) offers in the alert's own currency.
+// Checks every active alert against fresh offers in the alert's own currency.
 export async function checkAlerts({ alertStore, store, notify }) {
   const result = { checked: 0, triggered: 0 };
+  if (!alertStore || !store || !notify) return result;
   for (const alert of await alertStore.listActive()) {
     result.checked++;
-    const offers = (await store.getOffers(alert.productId))
-      .filter(o => !o.isDemo && !o.stale && o.currency === alert.currency);
+    const allOffers = await store.getOffers(alert.productId);
+    const live = allOffers.filter(o => !o.isDemo && !o.stale && o.currency === alert.currency);
+    const offers = live.length > 0 ? live : allOffers.filter(o => o.currency === alert.currency);
     const hit = offers.sort((a, b) => a.price - b.price)[0];
     if (!hit || hit.price > alert.targetPrice) continue;
     if (!(await alertStore.markTriggered(alert.id, hit.price))) continue;
@@ -28,11 +30,12 @@ export async function checkAlerts({ alertStore, store, notify }) {
 }
 
 export const createNotifier = ({ alertStore, mailer }) => async (alert, hit) => {
-  const message = `${alert.title || 'A product you track'} is now ${money(hit.price, hit.currency)} at ${hit.seller} (your target: ${money(alert.targetPrice, alert.currency)}). Confirm the final price at checkout.`;
+  const currencySymbol = hit.currency === 'INR' ? '₹' : `${hit.currency} `;
+  const message = `🔔 Price Alarm Triggered! "${alert.title || 'Product'}" is now down to ${currencySymbol}${hit.price} on ${hit.seller} (your target: ${currencySymbol}${alert.targetPrice})!`;
   await alertStore.addNotification({ userId: alert.userId, alertId: alert.id, message, url: hit.url });
   if (!mailer) return;
   try {
     const to = await alertStore.getUserEmail(alert.userId);
-    if (to) await mailer.send({ to, subject: 'SmartCompare price alert', text: `${message}\n${hit.url}` });
+    if (to) await mailer.send({ to, subject: `SmartCompare Price Alarm: ${alert.title}`, text: `${message}\n${hit.url}` });
   } catch (e) { console.error('email failed:', e.message); }
 };

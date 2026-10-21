@@ -2,7 +2,7 @@ import PriceAlert from '../models/PriceAlert.js';
 import Notification from '../models/Notification.js';
 import User from '../models/User.js';
 
-const toAlert = a => a && ({ id: String(a._id), userId: String(a.userId), productId: a.productId, title: a.title,
+const toAlert = a => a && ({ id: String(a._id), userId: String(a.userId), productId: a.productId, title: a.title, image: a.image,
   targetPrice: a.targetPrice, currency: a.currency, status: a.status, triggeredAt: a.triggeredAt, triggeredPrice: a.triggeredPrice, createdAt: a.createdAt });
 const toNote = n => ({ id: String(n._id), alertId: n.alertId, message: n.message, url: n.url, read: n.read, createdAt: n.createdAt });
 

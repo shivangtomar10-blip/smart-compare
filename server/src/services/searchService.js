@@ -2,7 +2,7 @@ import { normalizeQuery, dedupeOffers, groupProducts } from './normalize.js';
 
 // Calls every enabled provider concurrently; a failing provider never breaks the others.
 export async function searchProducts(rawQuery, providers, opts = {}) {
-  const { timeoutMs = 6000, sort = 'price_asc', page = 1, pageSize = 20, filters = {} } = opts;
+  const { timeoutMs = 7000, sort = 'relevance', page = 1, pageSize = 20, filters = {} } = opts;
   const query = normalizeQuery(rawQuery);
   const status = [];
   const active = providers.filter(p => {

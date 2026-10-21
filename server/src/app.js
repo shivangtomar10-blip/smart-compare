@@ -3,13 +3,14 @@ import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import { searchProducts } from './services/searchService.js';
+import { checkAlerts } from './services/alertService.js';
 import authRoutes from './routes/auth.js';
 import userRoutes from './routes/users.js';
 import productRoutes from './routes/products.js';
 import comparisonRoutes from './routes/comparisons.js';
 import { alertRoutes, notificationRoutes } from './routes/alerts.js';
 
-export function createApp(providers, env = process.env, store = null, alertStore = null, comparisonStore = null) {
+export function createApp(providers, env = process.env, store = null, alertStore = null, comparisonStore = null, notify = null) {
   const app = express();
   const secret = env.JWT_SECRET;
   app.use(helmet());
@@ -23,11 +24,16 @@ export function createApp(providers, env = process.env, store = null, alertStore
     try {
       const num = v => (v === undefined || v === '' ? undefined : Number(v));
       const data = await searchProducts(req.query.q, providers, {
-        timeoutMs: Number(env.PROVIDER_TIMEOUT_MS) || 6000,
+        timeoutMs: Number(env.PROVIDER_TIMEOUT_MS) || 7000,
         sort: req.query.sort, page: Math.max(1, Number(req.query.page) || 1),
         filters: { minPrice: num(req.query.minPrice), maxPrice: num(req.query.maxPrice), seller: req.query.seller },
       });
-      store?.saveSearchResults(data.products).catch(e => console.error('save failed:', e.message));
+      if (store) {
+        await store.saveSearchResults(data.products).catch(e => console.error('save failed:', e.message));
+        if (alertStore && notify) {
+          checkAlerts({ alertStore, store, notify }).catch(() => {});
+        }
+      }
       res.json({ success: true, ...data });
     } catch (e) { next(e); }
   });
@@ -36,7 +42,7 @@ export function createApp(providers, env = process.env, store = null, alertStore
   if (secret) {
     app.use('/api/auth', authRoutes(secret));
     app.use('/api/users', userRoutes(secret));
-    app.use('/api/alerts', alertRoutes(secret, { alertStore, store }));
+    app.use('/api/alerts', alertRoutes(secret, { alertStore, store, notify }));
     app.use('/api/comparisons', comparisonRoutes(secret, { comparisonStore, store }));
     app.use('/api/notifications', notificationRoutes(secret, { alertStore }));
   }

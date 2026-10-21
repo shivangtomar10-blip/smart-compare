@@ -31,9 +31,42 @@ function Protected({ children }) {
 }
 
 export default function App() {
-  const { user, logout } = useAuth(), { ids } = useCompare(), loc = useLocation(), nav = useNavigate();
+  const { user, ready, logout } = useAuth(), { ids } = useCompare(), loc = useLocation(), nav = useNavigate();
   const [unread, setUnread] = useState(0);
-  useEffect(() => { if (user) api.notifications().then(d => setUnread(d.unread)).catch(() => {}); else setUnread(0); }, [user, loc.pathname]);
+
+  useEffect(() => {
+    if (!user) { setUnread(0); return; }
+    const check = () => api.notifications().then(d => setUnread(d.unread)).catch(() => {});
+    check();
+    const timer = setInterval(check, 8000);
+    return () => clearInterval(timer);
+  }, [user, loc.pathname]);
+
+  if (!ready) {
+    return (
+      <div className="auth-loading-wrap">
+        <div className="auth-loading-card">
+          <div className="auth-logo">Smart<span>Compare</span></div>
+          <div className="card skel" style={{ height: '80px', margin: '1.5rem 0' }} />
+          <p style={{ color: 'var(--mut)', textAlign: 'center' }}>Connecting to SmartCompare...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Mandatory Login / Register gatekeeper before entering the website
+  if (!user) {
+    return (
+      <div className="auth-gateway-page">
+        <Routes>
+          <Route path="/register" element={<Login mode="register" />} />
+          <Route path="*" element={<Login mode="login" />} />
+        </Routes>
+      </div>
+    );
+  }
+
+  // Inside the website (unlocked after login or register)
   return (
     <>
       <header className="hdr">
@@ -41,12 +74,12 @@ export default function App() {
         <SearchBox />
         <nav>
           <NavLink to="/compare">Compare{ids.length > 0 && ` (${ids.length})`}</NavLink>
-          {user ? <>
-            <NavLink to="/wishlist">Wishlist</NavLink>
-            <NavLink to="/alerts" aria-label={`Alerts, ${unread} unread`}>Alerts{unread > 0 && <span className="dot">{unread}</span>}</NavLink>
-            <NavLink to="/dashboard">{user.name.split(' ')[0]}</NavLink>
-            <button className="linkbtn" onClick={() => { logout(); nav('/'); }}>Logout</button>
-          </> : <><NavLink to="/login">Login</NavLink><NavLink to="/register">Register</NavLink></>}
+          <NavLink to="/wishlist">Wishlist</NavLink>
+          <NavLink to="/alerts" aria-label={`Price Alarms, ${unread} unread`}>
+            🔔 Alerts{unread > 0 && <span className="dot" style={{ background: '#ef4444', animation: 'pulse-badge 1.5s infinite' }}>{unread}</span>}
+          </NavLink>
+          <NavLink to="/dashboard">{user.name.split(' ')[0]}</NavLink>
+          <button className="linkbtn" onClick={() => { logout(); nav('/'); }}>Logout</button>
         </nav>
       </header>
       <main>
@@ -56,15 +89,15 @@ export default function App() {
           <Route path="/product/:id" element={<Product />} />
           <Route path="/price-history/:id" element={<Product />} />
           <Route path="/compare" element={<Compare />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Login mode="register" />} />
-          <Route path="/dashboard" element={<Protected><Account /></Protected>} />
-          <Route path="/wishlist" element={<Protected><Account view="wishlist" /></Protected>} />
-          <Route path="/alerts" element={<Protected><Account view="alerts" /></Protected>} />
+          <Route path="/dashboard" element={<Account />} />
+          <Route path="/wishlist" element={<Account view="wishlist" />} />
+          <Route path="/alerts" element={<Account view="alerts" />} />
           <Route path="/about" element={<Info page="about" />} />
           <Route path="/contact" element={<Info page="contact" />} />
           <Route path="/privacy" element={<Info page="privacy" />} />
           <Route path="/terms" element={<Info page="terms" />} />
+          <Route path="/login" element={<Navigate to="/" replace />} />
+          <Route path="/register" element={<Navigate to="/" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

@@ -3,7 +3,8 @@ import mongoose from 'mongoose';
 const schema = new mongoose.Schema({
   productId: { type: String, required: true, index: true },
   source: { type: String, required: true }, seller: String, url: { type: String, required: true },
-  price: { type: Number, required: true }, currency: { type: String, default: 'USD' }, originalPrice: Number,
+  price: { type: Number, required: true }, currency: { type: String, default: 'INR' }, originalPrice: Number,
+  image: String,
   availability: String, isDemo: { type: Boolean, default: false }, lastSeenAt: { type: Date, default: Date.now },
 }, { timestamps: true });
 schema.index({ productId: 1, source: 1, url: 1 }, { unique: true });

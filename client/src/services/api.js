@@ -11,6 +11,7 @@ async function req(path, { method = 'GET', body } = {}) {
 }
 export const searchProducts = p =>
   req('/api/products/search?' + new URLSearchParams(Object.entries(p).filter(([, v]) => v !== '' && v != null)));
+export const getFeaturedProducts = () => searchProducts({ q: 'popular' }).then(d => d.products || []);
 export const api = {
   auth: (mode, body) => req(`/api/auth/${mode}`, { method: 'POST', body }),
   me: () => req('/api/users/me'),
@@ -26,10 +27,16 @@ export const api = {
   alerts: () => req('/api/alerts'),
   createAlert: (productId, targetPrice) => req('/api/alerts', { method: 'POST', body: { productId, targetPrice } }),
   deleteAlert: id => req(`/api/alerts/${id}`, { method: 'DELETE' }),
+  checkAlerts: () => req('/api/alerts/check', { method: 'POST' }),
+  simulateDrop: (productId, dropPercent = 20) => req('/api/alerts/simulate-drop', { method: 'POST', body: { productId, dropPercent } }),
   comparisons: () => req('/api/comparisons'),
   saveComparison: (name, productIds) => req('/api/comparisons', { method: 'POST', body: { name, productIds } }),
   deleteComparison: id => req(`/api/comparisons/${id}`, { method: 'DELETE' }),
   notifications: () => req('/api/notifications'),
   markRead: id => req(`/api/notifications/${id}/read`, { method: 'POST' }),
 };
-export const money = (n, c = 'USD') => new Intl.NumberFormat(undefined, { style: 'currency', currency: c }).format(n);
+export const money = (n, c = 'INR') => {
+  if (n == null) return '';
+  return new Intl.NumberFormat('en-IN', { style: 'currency', currency: c || 'INR', maximumFractionDigits: 0 }).format(n);
+};
+

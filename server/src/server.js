@@ -28,5 +28,5 @@ const port = process.env.PORT || 5000;
 const store = createProductStore(), alertStore = createAlertStore();
 const notify = createNotifier({ alertStore, mailer: createMailer() });
 startRefreshJob({ store, alertStore, providers, notify, maxProducts: Number(process.env.REFRESH_MAX_PRODUCTS) || 20 },
-  Number(process.env.REFRESH_INTERVAL_MINUTES) || 0);
-createApp(providers, process.env, store, alertStore, createComparisonStore()).listen(port, () => console.log(`SmartCompare API on :${port}`));
+  Number(process.env.REFRESH_INTERVAL_MINUTES) || 2);
+createApp(providers, process.env, store, alertStore, createComparisonStore(), notify).listen(port, () => console.log(`SmartCompare API on :${port}`));

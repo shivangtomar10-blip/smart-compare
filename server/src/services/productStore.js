@@ -12,7 +12,7 @@ export function createProductStore() {
         await Product.updateOne({ _id: p.id }, { $set: { title: p.title, brand: p.brand, image: p.image, lastSeenAt: new Date() } }, { upsert: true });
         for (const o of p.offers) {
           const prev = await ProductOffer.findOneAndUpdate({ productId: p.id, source: o.source, url: o.url },
-            { $set: { seller: o.seller, price: o.price, currency: o.currency, originalPrice: o.originalPrice, availability: o.availability, isDemo: o.isDemo, lastSeenAt: new Date() } },
+            { $set: { seller: o.seller, price: o.price, currency: o.currency, originalPrice: o.originalPrice, availability: o.availability, isDemo: o.isDemo, image: o.image || p.image, lastSeenAt: new Date() } },
             { upsert: true, new: false });
           if (!o.isDemo && (!prev || prev.price !== o.price))
             await PriceHistory.create({ productId: p.id, source: o.source, seller: o.seller, price: o.price, currency: o.currency });
