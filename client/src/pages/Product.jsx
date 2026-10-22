@@ -4,6 +4,7 @@ import { api, money } from '../services/api.js';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useCompare } from '../context/CompareContext.jsx';
 import PriceChart from '../components/PriceChart.jsx';
+import { getStoreSearchQuery } from '../services/catalog.js';
 
 export default function Product() {
   const { id } = useParams(), { user } = useAuth(), cmp = useCompare(), nav = useNavigate();
@@ -203,17 +204,23 @@ export default function Product() {
       </div>
 
       {/* Quick Compare across other Indian shopping apps */}
-      <div className="product-apps-compare-box">
-        <h3>Direct App Price Check</h3>
-        <p>Check genuine real-time prices for this exact product directly on popular shopping apps:</p>
-        <div className="product-app-buttons">
-          <a href={`https://www.meesho.com/search?q=${encodeURIComponent(product.title)}`} target="_blank" rel="noopener noreferrer" className="app-btn-big meesho">Check on Meesho App ↗</a>
-          <a href={`https://www.myntra.com/${encodeURIComponent(product.title)}`} target="_blank" rel="noopener noreferrer" className="app-btn-big myntra">Check on Myntra App ↗</a>
-          <a href={`https://www.amazon.in/s?k=${encodeURIComponent(product.title)}`} target="_blank" rel="noopener noreferrer" className="app-btn-big amazon">Check on Amazon India ↗</a>
-          <a href={`https://www.flipkart.com/search?q=${encodeURIComponent(product.title)}`} target="_blank" rel="noopener noreferrer" className="app-btn-big flipkart">Check on Flipkart App ↗</a>
-          <a href={`https://www.nykaa.com/search/result/?q=${encodeURIComponent(product.title)}`} target="_blank" rel="noopener noreferrer" className="app-btn-big nykaa">Check on Nykaa ↗</a>
-        </div>
-      </div>
+      {(() => {
+        const cleanTerm = product.searchQuery || getStoreSearchQuery(product.title, product.brand);
+        const qClean = encodeURIComponent(cleanTerm);
+        return (
+          <div className="product-apps-compare-box">
+            <h3>Direct App Price Check</h3>
+            <p>Check genuine real-time prices for this exact product directly on popular shopping apps:</p>
+            <div className="product-app-buttons">
+              <a href={`https://www.meesho.com/search?q=${qClean}`} target="_blank" rel="noopener noreferrer" className="app-btn-big meesho">Check on Meesho App ↗</a>
+              <a href={`https://www.myntra.com/${qClean}`} target="_blank" rel="noopener noreferrer" className="app-btn-big myntra">Check on Myntra App ↗</a>
+              <a href={`https://www.amazon.in/s?k=${qClean}`} target="_blank" rel="noopener noreferrer" className="app-btn-big amazon">Check on Amazon India ↗</a>
+              <a href={`https://www.flipkart.com/search?q=${qClean}`} target="_blank" rel="noopener noreferrer" className="app-btn-big flipkart">Check on Flipkart App ↗</a>
+              <a href={`https://www.nykaa.com/search/result/?q=${qClean}`} target="_blank" rel="noopener noreferrer" className="app-btn-big nykaa">Check on Nykaa ↗</a>
+            </div>
+          </div>
+        );
+      })()}
 
       <p className="note">All listed prices are verified live directly from the shopping platforms. Final checkout price may include local coupons or shipping charges.</p>
       <h3>Price history</h3>
