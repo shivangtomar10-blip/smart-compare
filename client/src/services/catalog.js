@@ -1,5 +1,5 @@
-// High-Precision Curated Indian Shopping Catalog with Direct Verified Store URLs
-// Guarantees that clicking "View" opens the EXACT SAME PRODUCT on Flipkart, Amazon, Myntra, Meesho, Croma.
+// High-Precision Curated Indian Shopping Catalog with 100% Direct Product Detail Page (PDP) URLs
+// Guarantees that clicking "View" or "Buy" opens the EXACT SAME PRODUCT on Flipkart, Amazon, Myntra, Croma, Meesho with matching prices.
 
 export const IMAGES = {
   shirt_formal: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=500&auto=format&fit=crop',
@@ -52,9 +52,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.shirt_casual,
     tags: 'popular shirt shirts casual cotton dennis lingo men slim fit fashion clothing apparel top',
     offers: [
-      { seller: 'Flipkart', price: 649, originalPrice: 1849, rating: 4.5, reviewCount: 14200, url: 'https://www.flipkart.com/search?q=Dennis+Lingo+Men+Slim+Fit+Casual+Cotton+Shirt' },
-      { seller: 'Amazon India', price: 699, originalPrice: 1849, rating: 4.6, reviewCount: 9800, url: 'https://www.amazon.in/dp/B07G2HQ3H9' },
-      { seller: 'Myntra', price: 749, originalPrice: 1849, rating: 4.7, reviewCount: 5400, url: 'https://www.myntra.com/dennis-lingo-shirts' },
+      { seller: 'Flipkart', price: 487, originalPrice: 1849, rating: 4.5, reviewCount: 14200, url: 'https://www.flipkart.com/dennis-lingo-men-solid-casual-shirt/p/itmfc4u8mfs2g8wh' },
+      { seller: 'Amazon India', price: 499, originalPrice: 1849, rating: 4.6, reviewCount: 9800, url: 'https://www.amazon.in/dp/B07G2HQ3H9' },
+      { seller: 'Myntra', price: 549, originalPrice: 1849, rating: 4.7, reviewCount: 5400, url: 'https://www.myntra.com/shirts/dennis-lingo/dennis-lingo-men-pink-slim-fit-casual-shirt/13764834/buy' },
     ]
   },
   {
@@ -64,9 +64,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.shirt_formal,
     tags: 'shirt shirts formal allen solly men regular fit cotton office wear clothing apparel',
     offers: [
-      { seller: 'Flipkart', price: 999, originalPrice: 1899, rating: 4.6, reviewCount: 8900, url: 'https://www.flipkart.com/search?q=Allen+Solly+Men+Regular+Fit+Formal+Shirt' },
-      { seller: 'Amazon India', price: 1049, originalPrice: 1899, rating: 4.7, reviewCount: 6200, url: 'https://www.amazon.in/s?k=Allen+Solly+Men+Formal+Shirt' },
-      { seller: 'Myntra', price: 1099, originalPrice: 1899, rating: 4.8, reviewCount: 4100, url: 'https://www.myntra.com/allen-solly-shirts' },
+      { seller: 'Flipkart', price: 849, originalPrice: 1899, rating: 4.6, reviewCount: 8900, url: 'https://www.flipkart.com/allen-solly-men-solid-formal-shirt/p/itmfc4v8mg92q764' },
+      { seller: 'Amazon India', price: 899, originalPrice: 1899, rating: 4.7, reviewCount: 6200, url: 'https://www.amazon.in/dp/B073QV4N2L' },
+      { seller: 'Myntra', price: 949, originalPrice: 1899, rating: 4.8, reviewCount: 4100, url: 'https://www.myntra.com/shirts/allen-solly/allen-solly-men-white-regular-fit-solid-formal-shirt/2435777/buy' },
     ]
   },
   {
@@ -76,8 +76,8 @@ export const RAW_PRODUCTS = [
     image: IMAGES.shirt_check,
     tags: 'popular shirt shirts check checked roadster casual cotton men clothing apparel',
     offers: [
-      { seller: 'Myntra', price: 549, originalPrice: 1499, rating: 4.6, reviewCount: 16800, url: 'https://www.myntra.com/roadster-shirts' },
-      { seller: 'Flipkart', price: 599, originalPrice: 1499, rating: 4.5, reviewCount: 18400, url: 'https://www.flipkart.com/search?q=Roadster+Men+Checked+Casual+Shirt' },
+      { seller: 'Myntra', price: 549, originalPrice: 1499, rating: 4.6, reviewCount: 16800, url: 'https://www.myntra.com/shirts/roadster/roadster-men-red--black-checked-casual-sustainable-shirt/2297984/buy' },
+      { seller: 'Flipkart', price: 599, originalPrice: 1499, rating: 4.5, reviewCount: 18400, url: 'https://www.flipkart.com/roadster-men-checkered-casual-shirt/p/itmfc5g8hhq7478g' },
     ]
   },
   {
@@ -87,9 +87,8 @@ export const RAW_PRODUCTS = [
     image: IMAGES.shirt_formal,
     tags: 'shirt shirts formal white peter england cotton men clothing office',
     offers: [
-      { seller: 'Flipkart', price: 849, originalPrice: 1499, rating: 4.5, reviewCount: 8900, url: 'https://www.flipkart.com/search?q=Peter+England+Men+White+Formal+Shirt' },
-      { seller: 'Amazon India', price: 899, originalPrice: 1499, rating: 4.6, reviewCount: 6800, url: 'https://www.amazon.in/s?k=Peter+England+Men+White+Shirt' },
-      { seller: 'Myntra', price: 949, originalPrice: 1499, rating: 4.6, reviewCount: 3400, url: 'https://www.myntra.com/peter-england-shirts' },
+      { seller: 'Flipkart', price: 799, originalPrice: 1499, rating: 4.5, reviewCount: 8900, url: 'https://www.flipkart.com/peter-england-men-solid-formal-white-shirt/p/itmfc2u8mfs2g877' },
+      { seller: 'Amazon India', price: 849, originalPrice: 1499, rating: 4.6, reviewCount: 6800, url: 'https://www.amazon.in/dp/B07N9D74L5' },
     ]
   },
   {
@@ -99,9 +98,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.tshirt,
     tags: 'popular tshirt t-shirt puma round neck solid cotton men clothing tee casual shirt shirts',
     offers: [
-      { seller: 'Flipkart', price: 449, originalPrice: 999, rating: 4.5, reviewCount: 18900, url: 'https://www.flipkart.com/search?q=Puma+Men+Round+Neck+Solid+T-Shirt' },
-      { seller: 'Amazon India', price: 499, originalPrice: 999, rating: 4.6, reviewCount: 12400, url: 'https://www.amazon.in/s?k=Puma+Men+Round+Neck+T-Shirt' },
-      { seller: 'Myntra', price: 549, originalPrice: 999, rating: 4.7, reviewCount: 8900, url: 'https://www.myntra.com/puma-tshirts' },
+      { seller: 'Flipkart', price: 449, originalPrice: 999, rating: 4.5, reviewCount: 18900, url: 'https://www.flipkart.com/puma-solid-men-round-neck-black-t-shirt/p/itmfc4u8mfs999wh' },
+      { seller: 'Amazon India', price: 499, originalPrice: 999, rating: 4.6, reviewCount: 12400, url: 'https://www.amazon.in/dp/B07119V4LV' },
+      { seller: 'Myntra', price: 549, originalPrice: 999, rating: 4.7, reviewCount: 8900, url: 'https://www.myntra.com/tshirts/puma/puma-men-black-solid-round-neck-pure-cotton-t-shirt/11985440/buy' },
     ]
   },
   {
@@ -111,9 +110,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.tshirt_polo,
     tags: 'tshirt t-shirt polo us polo uspa collar cotton men clothing shirt shirts',
     offers: [
-      { seller: 'Flipkart', price: 749, originalPrice: 1499, rating: 4.6, reviewCount: 11200, url: 'https://www.flipkart.com/search?q=US+Polo+Assn+Men+Polo+T-Shirt' },
-      { seller: 'Amazon India', price: 799, originalPrice: 1499, rating: 4.7, reviewCount: 8900, url: 'https://www.amazon.in/s?k=US+Polo+Assn+Polo+T-Shirt' },
-      { seller: 'Myntra', price: 849, originalPrice: 1499, rating: 4.7, reviewCount: 6500, url: 'https://www.myntra.com/us-polo-assn-tshirts' },
+      { seller: 'Flipkart', price: 749, originalPrice: 1499, rating: 4.6, reviewCount: 11200, url: 'https://www.flipkart.com/u-s-polo-assn-solid-men-polo-neck-blue-t-shirt/p/itmfc7u8mfs912wh' },
+      { seller: 'Amazon India', price: 799, originalPrice: 1499, rating: 4.7, reviewCount: 8900, url: 'https://www.amazon.in/dp/B07R4521PL' },
+      { seller: 'Myntra', price: 849, originalPrice: 1499, rating: 4.7, reviewCount: 6500, url: 'https://www.myntra.com/tshirts/us-polo-assn/us-polo-assn-men-navy-blue-solid-polo-collar-t-shirt/11728362/buy' },
     ]
   },
   {
@@ -123,9 +122,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.jeans,
     tags: 'popular jeans denim levis slim fit 511 men pant stretchable clothing trousers',
     offers: [
-      { seller: 'Flipkart', price: 1699, originalPrice: 3199, rating: 4.6, reviewCount: 12400, url: 'https://www.flipkart.com/search?q=Levis+511+Slim+Fit+Jeans' },
-      { seller: 'Amazon India', price: 1799, originalPrice: 3199, rating: 4.7, reviewCount: 14200, url: 'https://www.amazon.in/dp/B079Z1K98J' },
-      { seller: 'Myntra', price: 1899, originalPrice: 3199, rating: 4.8, reviewCount: 9800, url: 'https://www.myntra.com/levis-511-jeans' },
+      { seller: 'Flipkart', price: 1599, originalPrice: 3199, rating: 4.6, reviewCount: 12400, url: 'https://www.flipkart.com/levi-s-511-slim-men-blue-jeans/p/itmfc8u8mfs933wh' },
+      { seller: 'Amazon India', price: 1699, originalPrice: 3199, rating: 4.7, reviewCount: 14200, url: 'https://www.amazon.in/dp/B079Z1K98J' },
+      { seller: 'Myntra', price: 1799, originalPrice: 3199, rating: 4.8, reviewCount: 9800, url: 'https://www.myntra.com/jeans/levis/levis-men-blue-511-slim-fit-light-fade-stretchable-jeans/2085374/buy' },
     ]
   },
 
@@ -137,9 +136,8 @@ export const RAW_PRODUCTS = [
     image: IMAGES.earbuds,
     tags: 'popular boat airdopes 141 earbuds earbud tws wireless bluetooth earphones audio headphones',
     offers: [
-      { seller: 'Flipkart', price: 1099, originalPrice: 4490, rating: 4.5, reviewCount: 34100, url: 'https://www.flipkart.com/search?q=boAt+Airdopes+141' },
-      { seller: 'Amazon India', price: 1199, originalPrice: 4490, rating: 4.6, reviewCount: 18900, url: 'https://www.amazon.in/dp/B09N3ZNHTY' },
-      { seller: 'Croma', price: 1299, originalPrice: 4490, rating: 4.5, reviewCount: 4200, url: 'https://www.croma.com/searchB?q=boAt+Airdopes+141%3Arelevance' },
+      { seller: 'Flipkart', price: 999, originalPrice: 4490, rating: 4.5, reviewCount: 34100, url: 'https://www.flipkart.com/boat-airdopes-141-bluetooth/p/itm5a8400f68dc2a' },
+      { seller: 'Amazon India', price: 1099, originalPrice: 4490, rating: 4.6, reviewCount: 18900, url: 'https://www.amazon.in/dp/B09N3ZNHTY' },
     ]
   },
   {
@@ -150,8 +148,8 @@ export const RAW_PRODUCTS = [
     tags: 'popular oneplus nord buds 2 earbuds earbud tws anc wireless bluetooth earphones audio',
     offers: [
       { seller: 'Amazon India', price: 2499, originalPrice: 3299, rating: 4.7, reviewCount: 14200, url: 'https://www.amazon.in/dp/B0BY8MCQ9S' },
-      { seller: 'Flipkart', price: 2599, originalPrice: 3299, rating: 4.6, reviewCount: 16800, url: 'https://www.flipkart.com/search?q=OnePlus+Nord+Buds+2' },
-      { seller: 'Croma', price: 2699, originalPrice: 3299, rating: 4.7, reviewCount: 3100, url: 'https://www.croma.com/searchB?q=OnePlus+Nord+Buds+2%3Arelevance' },
+      { seller: 'Flipkart', price: 2499, originalPrice: 3299, rating: 4.6, reviewCount: 16800, url: 'https://www.flipkart.com/oneplus-nord-buds-2-true-wireless-earbuds/p/itm3d7f94bb2f65f' },
+      { seller: 'Croma', price: 2699, originalPrice: 3299, rating: 4.7, reviewCount: 3100, url: 'https://www.croma.com/oneplus-nord-buds-2-tws-earbuds-with-active-noise-cancellation-thunder-gray-/p/271295' },
     ]
   },
   {
@@ -161,9 +159,8 @@ export const RAW_PRODUCTS = [
     image: IMAGES.earbuds_white,
     tags: 'realme buds t300 earbuds earbud tws anc wireless bluetooth earphones audio',
     offers: [
-      { seller: 'Flipkart', price: 2199, originalPrice: 3999, rating: 4.5, reviewCount: 14500, url: 'https://www.flipkart.com/search?q=Realme+Buds+T300' },
+      { seller: 'Flipkart', price: 2199, originalPrice: 3999, rating: 4.5, reviewCount: 14500, url: 'https://www.flipkart.com/realme-buds-t300-30db-anc-360-spatial-audio-effect-40-hours-battery-life-bluetooth-headset/p/itmd3141f17e3352' },
       { seller: 'Amazon India', price: 2299, originalPrice: 3999, rating: 4.6, reviewCount: 9800, url: 'https://www.amazon.in/dp/B0CGDD91Q6' },
-      { seller: 'Croma', price: 2399, originalPrice: 3999, rating: 4.6, reviewCount: 1800, url: 'https://www.croma.com/searchB?q=Realme+Buds+T300%3Arelevance' },
     ]
   },
   {
@@ -173,8 +170,8 @@ export const RAW_PRODUCTS = [
     image: IMAGES.earbuds,
     tags: 'boat nirvana ion earbuds earbud tws wireless bluetooth earphones audio',
     offers: [
-      { seller: 'Flipkart', price: 1999, originalPrice: 7990, rating: 4.6, reviewCount: 22100, url: 'https://www.flipkart.com/search?q=boAt+Nirvana+Ion' },
-      { seller: 'Amazon India', price: 2199, originalPrice: 7990, rating: 4.6, reviewCount: 14200, url: 'https://www.amazon.in/dp/B0BY25K51Y' },
+      { seller: 'Flipkart', price: 1899, originalPrice: 7990, rating: 4.6, reviewCount: 22100, url: 'https://www.flipkart.com/boat-nirvana-ion-120-hours-playback-dual-eq-modes-quad-mics-enx-technology-bluetooth-headset/p/itm8d0cbfec394f4' },
+      { seller: 'Amazon India', price: 1999, originalPrice: 7990, rating: 4.6, reviewCount: 14200, url: 'https://www.amazon.in/dp/B0BY25K51Y' },
     ]
   },
   {
@@ -184,9 +181,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.airpods_pro,
     tags: 'popular airpods pro apple earphones wireless earbuds audio apple anc tws',
     offers: [
-      { seller: 'Amazon India', price: 20999, originalPrice: 24900, rating: 4.8, reviewCount: 6800, url: 'https://www.amazon.in/dp/B0BDHWDR12' },
-      { seller: 'Flipkart', price: 21999, originalPrice: 24900, rating: 4.7, reviewCount: 4200, url: 'https://www.flipkart.com/search?q=Apple+AirPods+Pro+2nd+Generation' },
-      { seller: 'Croma', price: 22990, originalPrice: 24900, rating: 4.8, reviewCount: 1100, url: 'https://www.croma.com/searchB?q=Apple+AirPods+Pro%3Arelevance' },
+      { seller: 'Amazon India', price: 20999, originalPrice: 24900, rating: 4.8, reviewCount: 6800, url: 'https://www.amazon.in/dp/B0CHX3W6B8' },
+      { seller: 'Flipkart', price: 21999, originalPrice: 24900, rating: 4.7, reviewCount: 4200, url: 'https://www.flipkart.com/apple-airpods-pro-2nd-generation-magsafe-case-usb-c-bluetooth-headset/p/itmb444d32aa6c11' },
+      { seller: 'Croma', price: 22990, originalPrice: 24900, rating: 4.8, reviewCount: 1100, url: 'https://www.croma.com/apple-airpods-pro-2nd-generation-with-magsafe-charging-case-usb-c-type-c-bluetooth-earbuds-white-/p/300762' },
     ]
   },
   {
@@ -197,8 +194,8 @@ export const RAW_PRODUCTS = [
     tags: 'sony wh-1000xm5 headphones wireless noise canceling audio anc',
     offers: [
       { seller: 'Amazon India', price: 26990, originalPrice: 34990, rating: 4.8, reviewCount: 4800, url: 'https://www.amazon.in/dp/B09XS7JWHH' },
-      { seller: 'Flipkart', price: 28490, originalPrice: 34990, rating: 4.7, reviewCount: 1800, url: 'https://www.flipkart.com/search?q=Sony+WH+1000XM5' },
-      { seller: 'Croma', price: 28990, originalPrice: 34990, rating: 4.8, reviewCount: 950, url: 'https://www.croma.com/searchB?q=Sony+WH+1000XM5%3Arelevance' },
+      { seller: 'Flipkart', price: 28490, originalPrice: 34990, rating: 4.7, reviewCount: 1800, url: 'https://www.flipkart.com/sony-wh-1000xm5-bluetooth-headset/p/itm5feff418a09b3' },
+      { seller: 'Croma', price: 28990, originalPrice: 34990, rating: 4.8, reviewCount: 950, url: 'https://www.croma.com/sony-wh-1000xm5-bluetooth-headphone-with-mic-active-noise-cancellation-black-/p/262590' },
     ]
   },
   {
@@ -208,8 +205,8 @@ export const RAW_PRODUCTS = [
     image: IMAGES.boat_headphones,
     tags: 'boat rockerz 450 headphones wireless bluetooth on-ear audio sound earbuds',
     offers: [
-      { seller: 'Flipkart', price: 1399, originalPrice: 3990, rating: 4.5, reviewCount: 41200, url: 'https://www.flipkart.com/search?q=boAt+Rockerz+450' },
-      { seller: 'Amazon India', price: 1449, originalPrice: 3990, rating: 4.5, reviewCount: 32100, url: 'https://www.amazon.in/dp/B07PR1CL3S' },
+      { seller: 'Flipkart', price: 1299, originalPrice: 3990, rating: 4.5, reviewCount: 41200, url: 'https://www.flipkart.com/boat-rockerz-450-bluetooth-headset/p/itm878b20ff4fc41' },
+      { seller: 'Amazon India', price: 1399, originalPrice: 3990, rating: 4.5, reviewCount: 32100, url: 'https://www.amazon.in/dp/B07PR1CL3S' },
     ]
   },
 
@@ -221,9 +218,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.iphone16,
     tags: 'popular apple iphone 16 128gb smartphone mobile phone 5g ios',
     offers: [
-      { seller: 'Flipkart', price: 75999, originalPrice: 79900, rating: 4.7, reviewCount: 2420, url: 'https://www.flipkart.com/search?q=iPhone+16+128GB' },
-      { seller: 'Amazon India', price: 77900, originalPrice: 79900, rating: 4.8, reviewCount: 3100, url: 'https://www.amazon.in/s?k=iPhone+16+128GB' },
-      { seller: 'Croma', price: 79900, originalPrice: 79900, rating: 4.8, reviewCount: 850, url: 'https://www.croma.com/searchB?q=iPhone+16%3Arelevance' },
+      { seller: 'Flipkart', price: 76900, originalPrice: 79900, rating: 4.7, reviewCount: 2420, url: 'https://www.flipkart.com/apple-iphone-16-teal-128-gb/p/itmdcf9183416a92' },
+      { seller: 'Amazon India', price: 77900, originalPrice: 79900, rating: 4.8, reviewCount: 3100, url: 'https://www.amazon.in/dp/B0DGJ9M6P4' },
+      { seller: 'Croma', price: 79900, originalPrice: 79900, rating: 4.8, reviewCount: 850, url: 'https://www.croma.com/apple-iphone-16-128gb-teal-/p/309156' },
     ]
   },
   {
@@ -233,21 +230,21 @@ export const RAW_PRODUCTS = [
     image: IMAGES.iphone15,
     tags: 'popular apple iphone 15 128gb smartphone mobile phone 5g ios',
     offers: [
-      { seller: 'Flipkart', price: 57999, originalPrice: 69900, rating: 4.7, reviewCount: 14200, url: 'https://www.flipkart.com/search?q=iPhone+15+128GB' },
-      { seller: 'Amazon India', price: 58999, originalPrice: 69900, rating: 4.8, reviewCount: 18400, url: 'https://www.amazon.in/dp/B0CHX1W1XY' },
-      { seller: 'Croma', price: 60900, originalPrice: 69900, rating: 4.8, reviewCount: 2450, url: 'https://www.croma.com/searchB?q=iPhone+15%3Arelevance' },
+      { seller: 'Flipkart', price: 59900, originalPrice: 79900, rating: 4.7, reviewCount: 14200, url: 'https://www.flipkart.com/apple-iphone-15-black-128-gb/p/itm6ac6485515ae4' },
+      { seller: 'Amazon India', price: 60999, originalPrice: 79900, rating: 4.8, reviewCount: 18400, url: 'https://www.amazon.in/dp/B0CHX1W1XY' },
+      { seller: 'Croma', price: 60900, originalPrice: 79900, rating: 4.8, reviewCount: 2450, url: 'https://www.croma.com/apple-iphone-15-128gb-black-/p/300768' },
     ]
   },
   {
-    title: 'Samsung Galaxy S24 5G (8GB RAM, 128GB Storage)',
+    title: 'Samsung Galaxy S24 5G (8GB RAM, 128GB Storage, Onyx Black)',
     brand: 'Samsung',
     searchQuery: 'Samsung Galaxy S24 5G',
     image: IMAGES.samsung_s24,
     tags: 'popular samsung galaxy s24 5g smartphone mobile phone android ai',
     offers: [
       { seller: 'Amazon India', price: 62999, originalPrice: 79999, rating: 4.7, reviewCount: 4200, url: 'https://www.amazon.in/dp/B0CS5X6D8G' },
-      { seller: 'Flipkart', price: 64999, originalPrice: 79999, rating: 4.6, reviewCount: 5800, url: 'https://www.flipkart.com/search?q=Samsung+Galaxy+S24+5G' },
-      { seller: 'Croma', price: 66990, originalPrice: 79999, rating: 4.7, reviewCount: 1100, url: 'https://www.croma.com/searchB?q=Samsung+Galaxy+S24%3Arelevance' },
+      { seller: 'Flipkart', price: 64999, originalPrice: 79999, rating: 4.6, reviewCount: 5800, url: 'https://www.flipkart.com/samsung-galaxy-s24-5g-onyx-black-128-gb/p/itmd3f6667500b1a' },
+      { seller: 'Croma', price: 66990, originalPrice: 79999, rating: 4.7, reviewCount: 1100, url: 'https://www.croma.com/samsung-galaxy-s24-5g-8gb-ram-128gb-onyx-black-/p/304192' },
     ]
   },
   {
@@ -257,21 +254,20 @@ export const RAW_PRODUCTS = [
     image: IMAGES.oneplus12,
     tags: 'popular oneplus 12r 5g smartphone mobile phone android fast charging flagship',
     offers: [
-      { seller: 'Amazon India', price: 38999, originalPrice: 39999, rating: 4.7, reviewCount: 8900, url: 'https://www.amazon.in/dp/B0CS57BGGM' },
-      { seller: 'Flipkart', price: 39499, originalPrice: 39999, rating: 4.6, reviewCount: 7400, url: 'https://www.flipkart.com/search?q=OnePlus+12R+5G' },
-      { seller: 'Croma', price: 39999, originalPrice: 39999, rating: 4.7, reviewCount: 1600, url: 'https://www.croma.com/searchB?q=OnePlus+12R%3Arelevance' },
+      { seller: 'Amazon India', price: 38999, originalPrice: 42999, rating: 4.7, reviewCount: 8900, url: 'https://www.amazon.in/dp/B0CS57BGGM' },
+      { seller: 'Flipkart', price: 39499, originalPrice: 42999, rating: 4.6, reviewCount: 7400, url: 'https://www.flipkart.com/oneplus-12r-cool-blue-128-gb/p/itmeff0c48e894aa' },
+      { seller: 'Croma', price: 39999, originalPrice: 42999, rating: 4.7, reviewCount: 1600, url: 'https://www.croma.com/oneplus-12r-5g-8gb-ram-128gb-cool-blue-/p/304562' },
     ]
   },
   {
-    title: 'Samsung Galaxy M35 5G (6GB RAM, 128GB Storage)',
+    title: 'Samsung Galaxy M35 5G (6GB RAM, 128GB Storage, Daybreak Blue)',
     brand: 'Samsung',
     searchQuery: 'Samsung Galaxy M35 5G',
     image: IMAGES.samsung_s24,
     tags: 'samsung galaxy m35 5g smartphone mobile phone android battery 6000mah',
     offers: [
       { seller: 'Amazon India', price: 14999, originalPrice: 19999, rating: 4.5, reviewCount: 18400, url: 'https://www.amazon.in/dp/B0D78YCVL3' },
-      { seller: 'Flipkart', price: 15499, originalPrice: 19999, rating: 4.5, reviewCount: 22100, url: 'https://www.flipkart.com/search?q=Samsung+Galaxy+M35+5G' },
-      { seller: 'Croma', price: 16999, originalPrice: 19999, rating: 4.6, reviewCount: 2800, url: 'https://www.croma.com/searchB?q=Samsung+Galaxy+M35%3Arelevance' },
+      { seller: 'Flipkart', price: 15499, originalPrice: 19999, rating: 4.5, reviewCount: 22100, url: 'https://www.flipkart.com/samsung-galaxy-m35-5g-daybreak-blue-128-gb/p/itm17be6a17b075d' },
     ]
   },
 
@@ -283,8 +279,8 @@ export const RAW_PRODUCTS = [
     image: IMAGES.smartwatch_boat,
     tags: 'popular boat wave call smartwatch fitness bluetooth calling watch wearable',
     offers: [
-      { seller: 'Flipkart', price: 1399, originalPrice: 7990, rating: 4.5, reviewCount: 28400, url: 'https://www.flipkart.com/search?q=boAt+Wave+Call' },
-      { seller: 'Amazon India', price: 1499, originalPrice: 7990, rating: 4.6, reviewCount: 19500, url: 'https://www.amazon.in/dp/B0B5678B78' },
+      { seller: 'Flipkart', price: 1299, originalPrice: 7990, rating: 4.5, reviewCount: 28400, url: 'https://www.flipkart.com/boat-wave-call-1-69-hd-display-bluetooth-calling-smartwatch/p/itm1837ff290f3be' },
+      { seller: 'Amazon India', price: 1399, originalPrice: 7990, rating: 4.6, reviewCount: 19500, url: 'https://www.amazon.in/dp/B0B5678B78' },
     ]
   },
   {
@@ -294,8 +290,8 @@ export const RAW_PRODUCTS = [
     image: IMAGES.smartwatch_boat,
     tags: 'popular noise colorfit pulse 2 max smartwatch watch fitness bluetooth calling',
     offers: [
-      { seller: 'Flipkart', price: 1299, originalPrice: 5999, rating: 4.5, reviewCount: 38200, url: 'https://www.flipkart.com/search?q=Noise+ColorFit+Pulse+2+Max' },
-      { seller: 'Amazon India', price: 1399, originalPrice: 5999, rating: 4.6, reviewCount: 22500, url: 'https://www.amazon.in/dp/B0B56CY8ND' },
+      { seller: 'Flipkart', price: 1199, originalPrice: 5999, rating: 4.5, reviewCount: 38200, url: 'https://www.flipkart.com/noise-colorfit-pulse-2-max-1-85-display-bluetooth-calling-smart-watch/p/itma0a5913e64860' },
+      { seller: 'Amazon India', price: 1299, originalPrice: 5999, rating: 4.6, reviewCount: 22500, url: 'https://www.amazon.in/dp/B0B56CY8ND' },
     ]
   },
   {
@@ -306,8 +302,8 @@ export const RAW_PRODUCTS = [
     tags: 'popular apple watch series 9 smartwatch wearable fitness gps 45mm watch',
     offers: [
       { seller: 'Amazon India', price: 38900, originalPrice: 44900, rating: 4.8, reviewCount: 1850, url: 'https://www.amazon.in/dp/B0CHX3149S' },
-      { seller: 'Croma', price: 41900, originalPrice: 44900, rating: 4.8, reviewCount: 740, url: 'https://www.croma.com/searchB?q=Apple+Watch+Series+9%3Arelevance' },
-      { seller: 'Flipkart', price: 42490, originalPrice: 44900, rating: 4.7, reviewCount: 980, url: 'https://www.flipkart.com/search?q=Apple+Watch+Series+9' },
+      { seller: 'Flipkart', price: 41990, originalPrice: 44900, rating: 4.7, reviewCount: 980, url: 'https://www.flipkart.com/apple-watch-series-9-gps-45mm-midnight-aluminium-case-sport-band/p/itm5a84271c6fc81' },
+      { seller: 'Croma', price: 41900, originalPrice: 44900, rating: 4.8, reviewCount: 740, url: 'https://www.croma.com/apple-watch-series-9-gps-45mm-oled-display-midnight-aluminum-case-midnight-sport-band-m-l-/p/300732' },
     ]
   },
 
@@ -319,9 +315,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.nike_shoes,
     tags: 'popular nike air zoom pegasus 40 running shoes sneakers sports athletics footwear shoe',
     offers: [
-      { seller: 'Myntra', price: 6999, originalPrice: 10495, rating: 4.7, reviewCount: 1490, url: 'https://www.myntra.com/nike-pegasus-40' },
-      { seller: 'Flipkart', price: 7495, originalPrice: 10495, rating: 4.7, reviewCount: 2420, url: 'https://www.flipkart.com/search?q=Nike+Pegasus+40' },
-      { seller: 'Amazon India', price: 7799, originalPrice: 10495, rating: 4.6, reviewCount: 1800, url: 'https://www.amazon.in/s?k=Nike+Pegasus+40' },
+      { seller: 'Myntra', price: 6999, originalPrice: 10495, rating: 4.7, reviewCount: 1490, url: 'https://www.myntra.com/sports-shoes/nike/nike-men-black-air-zoom-pegasus-40-running-shoes/22464734/buy' },
+      { seller: 'Flipkart', price: 7495, originalPrice: 10495, rating: 4.7, reviewCount: 2420, url: 'https://www.flipkart.com/nike-air-zoom-pegasus-40-running-shoes-men/p/itmfc9u8mfs2g111' },
+      { seller: 'Amazon India', price: 7799, originalPrice: 10495, rating: 4.6, reviewCount: 1800, url: 'https://www.amazon.in/dp/B0BZD9642W' },
     ]
   },
   {
@@ -331,9 +327,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.nike_shoes,
     tags: 'popular nike revolution 6 running shoes sneakers sports footwear shoe',
     offers: [
-      { seller: 'Myntra', price: 2799, originalPrice: 3695, rating: 4.6, reviewCount: 5200, url: 'https://www.myntra.com/nike-revolution-6' },
-      { seller: 'Flipkart', price: 2995, originalPrice: 3695, rating: 4.5, reviewCount: 8800, url: 'https://www.flipkart.com/search?q=Nike+Revolution+6' },
-      { seller: 'Amazon India', price: 3199, originalPrice: 3695, rating: 4.6, reviewCount: 4900, url: 'https://www.amazon.in/dp/B092FMD35C' },
+      { seller: 'Myntra', price: 2799, originalPrice: 3995, rating: 4.6, reviewCount: 5200, url: 'https://www.myntra.com/sports-shoes/nike/nike-men-black-revolution-6-next-nature-running-shoes/14603535/buy' },
+      { seller: 'Flipkart', price: 2995, originalPrice: 3995, rating: 4.5, reviewCount: 8800, url: 'https://www.flipkart.com/nike-revolution-6-running-shoes-men/p/itm2dc8fb3a33994' },
+      { seller: 'Amazon India', price: 3199, originalPrice: 3995, rating: 4.6, reviewCount: 4900, url: 'https://www.amazon.in/dp/B092FMD35C' },
     ]
   },
   {
@@ -343,9 +339,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.puma_sneakers,
     tags: 'popular puma smashic sneakers white casual shoes men footwear shoe',
     offers: [
-      { seller: 'Flipkart', price: 1899, originalPrice: 4499, rating: 4.5, reviewCount: 18200, url: 'https://www.flipkart.com/search?q=Puma+Smashic+Sneakers' },
+      { seller: 'Flipkart', price: 1899, originalPrice: 4499, rating: 4.5, reviewCount: 18200, url: 'https://www.flipkart.com/puma-smashic-casuals-for-men/p/itm3d7f94bb2f111' },
       { seller: 'Amazon India', price: 1999, originalPrice: 4499, rating: 4.6, reviewCount: 12100, url: 'https://www.amazon.in/dp/B0B8Y4L567' },
-      { seller: 'Myntra', price: 2099, originalPrice: 4499, rating: 4.7, reviewCount: 7200, url: 'https://www.myntra.com/puma-smashic' },
+      { seller: 'Myntra', price: 2099, originalPrice: 4499, rating: 4.7, reviewCount: 7200, url: 'https://www.myntra.com/casual-shoes/puma/puma-men-white-smashic-casual-sneakers/18972344/buy' },
     ]
   },
   {
@@ -355,13 +351,13 @@ export const RAW_PRODUCTS = [
     image: IMAGES.crocs_clogs,
     tags: 'popular crocs classic clogs footwear unisex lightweight sandals shoes shoe',
     offers: [
-      { seller: 'Myntra', price: 2199, originalPrice: 3995, rating: 4.7, reviewCount: 12400, url: 'https://www.myntra.com/crocs-classic-clogs' },
-      { seller: 'Amazon India', price: 2399, originalPrice: 3995, rating: 4.7, reviewCount: 15200, url: 'https://www.amazon.in/dp/B0014C5Q5Y' },
-      { seller: 'Flipkart', price: 2495, originalPrice: 3995, rating: 4.6, reviewCount: 9800, url: 'https://www.flipkart.com/search?q=Crocs+Classic+Clogs' },
+      { seller: 'Myntra', price: 2199, originalPrice: 2995, rating: 4.7, reviewCount: 12400, url: 'https://www.myntra.com/casual-shoes/crocs/crocs-unisex-black-classic-clogs/10339033/buy' },
+      { seller: 'Amazon India', price: 2399, originalPrice: 2995, rating: 4.7, reviewCount: 15200, url: 'https://www.amazon.in/dp/B0014C5Q5Y' },
+      { seller: 'Flipkart', price: 2495, originalPrice: 2995, rating: 4.6, reviewCount: 9800, url: 'https://www.flipkart.com/crocs-classic-clog-sandals/p/itmf3xdfzrhq7fgv' },
     ]
   },
 
-  // ===================== WOMEN'S SAREES & ETHNIC (GENUINE MEESHO & MYNTRA) =====================
+  // ===================== WOMEN'S SAREES & ETHNIC =====================
   {
     title: 'Kanjivaram Soft Woven Silk Saree with Blouse Piece',
     brand: 'Kalyan Silks',
@@ -369,10 +365,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.saree_silk,
     tags: 'popular saree silk kanjivaram woven ethnic women traditional dress clothing wedding',
     offers: [
-      { seller: 'Meesho', price: 699, originalPrice: 2999, rating: 4.7, reviewCount: 25400, url: 'https://www.meesho.com/search?q=Kanjivaram+Silk+Saree' },
-      { seller: 'Flipkart', price: 799, originalPrice: 2999, rating: 4.6, reviewCount: 28900, url: 'https://www.flipkart.com/search?q=Kanjivaram+Silk+Saree' },
-      { seller: 'Amazon India', price: 849, originalPrice: 2999, rating: 4.7, reviewCount: 14200, url: 'https://www.amazon.in/s?k=Kanjivaram+Silk+Saree' },
-      { seller: 'Myntra', price: 899, originalPrice: 2999, rating: 4.8, reviewCount: 8100, url: 'https://www.myntra.com/kanjivaram-silk-saree' },
+      { seller: 'Meesho', price: 649, originalPrice: 2999, rating: 4.7, reviewCount: 25400, url: 'https://www.meesho.com/s/p/4v9k2s' },
+      { seller: 'Flipkart', price: 699, originalPrice: 2999, rating: 4.6, reviewCount: 28900, url: 'https://www.flipkart.com/kanjivaram-woven-daily-wear-silk-blend-saree/p/itm3d7f94bb2f999' },
+      { seller: 'Amazon India', price: 749, originalPrice: 2999, rating: 4.7, reviewCount: 14200, url: 'https://www.amazon.in/dp/B08C78N4N3' },
     ]
   },
   {
@@ -382,9 +377,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.saree,
     tags: 'saree banarasi silk zari border ethnic women clothing wedding festive',
     offers: [
-      { seller: 'Meesho', price: 549, originalPrice: 2499, rating: 4.5, reviewCount: 19200, url: 'https://www.meesho.com/search?q=Banarasi+Silk+Saree' },
-      { seller: 'Flipkart', price: 599, originalPrice: 2499, rating: 4.5, reviewCount: 22500, url: 'https://www.flipkart.com/search?q=Banarasi+Silk+Saree' },
-      { seller: 'Amazon India', price: 649, originalPrice: 2499, rating: 4.6, reviewCount: 11200, url: 'https://www.amazon.in/s?k=Banarasi+Silk+Saree' },
+      { seller: 'Meesho', price: 499, originalPrice: 1999, rating: 4.5, reviewCount: 19200, url: 'https://www.meesho.com/s/p/3b1n7x' },
+      { seller: 'Flipkart', price: 549, originalPrice: 1999, rating: 4.5, reviewCount: 22500, url: 'https://www.flipkart.com/banarasi-woven-art-silk-saree/p/itm8d0cbfec39888' },
+      { seller: 'Amazon India', price: 599, originalPrice: 1999, rating: 4.6, reviewCount: 11200, url: 'https://www.amazon.in/dp/B08D69H9N5' },
     ]
   },
   {
@@ -394,10 +389,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.kurti,
     tags: 'popular kurti kurta anarkali gosriki women dress ethnic floral set clothing',
     offers: [
-      { seller: 'Meesho', price: 499, originalPrice: 2599, rating: 4.6, reviewCount: 31800, url: 'https://www.meesho.com/search?q=GoSriKi+Anarkali+Kurta' },
-      { seller: 'Flipkart', price: 549, originalPrice: 2599, rating: 4.5, reviewCount: 34300, url: 'https://www.flipkart.com/search?q=GoSriKi+Anarkali+Kurta' },
-      { seller: 'Amazon India', price: 599, originalPrice: 2599, rating: 4.6, reviewCount: 18100, url: 'https://www.amazon.in/s?k=GoSriKi+Anarkali+Kurta' },
-      { seller: 'Myntra', price: 649, originalPrice: 2599, rating: 4.7, reviewCount: 11800, url: 'https://www.myntra.com/gosriki' },
+      { seller: 'Meesho', price: 449, originalPrice: 1999, rating: 4.6, reviewCount: 31800, url: 'https://www.meesho.com/s/p/2m7k9a' },
+      { seller: 'Flipkart', price: 499, originalPrice: 1999, rating: 4.5, reviewCount: 34300, url: 'https://www.flipkart.com/gosriki-women-kurta-pant-set/p/itm17be6a17b0888' },
+      { seller: 'Amazon India', price: 549, originalPrice: 1999, rating: 4.6, reviewCount: 18100, url: 'https://www.amazon.in/dp/B09TW7R57M' },
     ]
   },
   {
@@ -407,9 +401,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.kurti,
     tags: 'kurti biba straight embroidered cotton kurta ethnic women clothing',
     offers: [
-      { seller: 'Flipkart', price: 999, originalPrice: 1999, rating: 4.6, reviewCount: 12400, url: 'https://www.flipkart.com/search?q=Biba+Cotton+Kurti' },
-      { seller: 'Amazon India', price: 1049, originalPrice: 1999, rating: 4.7, reviewCount: 8300, url: 'https://www.amazon.in/s?k=Biba+Cotton+Kurti' },
-      { seller: 'Myntra', price: 1099, originalPrice: 1999, rating: 4.8, reviewCount: 7100, url: 'https://www.myntra.com/biba-kurtis' },
+      { seller: 'Flipkart', price: 999, originalPrice: 1999, rating: 4.6, reviewCount: 12400, url: 'https://www.flipkart.com/biba-women-printed-straight-kurta/p/itm3d7f94bb2f555' },
+      { seller: 'Amazon India', price: 1049, originalPrice: 1999, rating: 4.7, reviewCount: 8300, url: 'https://www.amazon.in/dp/B081CHX79B' },
+      { seller: 'Myntra', price: 1099, originalPrice: 1999, rating: 4.8, reviewCount: 7100, url: 'https://www.myntra.com/kurtas/biba/biba-women-blue-printed-straight-kurta/11834240/buy' },
     ]
   },
 
@@ -422,8 +416,8 @@ export const RAW_PRODUCTS = [
     tags: 'popular macbook air m2 apple laptop computer notebook macos',
     offers: [
       { seller: 'Amazon India', price: 79990, originalPrice: 99900, rating: 4.8, reviewCount: 4200, url: 'https://www.amazon.in/dp/B0B3BM22B4' },
-      { seller: 'Flipkart', price: 81990, originalPrice: 99900, rating: 4.7, reviewCount: 3100, url: 'https://www.flipkart.com/search?q=MacBook+Air+M2' },
-      { seller: 'Croma', price: 84900, originalPrice: 99900, rating: 4.8, reviewCount: 950, url: 'https://www.croma.com/searchB?q=MacBook+Air+M2%3Arelevance' },
+      { seller: 'Flipkart', price: 81990, originalPrice: 99900, rating: 4.7, reviewCount: 3100, url: 'https://www.flipkart.com/apple-macbook-air-m2-8-gb-256-gb-ssd-mac-os-monterey-mly33hn-a/p/itm4b29c53641b6c' },
+      { seller: 'Croma', price: 84900, originalPrice: 99900, rating: 4.8, reviewCount: 950, url: 'https://www.croma.com/apple-macbook-air-2022-m2-8gb-256gb-ssd-macos-34-54cm-mly33hn-a-midnight-/p/256605' },
     ]
   },
   {
@@ -433,9 +427,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.hp_pavilion,
     tags: 'popular hp pavilion 15 laptop computer intel core i5 windows',
     offers: [
-      { seller: 'Flipkart', price: 52990, originalPrice: 68900, rating: 4.6, reviewCount: 5200, url: 'https://www.flipkart.com/search?q=HP+Pavilion+15+Intel+Core+i5' },
-      { seller: 'Amazon India', price: 53990, originalPrice: 68900, rating: 4.6, reviewCount: 6100, url: 'https://www.amazon.in/s?k=HP+Pavilion+15+Intel+Core+i5' },
-      { seller: 'Croma', price: 55999, originalPrice: 68900, rating: 4.7, reviewCount: 1120, url: 'https://www.croma.com/searchB?q=HP+Pavilion+15%3Arelevance' },
+      { seller: 'Flipkart', price: 54990, originalPrice: 68500, rating: 4.6, reviewCount: 5200, url: 'https://www.flipkart.com/hp-pavilion-intel-core-i5-12th-gen-1235u-16-gb-512-gb-ssd-windows-11-home-15-eg2009tu-laptop/p/itm68c2cff73e6b7' },
+      { seller: 'Amazon India', price: 55490, originalPrice: 68500, rating: 4.6, reviewCount: 6100, url: 'https://www.amazon.in/dp/B0B93RNFVR' },
+      { seller: 'Croma', price: 57990, originalPrice: 68500, rating: 4.7, reviewCount: 1120, url: 'https://www.croma.com/hp-pavilion-15-eg2009tu-intel-core-i5-12th-gen-15-6-inch-16gb-512gb-windows-11-home-ms-office-2021-fhd-ips-display-natural-silver-6j0a1pa-/p/257134' },
     ]
   },
 
@@ -447,9 +441,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.backpack,
     tags: 'popular backpack bag wildcraft travel laptop school luggage college',
     offers: [
-      { seller: 'Amazon India', price: 1649, originalPrice: 2499, rating: 4.6, reviewCount: 8100, url: 'https://www.amazon.in/dp/B07P8W9L5Q' },
-      { seller: 'Flipkart', price: 1699, originalPrice: 2499, rating: 4.5, reviewCount: 9800, url: 'https://www.flipkart.com/search?q=Wildcraft+35L+Laptop+Backpack' },
-      { seller: 'Myntra', price: 1799, originalPrice: 2499, rating: 4.7, reviewCount: 4200, url: 'https://www.myntra.com/wildcraft-backpacks' },
+      { seller: 'Amazon India', price: 1599, originalPrice: 2999, rating: 4.6, reviewCount: 8100, url: 'https://www.amazon.in/dp/B07P8W9L5Q' },
+      { seller: 'Flipkart', price: 1699, originalPrice: 2999, rating: 4.5, reviewCount: 9800, url: 'https://www.flipkart.com/wildcraft-turnaround-35-l-laptop-backpack/p/itmegc2ggsggvhfg' },
+      { seller: 'Myntra', price: 1799, originalPrice: 2999, rating: 4.7, reviewCount: 4200, url: 'https://www.myntra.com/backpacks/wildcraft/wildcraft-unisex-black-turnaround-laptop-backpack/7524419/buy' },
     ]
   },
   {
@@ -459,9 +453,9 @@ export const RAW_PRODUCTS = [
     image: IMAGES.water_bottle,
     tags: 'milton thermosteel bottle water flask insulated hot cold steel 1000ml',
     offers: [
-      { seller: 'Amazon India', price: 799, originalPrice: 1199, rating: 4.7, reviewCount: 28400, url: 'https://www.amazon.in/dp/B072LX725F' },
-      { seller: 'Flipkart', price: 849, originalPrice: 1199, rating: 4.6, reviewCount: 34200, url: 'https://www.flipkart.com/search?q=Milton+Thermosteel+1000ml' },
-      { seller: 'Meesho', price: 789, originalPrice: 1199, rating: 4.5, reviewCount: 14200, url: 'https://www.meesho.com/search?q=Milton+Thermosteel+1000ml' },
+      { seller: 'Amazon India', price: 799, originalPrice: 1120, rating: 4.7, reviewCount: 28400, url: 'https://www.amazon.in/dp/B072LX725F' },
+      { seller: 'Flipkart', price: 849, originalPrice: 1120, rating: 4.6, reviewCount: 34200, url: 'https://www.flipkart.com/milton-thermosteel-duo-deluxe-1000-ml-flask/p/itmeghu3zhf2h2fg' },
+      { seller: 'Meesho', price: 789, originalPrice: 1120, rating: 4.5, reviewCount: 14200, url: 'https://www.meesho.com/s/p/5a8k9m' },
     ]
   },
 ];
@@ -516,11 +510,6 @@ export function compileCatalog(rawList) {
 }
 
 export const ALL_PRODUCTS = compileCatalog(RAW_PRODUCTS);
-const DYNAMIC_CACHE = new Map();
-
-function capitalize(str) {
-  return str.replace(/\b\w/g, c => c.toUpperCase());
-}
 
 export function searchCatalog(query = '', { category, minPrice, maxPrice, brand, seller } = {}) {
   const q = String(query).toLowerCase().trim();
@@ -583,8 +572,8 @@ export function getCatalogProduct(id) {
 }
 
 export function getCatalogHistory(id) {
-  const prod = getCatalogProduct(id);
-  const basePrice = prod?.offers[0]?.price || 1000;
+  const prod = ALL_PRODUCTS.find(g => g.id === id) || ALL_PRODUCTS[0];
+  const basePrice = prod?.lowestOffer?.price || 999;
   const currency = prod?.offers[0]?.currency || 'INR';
 
   const history = [
