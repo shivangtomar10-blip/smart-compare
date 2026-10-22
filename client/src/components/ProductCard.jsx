@@ -60,7 +60,7 @@ export default function ProductCard({ product: p }) {
           <li key={o.url}>
             <span>{o.seller}</span>
             <b>{money(o.price, o.currency)}</b>
-            <a href={o.url} target="_blank" rel="noopener noreferrer sponsored">View ↗</a>
+            <a href={o.smartUrl || o.url} target="_blank" rel="noopener noreferrer sponsored">View ↗</a>
           </li>
         ))}
       </ul>
@@ -74,7 +74,7 @@ export default function ProductCard({ product: p }) {
           return (
             <a
               key={o.url}
-              href={o.url}
+              href={o.smartUrl || o.url}
               target="_blank"
               rel="noopener noreferrer sponsored"
               className={`app-mini-btn ${sellerKey}`}

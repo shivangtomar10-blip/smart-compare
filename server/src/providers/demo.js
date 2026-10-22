@@ -748,9 +748,10 @@ function scoreProduct(item, terms) {
   const fullText = `${title} ${brand} ${tags}`;
   const words = fullText.split(/[^a-z0-9]+/);
 
-  // Broad exploration search: return all curated hero products
-  if (terms.some(t => ['popular', 'all', 'trending', 'deals', 'online', 'apps', 'products'].includes(t))) {
-    return tags.includes('popular') ? 100 : 50;
+  // Broad exploration search or store search: return all curated hero products
+  const storeNames = ['flipkart', 'meesho', 'nykaa', 'nyka', 'shopsy', 'croma', 'amazon', 'myntra'];
+  if (terms.some(t => ['popular', 'all', 'trending', 'deals', 'online', 'apps', 'products', ...storeNames].includes(t))) {
+    return tags.includes('popular') || storeNames.some(s => terms.includes(s) && (item.seller || '').toLowerCase().includes(s)) ? 100 : 50;
   }
 
   let score = 0;
@@ -788,6 +789,9 @@ function scoreProduct(item, terms) {
     } else if (term === 'beauty' || term === 'cosmetics' || term === 'makeup') {
       if (tags.includes('beauty') || tags.includes('makeup') || tags.includes('cosmetics') || tags.includes('perfume')) score += 30;
       else { matchesAll = false; continue; }
+    } else if (storeNames.includes(term)) {
+      if ((item.seller || '').toLowerCase().includes(term) || tags.includes(term)) score += 50;
+      else { matchesAll = false; continue; }
     } else if (exactWord) {
       score += 20;
       if (brand === term) score += 30;
@@ -816,7 +820,8 @@ export function createDemoProvider(env = process.env) {
 
       if (terms.length === 0) return [];
 
-      const isBroadExplore = terms.some(t => ['popular', 'all', 'trending', 'deals', 'online', 'apps', 'products'].includes(t));
+      const storeNames = ['flipkart', 'meesho', 'nykaa', 'nyka', 'shopsy', 'croma', 'amazon', 'myntra'];
+      const isBroadExplore = terms.some(t => ['popular', 'all', 'trending', 'deals', 'online', 'apps', 'products', ...storeNames].includes(t));
       let liveOffers = [];
 
       // 1. Fetch live real products directly from Flipkart & Amazon India

@@ -192,7 +192,7 @@ export default function Product() {
                   <span className="badge-live-real">✓ Live Verified</span>
                 </td>
                 <td>
-                  <a href={o.url} target="_blank" rel="noopener noreferrer sponsored" className="btn-buy-link">
+                  <a href={o.smartUrl || o.url} target="_blank" rel="noopener noreferrer sponsored" className="btn-buy-link">
                     Open on {o.seller} ↗
                   </a>
                 </td>
@@ -212,13 +212,13 @@ export default function Product() {
             return (
               <a
                 key={o.url}
-                href={o.url}
+                href={o.smartUrl || o.url}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
                 className={`app-btn-big ${sellerKey}`}
                 title={`Open exact item on ${o.seller}`}
               >
-                View on {o.seller} ({money(o.price, o.currency)}) ↗
+                📱 Open on {o.seller} ({money(o.price, o.currency)}) ↗
               </a>
             );
           })}

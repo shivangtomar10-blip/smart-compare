@@ -66,7 +66,7 @@ export default function Compare() {
                       return (
                         <a
                           key={o.url}
-                          href={o.url}
+                          href={o.smartUrl || o.url}
                           target="_blank"
                           rel="noopener noreferrer sponsored"
                           className={`app-mini-btn ${sellerKey}`}
@@ -105,7 +105,7 @@ export default function Compare() {
                 <td key={p.id}>
                   {p.lowestOffer ? (
                     <a
-                      href={p.lowestOffer.url}
+                      href={p.lowestOffer.smartUrl || p.lowestOffer.url}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
                       className="btn-buy-link"
