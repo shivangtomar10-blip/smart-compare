@@ -11,7 +11,12 @@ export const IMAGES = {
   shirt_formal: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=500&auto=format&fit=crop',
   shirt_casual: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500&auto=format&fit=crop',
   shirt_check: 'https://images.unsplash.com/photo-1603252109303-2751441dd157?w=500&auto=format&fit=crop',
-  tshirt: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500&auto=format&fit=crop',
+  shirt_denim: 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=500&auto=format&fit=crop',
+  shirt_striped: 'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=500&auto=format&fit=crop',
+  shirt_formal_blue: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500&auto=format&fit=crop',
+  tshirt: 'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=500&auto=format&fit=crop',
+  tshirt_black: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500&auto=format&fit=crop',
+  tshirt_graphic: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500&auto=format&fit=crop',
   tshirt_polo: 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=500&auto=format&fit=crop',
   saree: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500&auto=format&fit=crop',
   saree_silk: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=500&auto=format&fit=crop',
@@ -457,11 +462,119 @@ export const RAW_PRODUCTS = [
     brand: 'Eyebogler',
     searchQuery: 'Eyebogler T-Shirt Pack of 2',
     image: IMAGES.tshirt,
-    tags: 'shopsy meesho tshirt t-shirt pack of 2 men printed round neck cotton casual top tee flipkart',
+    tags: 'popular shopsy meesho tshirt t-shirt pack of 2 men printed round neck cotton casual top tee flipkart amazon',
     offers: [
-      { seller: 'Shopsy', price: 299, originalPrice: 999, rating: 4.5, reviewCount: 24200, url: 'https://www.shopsy.in/eyebogler-printed-men-round-neck-t-shirt/p/itmfc4u8mfs2g111' },
-      { seller: 'Meesho', price: 319, originalPrice: 999, rating: 4.4, reviewCount: 18900, url: 'https://www.meesho.com/s/p/3k8m9x' },
-      { seller: 'Flipkart', price: 349, originalPrice: 999, rating: 4.4, reviewCount: 31200, url: 'https://dl.flipkart.com/dl/eyebogler-printed-men-round-neck-t-shirt/p/itmfc4u8mfs2g111' },
+      { seller: 'Meesho', price: 275, originalPrice: 999, rating: 4.4, reviewCount: 18900 },
+      { seller: 'Shopsy', price: 284, originalPrice: 999, rating: 4.5, reviewCount: 24200 },
+      { seller: 'Flipkart', price: 299, originalPrice: 999, rating: 4.4, reviewCount: 31200 },
+      { seller: 'Amazon India', price: 349, originalPrice: 999, rating: 4.4, reviewCount: 14200 },
+    ]
+  },
+  {
+    title: 'Highlander Men Slim Fit Casual Indigo Denim Shirt',
+    brand: 'Highlander',
+    searchQuery: 'Highlander Men Denim Shirt',
+    image: IMAGES.shirt_denim,
+    tags: 'popular shirt denim highlander casual blue cotton men clothing apparel flipkart meesho shopsy myntra amazon',
+    offers: [
+      { seller: 'Meesho', price: 499, originalPrice: 1299, rating: 4.5, reviewCount: 16400 },
+      { seller: 'Shopsy', price: 529, originalPrice: 1299, rating: 4.4, reviewCount: 11200 },
+      { seller: 'Flipkart', price: 599, originalPrice: 1299, rating: 4.3, reviewCount: 22100 },
+      { seller: 'Amazon India', price: 699, originalPrice: 1299, rating: 4.5, reviewCount: 14200 },
+      { seller: 'Myntra', price: 749, originalPrice: 1299, rating: 4.6, reviewCount: 8900 },
+    ]
+  },
+  {
+    title: 'Peter England Men Classic Formal Sky Blue Striped Shirt',
+    brand: 'Peter England',
+    searchQuery: 'Peter England Men Formal Shirt',
+    image: IMAGES.shirt_striped,
+    tags: 'popular shirt formal peter england striped blue office work regular fit cotton flipkart amazon myntra meesho',
+    offers: [
+      { seller: 'Meesho', price: 749, originalPrice: 1599, rating: 4.5, reviewCount: 8900 },
+      { seller: 'Flipkart', price: 799, originalPrice: 1599, rating: 4.4, reviewCount: 14200 },
+      { seller: 'Amazon India', price: 849, originalPrice: 1599, rating: 4.6, reviewCount: 11200 },
+      { seller: 'Myntra', price: 899, originalPrice: 1599, rating: 4.7, reviewCount: 6500 },
+    ]
+  },
+  {
+    title: 'U.S. Polo Assn. Men Solid Pique Cotton Polo T-Shirt',
+    brand: 'U.S. Polo Assn.',
+    searchQuery: 'US Polo Assn Men Polo T-Shirt',
+    image: IMAGES.tshirt_polo,
+    tags: 'popular tshirt polo us polo assn uspa cotton collar casual tee flipkart amazon myntra meesho shopsy',
+    offers: [
+      { seller: 'Meesho', price: 849, originalPrice: 1999, rating: 4.6, reviewCount: 9400 },
+      { seller: 'Shopsy', price: 879, originalPrice: 1999, rating: 4.5, reviewCount: 6200 },
+      { seller: 'Flipkart', price: 899, originalPrice: 1999, rating: 4.5, reviewCount: 18400 },
+      { seller: 'Amazon India', price: 999, originalPrice: 1999, rating: 4.7, reviewCount: 14200 },
+      { seller: 'Myntra', price: 1099, originalPrice: 1999, rating: 4.8, reviewCount: 12100 },
+    ]
+  },
+  {
+    title: 'Louis Philippe Men Classic White Formal Work Shirt',
+    brand: 'Louis Philippe',
+    searchQuery: 'Louis Philippe Formal Shirt',
+    image: IMAGES.shirt_formal_blue,
+    tags: 'popular shirt formal louis philippe white luxury office cotton executive flipkart amazon myntra',
+    offers: [
+      { seller: 'Flipkart', price: 1299, originalPrice: 2299, rating: 4.6, reviewCount: 8900 },
+      { seller: 'Croma', price: 1349, originalPrice: 2299, rating: 4.5, reviewCount: 1800 },
+      { seller: 'Amazon India', price: 1399, originalPrice: 2299, rating: 4.7, reviewCount: 6500 },
+      { seller: 'Myntra', price: 1499, originalPrice: 2299, rating: 4.8, reviewCount: 5200 },
+    ]
+  },
+  {
+    title: "Levi's Men Standard Fit Western Casual Denim Shirt",
+    brand: "Levi's",
+    searchQuery: "Levis Men Denim Casual Shirt",
+    image: IMAGES.shirt_denim,
+    tags: "popular shirt levis levi western denim casual cotton full sleeve blue flipkart amazon myntra shopsy",
+    offers: [
+      { seller: 'Shopsy', price: 1399, originalPrice: 2999, rating: 4.5, reviewCount: 4200 },
+      { seller: 'Flipkart', price: 1499, originalPrice: 2999, rating: 4.6, reviewCount: 14200 },
+      { seller: 'Amazon India', price: 1599, originalPrice: 2999, rating: 4.7, reviewCount: 9800 },
+      { seller: 'Myntra', price: 1699, originalPrice: 2999, rating: 4.8, reviewCount: 11400 },
+    ]
+  },
+  {
+    title: 'Bewakoof Men Oversized Graphic Cotton T-Shirt',
+    brand: 'Bewakoof',
+    searchQuery: 'Bewakoof Men Oversized T-Shirt',
+    image: IMAGES.tshirt_graphic,
+    tags: 'popular tshirt bewakoof oversized graphic printed cotton streetwear loose fit casual tee shopsy meesho flipkart amazon myntra',
+    offers: [
+      { seller: 'Shopsy', price: 399, originalPrice: 999, rating: 4.5, reviewCount: 16800 },
+      { seller: 'Meesho', price: 429, originalPrice: 999, rating: 4.4, reviewCount: 12400 },
+      { seller: 'Flipkart', price: 449, originalPrice: 999, rating: 4.4, reviewCount: 28400 },
+      { seller: 'Amazon India', price: 499, originalPrice: 999, rating: 4.6, reviewCount: 14200 },
+      { seller: 'Myntra', price: 549, originalPrice: 999, rating: 4.7, reviewCount: 18900 },
+    ]
+  },
+  {
+    title: 'Raymond Men Regular Fit Pure Linen Casual & Formal Shirt',
+    brand: 'Raymond',
+    searchQuery: 'Raymond Men Linen Shirt',
+    image: IMAGES.shirt_linen,
+    tags: 'popular shirt linen raymond pure linen formal casual breathable summer luxury flipkart amazon myntra',
+    offers: [
+      { seller: 'Flipkart', price: 1599, originalPrice: 2999, rating: 4.6, reviewCount: 5400 },
+      { seller: 'Amazon India', price: 1699, originalPrice: 2999, rating: 4.7, reviewCount: 4200 },
+      { seller: 'Myntra', price: 1799, originalPrice: 2999, rating: 4.8, reviewCount: 3800 },
+    ]
+  },
+  {
+    title: 'Flying Machine Men Slim Fit Olive Green Casual Cotton Shirt',
+    brand: 'Flying Machine',
+    searchQuery: 'Flying Machine Men Casual Shirt',
+    image: IMAGES.shirt_casual,
+    tags: 'popular shirt casual flying machine olive green cotton slim fit men fashion flipkart meesho shopsy amazon myntra',
+    offers: [
+      { seller: 'Meesho', price: 649, originalPrice: 1699, rating: 4.5, reviewCount: 7800 },
+      { seller: 'Shopsy', price: 679, originalPrice: 1699, rating: 4.4, reviewCount: 5200 },
+      { seller: 'Flipkart', price: 699, originalPrice: 1699, rating: 4.5, reviewCount: 12400 },
+      { seller: 'Amazon India', price: 799, originalPrice: 1699, rating: 4.6, reviewCount: 8900 },
+      { seller: 'Myntra', price: 849, originalPrice: 1699, rating: 4.7, reviewCount: 6100 },
     ]
   },
 
@@ -475,9 +588,58 @@ export const RAW_PRODUCTS = [
     image: IMAGES.nike_shoes,
     tags: 'popular shoes footwear sneakers running nike revolution interact men sports flipkart amazon myntra',
     offers: [
-      { seller: 'Flipkart', price: 3548, originalPrice: 7095, rating: 4.5, reviewCount: 4210, url: 'https://dl.flipkart.com/dl/nike-interact-run-running-shoes-men/p/itm84fb59d5c4146?pid=SHOHGZY8UGZTYR7H' },
-      { seller: 'Amazon India', price: 3795, originalPrice: 7095, rating: 4.6, reviewCount: 11200, url: 'https://www.amazon.in/dp/B08N5KBG9Y' },
-      { seller: 'Myntra', price: 3995, originalPrice: 7095, rating: 4.7, reviewCount: 8400, url: 'https://www.myntra.com/nike-running-shoes' },
+      { seller: 'Flipkart', price: 3548, originalPrice: 7095, rating: 4.5, reviewCount: 4210 },
+      { seller: 'Amazon India', price: 3795, originalPrice: 7095, rating: 4.6, reviewCount: 11200 },
+      { seller: 'Myntra', price: 3995, originalPrice: 7095, rating: 4.7, reviewCount: 8400 },
+    ]
+  },
+  {
+    title: 'Puma Smashic Low-Top Casual Sneakers For Men (White/Black)',
+    brand: 'Puma',
+    searchQuery: 'Puma Smashic Sneakers',
+    image: IMAGES.puma_sneakers,
+    tags: 'popular shoes footwear sneakers puma smashic casual low top men lifestyle flipkart amazon myntra',
+    offers: [
+      { seller: 'Flipkart', price: 1999, originalPrice: 4499, rating: 4.5, reviewCount: 18400 },
+      { seller: 'Amazon India', price: 2199, originalPrice: 4499, rating: 4.6, reviewCount: 14200 },
+      { seller: 'Myntra', price: 2299, originalPrice: 4499, rating: 4.7, reviewCount: 9200 },
+    ]
+  },
+  {
+    title: 'Asian Men Wonder-13 Lightweight Mesh Sports Running Shoes',
+    brand: 'Asian',
+    searchQuery: 'Asian Wonder 13 Shoes',
+    image: IMAGES.shoes_sports,
+    tags: 'popular shoes footwear sneakers asian wonder 13 running sports gym mesh meesho shopsy flipkart amazon',
+    offers: [
+      { seller: 'Meesho', price: 549, originalPrice: 999, rating: 4.4, reviewCount: 38400 },
+      { seller: 'Shopsy', price: 569, originalPrice: 999, rating: 4.4, reviewCount: 24100 },
+      { seller: 'Flipkart', price: 599, originalPrice: 999, rating: 4.3, reviewCount: 48900 },
+      { seller: 'Amazon India', price: 649, originalPrice: 999, rating: 4.5, reviewCount: 22100 },
+    ]
+  },
+  {
+    title: 'Sparx Men Casual White Canvas Sneakers (SM-648)',
+    brand: 'Sparx',
+    searchQuery: 'Sparx Canvas Sneakers SM-648',
+    image: IMAGES.puma_sneakers,
+    tags: 'popular shoes footwear sneakers sparx canvas casual white men college wear flipkart meesho amazon',
+    offers: [
+      { seller: 'Meesho', price: 699, originalPrice: 1099, rating: 4.4, reviewCount: 14200 },
+      { seller: 'Flipkart', price: 749, originalPrice: 1099, rating: 4.4, reviewCount: 29800 },
+      { seller: 'Amazon India', price: 799, originalPrice: 1099, rating: 4.5, reviewCount: 18400 },
+    ]
+  },
+  {
+    title: 'Campus Men Oxyfit Walking & Running Shoes',
+    brand: 'Campus',
+    searchQuery: 'Campus Oxyfit Running Shoes',
+    image: IMAGES.shoes_sports,
+    tags: 'popular shoes footwear sneakers campus oxyfit running walking sports gym flipkart amazon meesho',
+    offers: [
+      { seller: 'Meesho', price: 849, originalPrice: 1699, rating: 4.5, reviewCount: 11200 },
+      { seller: 'Flipkart', price: 899, originalPrice: 1699, rating: 4.4, reviewCount: 26400 },
+      { seller: 'Amazon India', price: 949, originalPrice: 1699, rating: 4.5, reviewCount: 14900 },
     ]
   },
 
@@ -716,6 +878,27 @@ function generateDynamicProducts(query) {
         basePrice: 899,
         image: IMAGES.fast_charger,
         tags: 'charger adapter mi xiaomi 33w fast flipkart amazon meesho croma shopsy'
+      },
+      {
+        title: `OnePlus 80W SUPERVOOC Fast Power Adapter`,
+        brand: 'OnePlus',
+        basePrice: 2499,
+        image: IMAGES.apple_charger,
+        tags: 'charger adapter oneplus 80w supervooc fast croma flipkart amazon'
+      },
+      {
+        title: `Portronics Adapto 20 Type-C 20W Fast Wall Adapter (White)`,
+        brand: 'Portronics',
+        basePrice: 449,
+        image: IMAGES.fast_charger,
+        tags: 'charger adapter portronics 20w fast type-c flipkart amazon meesho shopsy'
+      },
+      {
+        title: `boAt 20W Quick Charge Type-C Wall Adapter`,
+        brand: 'boAt',
+        basePrice: 399,
+        image: IMAGES.fast_charger,
+        tags: 'charger adapter boat 20w fast type-c flipkart amazon meesho shopsy'
       }
     ];
   } else if (/brush|toothbrush|comb|teeth|hair brush/.test(lower)) {
@@ -740,6 +923,13 @@ function generateDynamicProducts(query) {
         basePrice: 1299,
         image: IMAGES.electric_toothbrush,
         tags: 'brush toothbrush electric sonic flipkart amazon croma'
+      },
+      {
+        title: `Colgate ZigZag Charcoal Antibacterial Toothbrush (Pack of 6)`,
+        brand: 'Colgate',
+        basePrice: 199,
+        image: IMAGES.manual_toothbrush,
+        tags: 'brush toothbrush colgate zigzag charcoal teeth clean nykaa flipkart amazon meesho'
       }
     ];
   } else if (/phone|mobile|smartphone|iphone|samsung|5g/.test(lower)) {
@@ -764,6 +954,27 @@ function generateDynamicProducts(query) {
         basePrice: 55880,
         image: IMAGES.oneplus12,
         tags: 'phone mobile oneplus 12 5g croma flipkart amazon'
+      },
+      {
+        title: `Apple iPhone 15 Plus (128GB Storage, Pink)`,
+        brand: 'Apple',
+        basePrice: 60999,
+        image: IMAGES.iphone15,
+        tags: 'phone mobile apple iphone 15 5g croma flipkart amazon'
+      },
+      {
+        title: `Samsung Galaxy M35 5G (128GB Storage, 6000mAh)`,
+        brand: 'Samsung',
+        basePrice: 14999,
+        image: IMAGES.samsung_m35,
+        tags: 'phone mobile samsung galaxy m35 5g amazon flipkart'
+      },
+      {
+        title: `Realme 12 Pro 5G (128GB Storage, Submarine Blue)`,
+        brand: 'Realme',
+        basePrice: 21999,
+        image: IMAGES.samsung_s24,
+        tags: 'phone mobile realme 12 pro 5g flipkart amazon'
       }
     ];
   } else if (/laptop|macbook|computer|pc/.test(lower)) {
@@ -781,6 +992,20 @@ function generateDynamicProducts(query) {
         basePrice: 54990,
         image: IMAGES.hp_pavilion,
         tags: 'laptop hp intel core i5 croma flipkart amazon'
+      },
+      {
+        title: `Dell Inspiron 3520 Intel Core i3 12th Gen (8GB, 512GB SSD)`,
+        brand: 'Dell',
+        basePrice: 36990,
+        image: IMAGES.dell_xps,
+        tags: 'laptop dell intel core i3 croma flipkart amazon'
+      },
+      {
+        title: `ASUS Vivobook 15 Intel Celeron Dual Core (8GB, 512GB SSD)`,
+        brand: 'ASUS',
+        basePrice: 27990,
+        image: IMAGES.hp_pavilion,
+        tags: 'laptop asus vivobook croma flipkart amazon'
       }
     ];
   } else if (/shoe|sneaker|footwear|sandal|running/.test(lower)) {
@@ -798,6 +1023,34 @@ function generateDynamicProducts(query) {
         basePrice: 1999,
         image: IMAGES.puma_sneakers,
         tags: 'shoes sneakers puma casual footwear flipkart amazon myntra'
+      },
+      {
+        title: `Asian Men Wonder-13 Lightweight Mesh Running Shoes`,
+        brand: 'Asian',
+        basePrice: 599,
+        image: IMAGES.shoes_sports,
+        tags: 'shoes sneakers asian mesh sports running meesho shopsy flipkart amazon'
+      },
+      {
+        title: `Sparx Men Casual White Canvas Sneakers (SM-648)`,
+        brand: 'Sparx',
+        basePrice: 749,
+        image: IMAGES.puma_sneakers,
+        tags: 'shoes sneakers sparx canvas casual footwear flipkart meesho amazon'
+      },
+      {
+        title: `Campus Men Oxyfit Walking & Running Shoes`,
+        brand: 'Campus',
+        basePrice: 899,
+        image: IMAGES.shoes_sports,
+        tags: 'shoes sneakers campus running walking footwear flipkart amazon meesho'
+      },
+      {
+        title: `Bata Formal Men Genuine Leather Derby Shoes`,
+        brand: 'Bata',
+        basePrice: 1299,
+        image: IMAGES.puma_sneakers,
+        tags: 'shoes formal bata leather derby office footwear flipkart amazon myntra'
       }
     ];
   } else if (/saree|kurti|kurta|dress|ethnic|suit/.test(lower)) {
@@ -810,11 +1063,39 @@ function generateDynamicProducts(query) {
         tags: 'saree silk kanjivaram ethnic meesho shopsy flipkart amazon myntra'
       },
       {
+        title: `HouseOfCommon Woven, Printed Banarasi Art Silk Saree`,
+        brand: 'HouseOfCommon',
+        basePrice: 499,
+        image: 'https://rukmini1.flixcart.com/image/612/612/xif0q/sari/f/e/6/free-printed-jacquard-houseofcommon-unstitched-original-imahhzy8bbfvwhhz.jpeg?q=70',
+        tags: 'saree banarasi silk art ethnic meesho shopsy flipkart amazon'
+      },
+      {
+        title: `Siril Georgette Floral Printed Daily Wear Saree with Blouse`,
+        brand: 'Siril',
+        basePrice: 349,
+        image: IMAGES.saree,
+        tags: 'saree georgette siril floral printed daily wear meesho shopsy flipkart amazon'
+      },
+      {
         title: `Hisham Embroidered Anarkali Kurta, Bottom & Dupatta Set`,
         brand: 'Hisham',
         basePrice: 458,
         image: 'https://rukmini1.flixcart.com/image/612/612/xif0q/salwar-kurta-dupatta/p/w/i/xl-anarkali-kurti-with-pant-and-dupatta-hisham-original-imahjgzkyv5bchfy.jpeg?q=70',
         tags: 'kurti anarkali kurta ethnic meesho shopsy flipkart amazon'
+      },
+      {
+        title: `Libas Women Maroon Embroidered Straight Kurta with Palazzos`,
+        brand: 'Libas',
+        basePrice: 899,
+        image: IMAGES.kurti,
+        tags: 'kurti libas palazzo ethnic festive embroidery myntra flipkart amazon'
+      },
+      {
+        title: `Biba Women Printed Pure Cotton Straight Daily Kurti`,
+        brand: 'Biba',
+        basePrice: 699,
+        image: IMAGES.dress,
+        tags: 'kurti biba cotton straight daily office casual myntra flipkart amazon'
       }
     ];
   } else if (/shirt|tshirt|jeans|cloth|pant/.test(lower)) {
@@ -827,11 +1108,67 @@ function generateDynamicProducts(query) {
         tags: 'shirt casual dennis lingo cotton flipkart meesho shopsy myntra amazon'
       },
       {
+        title: `Allen Solly Men Solid Casual White Pure Cotton Shirt`,
+        brand: 'Allen Solly',
+        basePrice: 679,
+        image: 'https://rukmini1.flixcart.com/image/612/612/xif0q/shirt/r/z/h/40-assfsmofl12788-allen-solly-original-imahf3gy7hgyzyfg.jpeg?q=70',
+        tags: 'shirt formal allen solly men regular fit cotton office flipkart amazon myntra meesho'
+      },
+      {
+        title: `Roadster Men Checkered Casual Blue Cotton Shirt`,
+        brand: 'Roadster',
+        basePrice: 347,
+        image: 'https://rukmini1.flixcart.com/image/612/612/xif0q/shirt/4/f/c/m-check-shirt-roadster-original-imah7e3gzqhyvhzz.jpeg?q=70',
+        tags: 'shirt check checked roadster casual cotton men flipkart myntra meesho shopsy amazon'
+      },
+      {
+        title: `Highlander Men Slim Fit Casual Indigo Denim Shirt`,
+        brand: 'Highlander',
+        basePrice: 599,
+        image: IMAGES.shirt_denim,
+        tags: 'shirt denim highlander casual blue cotton men flipkart meesho shopsy myntra amazon'
+      },
+      {
+        title: `Peter England Men Classic Formal Sky Blue Striped Shirt`,
+        brand: 'Peter England',
+        basePrice: 799,
+        image: IMAGES.shirt_striped,
+        tags: 'shirt formal peter england striped blue office cotton flipkart amazon myntra meesho'
+      },
+      {
+        title: `U.S. Polo Assn. Men Solid Pique Cotton Polo T-Shirt`,
+        brand: 'U.S. Polo Assn.',
+        basePrice: 899,
+        image: IMAGES.tshirt_polo,
+        tags: 'tshirt polo us polo assn cotton collar casual tee flipkart amazon myntra meesho shopsy'
+      },
+      {
+        title: `Louis Philippe Men Classic White Formal Work Shirt`,
+        brand: 'Louis Philippe',
+        basePrice: 1299,
+        image: IMAGES.shirt_formal_blue,
+        tags: 'shirt formal louis philippe white luxury office cotton flipkart amazon myntra'
+      },
+      {
+        title: `Levi's Men Standard Fit Western Casual Denim Shirt`,
+        brand: "Levi's",
+        basePrice: 1499,
+        image: IMAGES.shirt_denim,
+        tags: 'shirt levis western denim casual cotton blue flipkart amazon myntra shopsy'
+      },
+      {
         title: `Eyebogler Men Printed Round Neck Cotton T-Shirt (Pack of 2)`,
         brand: 'Eyebogler',
         basePrice: 299,
         image: IMAGES.tshirt,
-        tags: 'tshirt eyebogler cotton pack of 2 shopsy meesho flipkart'
+        tags: 'tshirt eyebogler cotton pack of 2 shopsy meesho flipkart amazon'
+      },
+      {
+        title: `Bewakoof Men Oversized Graphic Cotton T-Shirt`,
+        brand: 'Bewakoof',
+        basePrice: 449,
+        image: IMAGES.tshirt_graphic,
+        tags: 'tshirt bewakoof oversized graphic printed cotton streetwear loose casual tee flipkart meesho shopsy amazon myntra'
       }
     ];
   } else if (/bottle|flask|water bottle/.test(lower)) {
@@ -842,6 +1179,41 @@ function generateDynamicProducts(query) {
         basePrice: 1026,
         image: IMAGES.water_bottle,
         tags: 'bottle flask milton thermosteel hot cold flipkart meesho shopsy amazon'
+      },
+      {
+        title: `Cello Puro Steel Insulated Water Bottle (900ml)`,
+        brand: 'Cello',
+        basePrice: 649,
+        image: IMAGES.water_bottle,
+        tags: 'bottle cello puro steel insulated gym office flipkart meesho amazon'
+      },
+      {
+        title: `Borosil Stainless Steel Hydra Trek Vacuum Flask (700ml)`,
+        brand: 'Borosil',
+        basePrice: 849,
+        image: IMAGES.water_bottle,
+        tags: 'bottle flask borosil hydra trek vacuum insulated flipkart amazon'
+      },
+      {
+        title: `Boldfit Stainless Steel Gym Shaker Sports Sipper Bottle (750ml)`,
+        brand: 'Boldfit',
+        basePrice: 499,
+        image: IMAGES.water_bottle,
+        tags: 'bottle sipper gym shaker boldfit sports leakproof flipkart amazon meesho'
+      },
+      {
+        title: `Milton Copper Charge 1000ml Pure Copper Water Bottle`,
+        brand: 'Milton',
+        basePrice: 899,
+        image: IMAGES.water_bottle,
+        tags: 'bottle copper milton pure copper health ayurvedic flipkart amazon meesho'
+      },
+      {
+        title: `Milton Spot 750 Stainless Steel Single Wall Bottle`,
+        brand: 'Milton',
+        basePrice: 349,
+        image: IMAGES.water_bottle,
+        tags: 'bottle milton spot steel school office flipkart meesho shopsy amazon'
       }
     ];
   } else if (/earbud|headphone|earphone|audio|tws|sound/.test(lower)) {
@@ -859,33 +1231,131 @@ function generateDynamicProducts(query) {
         basePrice: 2499,
         image: IMAGES.earbuds_black,
         tags: 'earbuds tws oneplus anc wireless croma flipkart amazon'
+      },
+      {
+        title: `SONY WH-ULT900N Wireless Active Noise Cancelling Headphones`,
+        brand: 'Sony',
+        basePrice: 14999,
+        image: IMAGES.sony_headphones,
+        tags: 'headphones sony wireless anc over ear croma amazon flipkart'
+      },
+      {
+        title: `Boult Audio Z40 True Wireless Earbuds with 60H Playtime`,
+        brand: 'Boult',
+        basePrice: 999,
+        image: IMAGES.earbuds,
+        tags: 'earbuds boult z40 tws bluetooth flipkart amazon shopsy meesho'
+      },
+      {
+        title: `boAt Rockerz 255 Pro+ Bluetooth Wireless Neckband`,
+        brand: 'boAt',
+        basePrice: 999,
+        image: IMAGES.boat_headphones,
+        tags: 'headphones neckband boat rockerz bluetooth wireless flipkart amazon shopsy'
+      },
+      {
+        title: `Realme Buds T300 TWS with 30dB Active Noise Cancellation`,
+        brand: 'Realme',
+        basePrice: 2199,
+        image: IMAGES.earbuds_black,
+        tags: 'earbuds realme t300 tws anc wireless flipkart amazon croma'
       }
     ];
   } else if (/watch|smartwatch/.test(lower)) {
     categoryItems = [
       {
-        title: `boAt Wave Sigma 3 Smartwatch with Bluetooth Calling`,
+        title: `boAt Wave Sigma 3 Smartwatch with Bluetooth Calling (1.96-inch)`,
         brand: 'boAt',
         basePrice: 1499,
         image: IMAGES.smartwatch_boat,
         tags: 'watch smartwatch boat calling bluetooth flipkart amazon croma shopsy'
+      },
+      {
+        title: `Noise ColorFit Pulse 3 with 1.96-inch Display & Calling`,
+        brand: 'Noise',
+        basePrice: 1399,
+        image: IMAGES.smartwatch_boat,
+        tags: 'watch smartwatch noise colorfit pulse calling flipkart amazon croma'
+      },
+      {
+        title: `Fire-Boltt Ninja Call Pro Plus 1.83-inch Bluetooth Smartwatch`,
+        brand: 'Fire-Boltt',
+        basePrice: 1199,
+        image: IMAGES.smartwatch_boat,
+        tags: 'watch smartwatch fire-boltt ninja bluetooth calling flipkart amazon meesho'
+      },
+      {
+        title: `Fastrack Limitless FS1 Pro with 1.96-inch Super AMOLED Display`,
+        brand: 'Fastrack',
+        basePrice: 1999,
+        image: IMAGES.smartwatch_boat,
+        tags: 'watch smartwatch fastrack amoled calling flipkart amazon croma'
+      },
+      {
+        title: `Apple Watch SE (2nd Gen, GPS 40mm) Smartwatch`,
+        brand: 'Apple',
+        basePrice: 24900,
+        image: IMAGES.apple_watch,
+        tags: 'watch smartwatch apple se gps fitness retina croma flipkart amazon'
       }
     ];
   } else {
     categoryItems = [
       {
-        title: `${cleanQ} - Premium Quality Verified Edition`,
-        brand: 'PrimeChoice',
-        basePrice: 599,
+        title: `${cleanQ} - Best Value Daily Choice`,
+        brand: 'ValueChoice',
+        basePrice: 299,
         image: IMAGES.neutral_product,
-        tags: `${lower} popular flipkart meesho shopsy croma amazon`
+        tags: `${lower} popular flipkart meesho shopsy croma amazon myntra`
       },
       {
-        title: `${cleanQ} - Pro Value Series for Daily Use`,
-        brand: 'DailySelect',
-        basePrice: 399,
+        title: `${cleanQ} - Everyday Classic Series`,
+        brand: 'ClassicSelect',
+        basePrice: 499,
         image: IMAGES.neutral_product,
-        tags: `${lower} popular flipkart meesho shopsy croma amazon`
+        tags: `${lower} popular flipkart meesho shopsy croma amazon myntra`
+      },
+      {
+        title: `${cleanQ} - Premium Quality Verified Edition`,
+        brand: 'PrimeChoice',
+        basePrice: 799,
+        image: IMAGES.neutral_product,
+        tags: `${lower} popular flipkart meesho shopsy croma amazon myntra`
+      },
+      {
+        title: `${cleanQ} - Pro Ultra Performance Series`,
+        brand: 'ProElite',
+        basePrice: 1199,
+        image: IMAGES.neutral_product,
+        tags: `${lower} popular flipkart meesho shopsy croma amazon myntra`
+      },
+      {
+        title: `${cleanQ} - High Performance Plus Edition`,
+        brand: 'MaxPro',
+        basePrice: 1699,
+        image: IMAGES.neutral_product,
+        tags: `${lower} popular flipkart meesho shopsy croma amazon myntra`
+      },
+      {
+        title: `${cleanQ} - Heavy Duty Commercial Grade`,
+        brand: 'DuraTech',
+        basePrice: 2499,
+        image: IMAGES.neutral_product,
+        tags: `${lower} popular flipkart meesho shopsy croma amazon myntra`
+      },
+      {
+        title: `${cleanQ} - Signature Collection Special Edition`,
+        brand: 'Signature',
+        basePrice: 3499,
+        image: IMAGES.neutral_product,
+        tags: `${lower} popular flipkart meesho shopsy croma amazon myntra`
+      },
+      {
+        title: `${cleanQ} - Luxury Flagship Master Edition`,
+        brand: 'MasterElite',
+        basePrice: 4999,
+        image: IMAGES.neutral_product,
+        tags: `${lower} popular flipkart meesho shopsy croma amazon myntra`
       }
     ];
   }
@@ -903,14 +1373,47 @@ function generateDynamicProducts(query) {
       { seller: 'Amazon India', price: Math.round(item.basePrice * 1.04), originalPrice: Math.round(item.basePrice * 1.7), rating: 4.7, reviewCount: 18400, url: `https://www.amazon.in/s?k=${enc}` },
       { seller: 'Croma', price: Math.round(item.basePrice * 1.06), originalPrice: Math.round(item.basePrice * 1.5), rating: 4.6, reviewCount: 3400, url: `https://www.croma.com/searchB?q=${enc}` },
       { seller: 'Nykaa', price: Math.round(item.basePrice * 1.05), originalPrice: Math.round(item.basePrice * 1.6), rating: 4.7, reviewCount: 8900, url: `https://www.nykaa.com/search/result/?q=${enc}` },
+      { seller: 'Myntra', price: Math.round(item.basePrice * 1.08), originalPrice: Math.round(item.basePrice * 1.6), rating: 4.7, reviewCount: 6200, url: `https://www.myntra.com/search?q=${enc}` },
     ]
   }));
 
   return compileCatalog(rawList);
 }
 
+// Typo map for common online shopping misspellings
+const SEARCH_TYPO_MAP = {
+  shirtr: 'shirt',
+  shrt: 'shirt',
+  shirst: 'shirt',
+  shirtt: 'shirt',
+  tshirtr: 'tshirt',
+  tshrt: 'tshirt',
+  tshirt: 'tshirt',
+  chrger: 'charger',
+  chargr: 'charger',
+  chargerr: 'charger',
+  adaptor: 'adapter',
+  botle: 'bottle',
+  bootle: 'bottle',
+  iphne: 'iphone',
+  iphn: 'iphone',
+  phne: 'phone',
+  moble: 'mobile',
+  shooes: 'shoes',
+  shoe: 'shoes',
+  watche: 'watch',
+  earbud: 'earbuds',
+  headfone: 'headphones',
+  headfones: 'headphones',
+  sari: 'saree',
+  sary: 'saree',
+  pantt: 'pant',
+  jeens: 'jeans'
+};
+
 export function searchCatalog(query = '', { category, minPrice, maxPrice, brand, seller } = {}) {
-  let q = String(query).toLowerCase().trim();
+  let rawQ = String(query).trim();
+  let q = rawQ.toLowerCase();
 
   // Spelling / App Aliases
   if (q === 'nyka') q = 'nykaa';
@@ -918,17 +1421,33 @@ export function searchCatalog(query = '', { category, minPrice, maxPrice, brand,
   if (q === 'shopsey') q = 'shopsy';
   if (q === 'crooma') q = 'croma';
 
-  const terms = q.split(/\s+/).filter(Boolean);
+  // Normalize typos for each term
+  const rawTerms = q.split(/\s+/).filter(Boolean);
+  const terms = rawTerms.map(t => SEARCH_TYPO_MAP[t] || t);
 
   let list = ALL_PRODUCTS;
 
   if (terms.length > 0 && q !== 'popular' && q !== 'all') {
     list = list.filter(g => {
-      const text = `${g.title} ${g.brand} ${g.tags} ${g.searchQuery}`.toLowerCase();
-      return terms.some(t => {
-        if (text.includes(t)) return true;
-        if (t.endsWith('s') && text.includes(t.slice(0, -1))) return true;
-        if (!t.endsWith('s') && text.includes(t + 's')) return true;
+      const text = `${g.title} ${g.brand} ${g.tags} ${g.searchQuery || ''}`.toLowerCase();
+      const words = text.split(/[^a-z0-9]+/);
+      return terms.some((t, idx) => {
+        const rawT = rawTerms[idx] || t;
+
+        // 1. Exact word or title substring
+        if (words.includes(t) || words.includes(rawT)) return true;
+        if (g.title.toLowerCase().includes(t) || (g.searchQuery && g.searchQuery.toLowerCase().includes(t))) return true;
+
+        // 2. Singular / Plural
+        if (t.endsWith('s') && words.includes(t.slice(0, -1))) return true;
+        if (!t.endsWith('s') && words.includes(t + 's')) return true;
+
+        // 3. Trailing typo on word (e.g. "shirtr" -> "shirt", "watche" -> "watch")
+        if (rawT.length >= 5 && words.includes(rawT.slice(0, -1))) return true;
+
+        // 4. Word-level prefix matching (e.g. "charg" -> "charger")
+        if (t.length >= 4 && words.some(w => w.startsWith(t))) return true;
+
         return false;
       });
     });
@@ -936,9 +1455,14 @@ export function searchCatalog(query = '', { category, minPrice, maxPrice, brand,
     list.sort((a, b) => {
       const aText = `${a.title} ${a.brand} ${a.tags}`.toLowerCase();
       const bText = `${b.title} ${b.brand} ${b.tags}`.toLowerCase();
-      const aMatches = terms.filter(t => aText.includes(t)).length;
-      const bMatches = terms.filter(t => bText.includes(t)).length;
-      return bMatches - aMatches;
+      const scoreTerm = (t, text) => {
+        if (text.includes(t)) return 2;
+        if (t.length >= 4 && text.includes(t.slice(0, -1))) return 1;
+        return 0;
+      };
+      const aScore = terms.reduce((acc, t) => acc + scoreTerm(t, aText), 0);
+      const bScore = terms.reduce((acc, t) => acc + scoreTerm(t, bText), 0);
+      return bScore - aScore;
     });
 
     // If no static match, generate category-accurate verified products for this term!
