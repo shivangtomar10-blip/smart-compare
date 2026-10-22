@@ -3,8 +3,6 @@ import { useState } from 'react';
 import { api, money } from '../services/api.js';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useCompare } from '../context/CompareContext.jsx';
-import { getStoreSearchQuery } from '../services/catalog.js';
-
 export default function ProductCard({ product: p }) {
   if (!p) return null;
   const offers = Array.isArray(p.offers) ? p.offers : [];
@@ -21,9 +19,6 @@ export default function ProductCard({ product: p }) {
     ? Math.round((1 - best.price / best.originalPrice) * 100)
     : null;
   const sellerClean = (best.seller || 'store').toLowerCase().replace(/[^a-z]/g, '');
-
-  const cleanTerm = p.searchQuery || getStoreSearchQuery(p.title, p.brand);
-  const qClean = encodeURIComponent(cleanTerm);
 
   return (
     <article className="card prod">
@@ -70,17 +65,25 @@ export default function ProductCard({ product: p }) {
         ))}
       </ul>
 
-      {/* Quick Compare across other popular shopping apps */}
+      {/* Quick direct links to all verified sellers for this exact item */}
       <div className="app-compare-links">
-        <span className="app-compare-label">Apps:</span>
-        <a href={`https://www.meesho.com/search?q=${qClean}`} target="_blank" rel="noopener noreferrer" className="app-mini-btn meesho" title="Check real price on Meesho App">Meesho ↗</a>
-        <a href={`https://www.myntra.com/${qClean}`} target="_blank" rel="noopener noreferrer" className="app-mini-btn myntra" title="Check real price on Myntra App">Myntra ↗</a>
-        {best.seller !== 'Amazon India' && (
-          <a href={`https://www.amazon.in/s?k=${qClean}`} target="_blank" rel="noopener noreferrer" className="app-mini-btn amazon" title="Check real price on Amazon">Amazon ↗</a>
-        )}
-        {best.seller !== 'Flipkart' && (
-          <a href={`https://www.flipkart.com/search?q=${qClean}`} target="_blank" rel="noopener noreferrer" className="app-mini-btn flipkart" title="Check real price on Flipkart">Flipkart ↗</a>
-        )}
+        <span className="app-compare-label">Stores:</span>
+        {offers.map(o => {
+          const sellerKey = o.seller.toLowerCase().replace(/[^a-z]/g, '');
+          const label = o.seller.replace(' India', '');
+          return (
+            <a
+              key={o.url}
+              href={o.url}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className={`app-mini-btn ${sellerKey}`}
+              title={`Open exact item on ${o.seller} (${money(o.price, o.currency)})`}
+            >
+              {label} ↗
+            </a>
+          );
+        })}
       </div>
 
       <div className="acts">
