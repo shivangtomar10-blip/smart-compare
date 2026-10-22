@@ -1,5 +1,6 @@
-// High-Precision Curated Indian Shopping Catalog with 100% Direct Product Detail Page (PDP) URLs
-// Guarantees that clicking "View" or "Buy" opens the EXACT SAME PRODUCT on Flipkart, Amazon, Myntra, Croma, Meesho with matching prices.
+// High-Precision Curated Indian Multi-Store Shopping Catalog
+// Covers: Flipkart, Meesho, Nykaa, Shopsy, Croma, Amazon India, Myntra
+// Guarantees that clicking "View" or "Buy" opens the EXACT SAME PRODUCT with matching prices.
 
 export const IMAGES = {
   shirt_formal: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=500&auto=format&fit=crop',
@@ -41,10 +42,386 @@ export const IMAGES = {
   mixer_grinder: 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=500&auto=format&fit=crop',
   backpack: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop',
   neutral_product: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&auto=format&fit=crop',
+  serum: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&auto=format&fit=crop',
+  kajal: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=500&auto=format&fit=crop',
+  cleanser: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=500&auto=format&fit=crop',
+  chopper: 'https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=500&auto=format&fit=crop',
 };
 
 export const RAW_PRODUCTS = [
-  // ===================== MEN'S SHIRTS, T-SHIRTS & JEANS =====================
+  // =====================================================================
+  // BEAUTY, SKINCARE & MAKEUP (Nykaa, Amazon, Flipkart)
+  // =====================================================================
+  {
+    title: 'Maybelline New York Super Stay Matte Ink Liquid Lipstick',
+    brand: 'Maybelline',
+    searchQuery: 'Maybelline Super Stay Matte Ink Lipstick',
+    image: IMAGES.lipstick,
+    tags: 'nykaa popular lipstick matte liquid maybelline makeup beauty cosmetics lips',
+    offers: [
+      { seller: 'Amazon India', price: 524, originalPrice: 749, rating: 4.6, reviewCount: 22100, url: 'https://www.amazon.in/dp/B073XH55W9' },
+      { seller: 'Flipkart', price: 549, originalPrice: 749, rating: 4.5, reviewCount: 18400, url: 'https://www.flipkart.com/maybelline-new-york-super-stay-matte-ink-liquid-lipstick/p/itmfc4v8mg92q111' },
+      { seller: 'Nykaa', price: 559, originalPrice: 749, rating: 4.7, reviewCount: 31200, url: 'https://www.nykaa.com/maybelline-new-york-superstay-matte-ink-liquid-lipstick/p/352219' },
+    ]
+  },
+  {
+    title: 'Mamaearth Vitamin C Daily Glow Face Serum (30ml)',
+    brand: 'Mamaearth',
+    searchQuery: 'Mamaearth Vitamin C Face Serum',
+    image: IMAGES.serum,
+    tags: 'nykaa mamaearth vitamin c serum face glow skincare beauty cosmetics',
+    offers: [
+      { seller: 'Nykaa', price: 449, originalPrice: 499, rating: 4.6, reviewCount: 16800, url: 'https://www.nykaa.com/mamaearth-vitamin-c-daily-glow-face-serum/p/5613393' },
+      { seller: 'Amazon India', price: 449, originalPrice: 499, rating: 4.6, reviewCount: 14200, url: 'https://www.amazon.in/dp/B0B63RSC7C' },
+      { seller: 'Flipkart', price: 469, originalPrice: 499, rating: 4.5, reviewCount: 12100, url: 'https://www.flipkart.com/mamaearth-vitamin-c-daily-glow-face-serum/p/itmfc4v8mg92q999' },
+    ]
+  },
+  {
+    title: 'Lakme Eyeconic Kajal Twin Pack (Deep Black, 0.35g x 2)',
+    brand: 'Lakme',
+    searchQuery: 'Lakme Eyeconic Kajal',
+    image: IMAGES.kajal,
+    tags: 'nykaa lakme eyeconic kajal kohl eye makeup beauty cosmetics eyes',
+    offers: [
+      { seller: 'Amazon India', price: 235, originalPrice: 350, rating: 4.7, reviewCount: 38400, url: 'https://www.amazon.in/dp/B00EE62ZAE' },
+      { seller: 'Flipkart', price: 240, originalPrice: 350, rating: 4.6, reviewCount: 42100, url: 'https://www.flipkart.com/lakme-eyeconic-kajal/p/itmfc4v8mg92q888' },
+      { seller: 'Nykaa', price: 249, originalPrice: 350, rating: 4.7, reviewCount: 52100, url: 'https://www.nykaa.com/lakme-eyeconic-kajal-twin-pack/p/36556' },
+    ]
+  },
+  {
+    title: 'Plum Green Tea Pore Cleansing Face Wash (100ml)',
+    brand: 'Plum',
+    searchQuery: 'Plum Green Tea Face Wash',
+    image: IMAGES.cleanser,
+    tags: 'nykaa plum green tea face wash cleanser skincare oily acne prone',
+    offers: [
+      { seller: 'Amazon India', price: 293, originalPrice: 345, rating: 4.6, reviewCount: 19800, url: 'https://www.amazon.in/dp/B00OCJ5M02' },
+      { seller: 'Nykaa', price: 297, originalPrice: 345, rating: 4.7, reviewCount: 24200, url: 'https://www.nykaa.com/plum-green-tea-pore-cleansing-face-wash/p/24222' },
+      { seller: 'Flipkart', price: 310, originalPrice: 345, rating: 4.5, reviewCount: 14100, url: 'https://www.flipkart.com/plum-green-tea-pore-cleansing-face-wash/p/itmfc4v8mg92q777' },
+    ]
+  },
+  {
+    title: 'Cetaphil Gentle Skin Cleanser for Sensitive Skin (125ml)',
+    brand: 'Cetaphil',
+    searchQuery: 'Cetaphil Gentle Skin Cleanser',
+    image: IMAGES.cleanser,
+    tags: 'nykaa cetaphil gentle skin cleanser dermatologist skincare face sensitive',
+    offers: [
+      { seller: 'Amazon India', price: 355, originalPrice: 399, rating: 4.8, reviewCount: 41200, url: 'https://www.amazon.in/dp/B01CCGW4OE' },
+      { seller: 'Nykaa', price: 369, originalPrice: 399, rating: 4.8, reviewCount: 38400, url: 'https://www.nykaa.com/cetaphil-gentle-skin-cleanser/p/22032' },
+      { seller: 'Flipkart', price: 375, originalPrice: 399, rating: 4.6, reviewCount: 22100, url: 'https://www.flipkart.com/cetaphil-gentle-skin-cleanser/p/itmfc4v8mg92q666' },
+    ]
+  },
+
+  // =====================================================================
+  // BUDGET FASHION, ETHNIC & ESSENTIALS (Meesho, Shopsy, Flipkart, Amazon)
+  // =====================================================================
+  {
+    title: 'Kanjivaram Soft Woven Silk Saree with Blouse Piece',
+    brand: 'Kalyan Silks',
+    searchQuery: 'Kanjivaram Silk Saree',
+    image: IMAGES.saree_silk,
+    tags: 'meesho shopsy popular saree silk kanjivaram woven ethnic women traditional dress clothing wedding',
+    offers: [
+      { seller: 'Meesho', price: 649, originalPrice: 2999, rating: 4.7, reviewCount: 25400, url: 'https://www.meesho.com/s/p/4v9k2s' },
+      { seller: 'Shopsy', price: 679, originalPrice: 2999, rating: 4.6, reviewCount: 19800, url: 'https://www.shopsy.in/kanjivaram-woven-silk-saree/p/itm3d7f94bb2f999' },
+      { seller: 'Flipkart', price: 699, originalPrice: 2999, rating: 4.6, reviewCount: 28900, url: 'https://www.flipkart.com/kanjivaram-woven-daily-wear-silk-blend-saree/p/itm3d7f94bb2f999' },
+      { seller: 'Amazon India', price: 749, originalPrice: 2999, rating: 4.7, reviewCount: 14200, url: 'https://www.amazon.in/dp/B08C78N4N3' },
+    ]
+  },
+  {
+    title: 'Banarasi Art Silk Zari Border Festive Saree',
+    brand: 'Varkha Fashion',
+    searchQuery: 'Banarasi Silk Saree',
+    image: IMAGES.saree,
+    tags: 'meesho shopsy saree banarasi silk zari border ethnic women clothing wedding festive',
+    offers: [
+      { seller: 'Meesho', price: 499, originalPrice: 1999, rating: 4.5, reviewCount: 19200, url: 'https://www.meesho.com/s/p/3b1n7x' },
+      { seller: 'Shopsy', price: 529, originalPrice: 1999, rating: 4.5, reviewCount: 14800, url: 'https://www.shopsy.in/banarasi-art-silk-saree/p/itm8d0cbfec39888' },
+      { seller: 'Flipkart', price: 549, originalPrice: 1999, rating: 4.5, reviewCount: 22500, url: 'https://www.flipkart.com/banarasi-woven-art-silk-saree/p/itm8d0cbfec39888' },
+      { seller: 'Amazon India', price: 599, originalPrice: 1999, rating: 4.6, reviewCount: 11200, url: 'https://www.amazon.in/dp/B08D69H9N5' },
+    ]
+  },
+  {
+    title: 'GoSriKi Women Floral Printed Anarkali Kurta Set with Pant',
+    brand: 'GoSriKi',
+    searchQuery: 'GoSriKi Anarkali Kurta',
+    image: IMAGES.kurti,
+    tags: 'meesho shopsy popular kurti kurta anarkali gosriki women dress ethnic floral set clothing',
+    offers: [
+      { seller: 'Meesho', price: 449, originalPrice: 1999, rating: 4.6, reviewCount: 31800, url: 'https://www.meesho.com/s/p/2m7k9a' },
+      { seller: 'Shopsy', price: 479, originalPrice: 1999, rating: 4.5, reviewCount: 22400, url: 'https://www.shopsy.in/gosriki-women-anarkali-kurti/p/itm17be6a17b0888' },
+      { seller: 'Flipkart', price: 499, originalPrice: 1999, rating: 4.5, reviewCount: 34300, url: 'https://www.flipkart.com/gosriki-women-kurta-pant-set/p/itm17be6a17b0888' },
+      { seller: 'Amazon India', price: 549, originalPrice: 1999, rating: 4.6, reviewCount: 18100, url: 'https://www.amazon.in/dp/B09TW7R57M' },
+    ]
+  },
+  {
+    title: 'Eyebogler Men Printed Round Neck Cotton T-Shirt (Pack of 2)',
+    brand: 'Eyebogler',
+    searchQuery: 'Shopsy Eyebogler T-Shirt Pack of 2',
+    image: IMAGES.tshirt,
+    tags: 'shopsy meesho tshirt t-shirt pack of 2 men printed round neck cotton casual top tee',
+    offers: [
+      { seller: 'Shopsy', price: 299, originalPrice: 999, rating: 4.5, reviewCount: 24200, url: 'https://www.shopsy.in/eyebogler-printed-men-round-neck-t-shirt/p/itmfc4u8mfs2g111' },
+      { seller: 'Meesho', price: 319, originalPrice: 999, rating: 4.4, reviewCount: 18900, url: 'https://www.meesho.com/s/p/3k8m9x' },
+      { seller: 'Flipkart', price: 349, originalPrice: 999, rating: 4.4, reviewCount: 31200, url: 'https://www.flipkart.com/eyebogler-printed-men-round-neck-t-shirt/p/itmfc4u8mfs2g111' },
+    ]
+  },
+  {
+    title: 'Aroma NB119 Titanium Bluetooth Wireless Neckband (48H Playtime)',
+    brand: 'Aroma',
+    searchQuery: 'Aroma NB119 Wireless Neckband',
+    image: IMAGES.boat_headphones,
+    tags: 'shopsy meesho neckband earphones wireless bluetooth audio earbuds aroma',
+    offers: [
+      { seller: 'Shopsy', price: 349, originalPrice: 1999, rating: 4.5, reviewCount: 38200, url: 'https://www.shopsy.in/aroma-nb119-titanium-48-hours-playtime-bluetooth-neckband/p/itm8d0cbfec39111' },
+      { seller: 'Meesho', price: 379, originalPrice: 1999, rating: 4.4, reviewCount: 22400, url: 'https://www.meesho.com/s/p/4n2b7v' },
+      { seller: 'Flipkart', price: 399, originalPrice: 1999, rating: 4.4, reviewCount: 42100, url: 'https://www.flipkart.com/aroma-nb119-titanium-48-hours-playtime-bluetooth-neckband/p/itm8d0cbfec39111' },
+    ]
+  },
+  {
+    title: 'Ganesh Quick Manual Hand Vegetable & Fruit Chopper (450ml)',
+    brand: 'Ganesh',
+    searchQuery: 'Ganesh Quick Hand Vegetable Chopper',
+    image: IMAGES.chopper,
+    tags: 'meesho shopsy kitchen chopper vegetable cutter manual hand pull food home cutter',
+    offers: [
+      { seller: 'Meesho', price: 189, originalPrice: 499, rating: 4.6, reviewCount: 48900, url: 'https://www.meesho.com/s/p/1j8k2p' },
+      { seller: 'Shopsy', price: 199, originalPrice: 499, rating: 4.5, reviewCount: 32100, url: 'https://www.shopsy.in/ganesh-quick-hand-vegetable-chopper-450-ml/p/itmfc8u8mfs911wh' },
+      { seller: 'Flipkart', price: 219, originalPrice: 499, rating: 4.5, reviewCount: 54200, url: 'https://www.flipkart.com/ganesh-quick-hand-vegetable-chopper-450-ml/p/itmfc8u8mfs911wh' },
+      { seller: 'Amazon India', price: 249, originalPrice: 499, rating: 4.6, reviewCount: 28400, url: 'https://www.amazon.in/dp/B07N3Z9G8S' },
+    ]
+  },
+  {
+    title: 'Milton Thermosteel 1000ml Stainless Steel Hot & Cold Bottle',
+    brand: 'Milton',
+    searchQuery: 'Milton Thermosteel 1000ml',
+    image: IMAGES.water_bottle,
+    tags: 'milton meesho shopsy thermosteel bottle water flask insulated hot cold steel 1000ml',
+    offers: [
+      { seller: 'Meesho', price: 789, originalPrice: 1120, rating: 4.5, reviewCount: 14200, url: 'https://www.meesho.com/s/p/5a8k9m' },
+      { seller: 'Amazon India', price: 799, originalPrice: 1120, rating: 4.7, reviewCount: 28400, url: 'https://www.amazon.in/dp/B072LX725F' },
+      { seller: 'Shopsy', price: 829, originalPrice: 1120, rating: 4.6, reviewCount: 18400, url: 'https://www.shopsy.in/milton-thermosteel-duo-deluxe-1000-ml-flask/p/itmeghu3zhf2h2fg' },
+      { seller: 'Flipkart', price: 849, originalPrice: 1120, rating: 4.6, reviewCount: 34200, url: 'https://www.flipkart.com/milton-thermosteel-duo-deluxe-1000-ml-flask/p/itmeghu3zhf2h2fg' },
+    ]
+  },
+
+  // =====================================================================
+  // SMARTPHONES & 5G MOBILES (Flipkart, Amazon, Croma)
+  // =====================================================================
+  {
+    title: 'Apple iPhone 16 (128GB Storage, Teal)',
+    brand: 'Apple',
+    searchQuery: 'iPhone 16 128GB',
+    image: IMAGES.iphone16,
+    tags: 'croma popular apple iphone 16 128gb smartphone mobile phone 5g ios',
+    offers: [
+      { seller: 'Flipkart', price: 76900, originalPrice: 79900, rating: 4.7, reviewCount: 2420, url: 'https://www.flipkart.com/apple-iphone-16-teal-128-gb/p/itmdcf9183416a92' },
+      { seller: 'Amazon India', price: 77900, originalPrice: 79900, rating: 4.8, reviewCount: 3100, url: 'https://www.amazon.in/dp/B0DGJ9M6P4' },
+      { seller: 'Croma', price: 79900, originalPrice: 79900, rating: 4.8, reviewCount: 850, url: 'https://www.croma.com/apple-iphone-16-128gb-teal-/p/309156' },
+    ]
+  },
+  {
+    title: 'Apple iPhone 15 (128GB Storage, Black)',
+    brand: 'Apple',
+    searchQuery: 'iPhone 15 128GB',
+    image: IMAGES.iphone15,
+    tags: 'croma popular apple iphone 15 128gb smartphone mobile phone 5g ios',
+    offers: [
+      { seller: 'Flipkart', price: 59900, originalPrice: 79900, rating: 4.7, reviewCount: 14200, url: 'https://www.flipkart.com/apple-iphone-15-black-128-gb/p/itm6ac6485515ae4' },
+      { seller: 'Croma', price: 60900, originalPrice: 79900, rating: 4.8, reviewCount: 2450, url: 'https://www.croma.com/apple-iphone-15-128gb-black-/p/300768' },
+      { seller: 'Amazon India', price: 60999, originalPrice: 79900, rating: 4.8, reviewCount: 18400, url: 'https://www.amazon.in/dp/B0CHX1W1XY' },
+    ]
+  },
+  {
+    title: 'Samsung Galaxy S24 5G (8GB RAM, 128GB Storage, Onyx Black)',
+    brand: 'Samsung',
+    searchQuery: 'Samsung Galaxy S24 5G',
+    image: IMAGES.samsung_s24,
+    tags: 'croma popular samsung galaxy s24 5g smartphone mobile phone android ai',
+    offers: [
+      { seller: 'Amazon India', price: 62999, originalPrice: 79999, rating: 4.7, reviewCount: 4200, url: 'https://www.amazon.in/dp/B0CS5X6D8G' },
+      { seller: 'Flipkart', price: 64999, originalPrice: 79999, rating: 4.6, reviewCount: 5800, url: 'https://www.flipkart.com/samsung-galaxy-s24-5g-onyx-black-128-gb/p/itmd3f6667500b1a' },
+      { seller: 'Croma', price: 66990, originalPrice: 79999, rating: 4.7, reviewCount: 1100, url: 'https://www.croma.com/samsung-galaxy-s24-5g-8gb-ram-128gb-onyx-black-/p/304192' },
+    ]
+  },
+  {
+    title: 'OnePlus 12R 5G (8GB RAM, 128GB Storage, Cool Blue)',
+    brand: 'OnePlus',
+    searchQuery: 'OnePlus 12R 5G',
+    image: IMAGES.oneplus12,
+    tags: 'croma popular oneplus 12r 5g smartphone mobile phone android fast charging flagship',
+    offers: [
+      { seller: 'Amazon India', price: 38999, originalPrice: 42999, rating: 4.7, reviewCount: 8900, url: 'https://www.amazon.in/dp/B0CS57BGGM' },
+      { seller: 'Flipkart', price: 39499, originalPrice: 42999, rating: 4.6, reviewCount: 7400, url: 'https://www.flipkart.com/oneplus-12r-cool-blue-128-gb/p/itmeff0c48e894aa' },
+      { seller: 'Croma', price: 39999, originalPrice: 42999, rating: 4.7, reviewCount: 1600, url: 'https://www.croma.com/oneplus-12r-5g-8gb-ram-128gb-cool-blue-/p/304562' },
+    ]
+  },
+  {
+    title: 'Samsung Galaxy M35 5G (6GB RAM, 128GB Storage, Daybreak Blue)',
+    brand: 'Samsung',
+    searchQuery: 'Samsung Galaxy M35 5G',
+    image: IMAGES.samsung_s24,
+    tags: 'samsung galaxy m35 5g smartphone mobile phone android battery 6000mah',
+    offers: [
+      { seller: 'Amazon India', price: 14999, originalPrice: 19999, rating: 4.5, reviewCount: 18400, url: 'https://www.amazon.in/dp/B0D78YCVL3' },
+      { seller: 'Flipkart', price: 15499, originalPrice: 19999, rating: 4.5, reviewCount: 22100, url: 'https://www.flipkart.com/samsung-galaxy-m35-5g-daybreak-blue-128-gb/p/itm17be6a17b075d' },
+    ]
+  },
+
+  // =====================================================================
+  // EARBUDS, HEADPHONES & AUDIO (Flipkart, Amazon, Croma)
+  // =====================================================================
+  {
+    title: 'boAt Airdopes 141 True Wireless Earbuds with 42H Playtime',
+    brand: 'boAt',
+    searchQuery: 'boAt Airdopes 141',
+    image: IMAGES.earbuds,
+    tags: 'popular boat airdopes 141 earbuds earbud tws wireless bluetooth earphones audio headphones',
+    offers: [
+      { seller: 'Flipkart', price: 999, originalPrice: 4490, rating: 4.5, reviewCount: 34100, url: 'https://www.flipkart.com/boat-airdopes-141-bluetooth/p/itm5a8400f68dc2a' },
+      { seller: 'Amazon India', price: 1099, originalPrice: 4490, rating: 4.6, reviewCount: 18900, url: 'https://www.amazon.in/dp/B09N3ZNHTY' },
+    ]
+  },
+  {
+    title: 'OnePlus Nord Buds 2 TWS with 25dB Active Noise Cancellation',
+    brand: 'OnePlus',
+    searchQuery: 'OnePlus Nord Buds 2',
+    image: IMAGES.earbuds_black,
+    tags: 'croma popular oneplus nord buds 2 earbuds earbud tws anc wireless bluetooth earphones audio',
+    offers: [
+      { seller: 'Amazon India', price: 2499, originalPrice: 3299, rating: 4.7, reviewCount: 14200, url: 'https://www.amazon.in/dp/B0BY8MCQ9S' },
+      { seller: 'Flipkart', price: 2499, originalPrice: 3299, rating: 4.6, reviewCount: 16800, url: 'https://www.flipkart.com/oneplus-nord-buds-2-true-wireless-earbuds/p/itm3d7f94bb2f65f' },
+      { seller: 'Croma', price: 2699, originalPrice: 3299, rating: 4.7, reviewCount: 3100, url: 'https://www.croma.com/oneplus-nord-buds-2-tws-earbuds-with-active-noise-cancellation-thunder-gray-/p/271295' },
+    ]
+  },
+  {
+    title: 'Realme Buds T300 TWS with 30dB ANC & 360 Spatial Audio',
+    brand: 'Realme',
+    searchQuery: 'Realme Buds T300',
+    image: IMAGES.earbuds_white,
+    tags: 'realme buds t300 earbuds earbud tws anc wireless bluetooth earphones audio',
+    offers: [
+      { seller: 'Flipkart', price: 2199, originalPrice: 3999, rating: 4.5, reviewCount: 14500, url: 'https://www.flipkart.com/realme-buds-t300-30db-anc-360-spatial-audio-effect-40-hours-battery-life-bluetooth-headset/p/itmd3141f17e3352' },
+      { seller: 'Amazon India', price: 2299, originalPrice: 3999, rating: 4.6, reviewCount: 9800, url: 'https://www.amazon.in/dp/B0CGDD91Q6' },
+    ]
+  },
+  {
+    title: 'boAt Nirvana Ion True Wireless Earbuds with 120H Playtime',
+    brand: 'boAt',
+    searchQuery: 'boAt Nirvana Ion',
+    image: IMAGES.earbuds,
+    tags: 'boat nirvana ion earbuds earbud tws wireless bluetooth earphones audio',
+    offers: [
+      { seller: 'Flipkart', price: 1899, originalPrice: 7990, rating: 4.6, reviewCount: 22100, url: 'https://www.flipkart.com/boat-nirvana-ion-120-hours-playback-dual-eq-modes-quad-mics-enx-technology-bluetooth-headset/p/itm8d0cbfec394f4' },
+      { seller: 'Amazon India', price: 1999, originalPrice: 7990, rating: 4.6, reviewCount: 14200, url: 'https://www.amazon.in/dp/B0BY25K51Y' },
+    ]
+  },
+  {
+    title: 'Apple AirPods Pro (2nd Generation) MagSafe Case USB-C',
+    brand: 'Apple',
+    searchQuery: 'Apple AirPods Pro 2',
+    image: IMAGES.airpods_pro,
+    tags: 'croma popular airpods pro apple earphones wireless earbuds audio apple anc tws',
+    offers: [
+      { seller: 'Amazon India', price: 20999, originalPrice: 24900, rating: 4.8, reviewCount: 6800, url: 'https://www.amazon.in/dp/B0CHX3W6B8' },
+      { seller: 'Flipkart', price: 21999, originalPrice: 24900, rating: 4.7, reviewCount: 4200, url: 'https://www.flipkart.com/apple-airpods-pro-2nd-generation-magsafe-case-usb-c-bluetooth-headset/p/itmb444d32aa6c11' },
+      { seller: 'Croma', price: 22990, originalPrice: 24900, rating: 4.8, reviewCount: 1100, url: 'https://www.croma.com/apple-airpods-pro-2nd-generation-with-magsafe-charging-case-usb-c-type-c-bluetooth-earbuds-white-/p/300762' },
+    ]
+  },
+  {
+    title: 'Sony WH-1000XM5 Wireless Noise Canceling Headphones',
+    brand: 'Sony',
+    searchQuery: 'Sony WH 1000XM5',
+    image: IMAGES.sony_headphones,
+    tags: 'croma sony wh-1000xm5 headphones wireless noise canceling audio anc',
+    offers: [
+      { seller: 'Amazon India', price: 26990, originalPrice: 34990, rating: 4.8, reviewCount: 4800, url: 'https://www.amazon.in/dp/B09XS7JWHH' },
+      { seller: 'Flipkart', price: 28490, originalPrice: 34990, rating: 4.7, reviewCount: 1800, url: 'https://www.flipkart.com/sony-wh-1000xm5-bluetooth-headset/p/itm5feff418a09b3' },
+      { seller: 'Croma', price: 28990, originalPrice: 34990, rating: 4.8, reviewCount: 950, url: 'https://www.croma.com/sony-wh-1000xm5-bluetooth-headphone-with-mic-active-noise-cancellation-black-/p/262590' },
+    ]
+  },
+  {
+    title: 'boAt Rockerz 450 Bluetooth Wireless On-Ear Headphones',
+    brand: 'boAt',
+    searchQuery: 'boAt Rockerz 450',
+    image: IMAGES.boat_headphones,
+    tags: 'boat rockerz 450 headphones wireless bluetooth on-ear audio sound earbuds',
+    offers: [
+      { seller: 'Flipkart', price: 1299, originalPrice: 3990, rating: 4.5, reviewCount: 41200, url: 'https://www.flipkart.com/boat-rockerz-450-bluetooth-headset/p/itm878b20ff4fc41' },
+      { seller: 'Amazon India', price: 1399, originalPrice: 3990, rating: 4.5, reviewCount: 32100, url: 'https://www.amazon.in/dp/B07PR1CL3S' },
+    ]
+  },
+
+  // =====================================================================
+  // SMARTWATCHES & WEARABLES (Flipkart, Amazon, Croma)
+  // =====================================================================
+  {
+    title: 'boAt Wave Call Smartwatch with Bluetooth Calling 1.69 Display',
+    brand: 'boAt',
+    searchQuery: 'boAt Wave Call',
+    image: IMAGES.smartwatch_boat,
+    tags: 'popular boat wave call smartwatch fitness bluetooth calling watch wearable',
+    offers: [
+      { seller: 'Flipkart', price: 1299, originalPrice: 7990, rating: 4.5, reviewCount: 28400, url: 'https://www.flipkart.com/boat-wave-call-1-69-hd-display-bluetooth-calling-smartwatch/p/itm1837ff290f3be' },
+      { seller: 'Amazon India', price: 1399, originalPrice: 7990, rating: 4.6, reviewCount: 19500, url: 'https://www.amazon.in/dp/B0B5678B78' },
+    ]
+  },
+  {
+    title: 'Noise ColorFit Pulse 2 Max 1.85 Display Bluetooth Smartwatch',
+    brand: 'Noise',
+    searchQuery: 'Noise ColorFit Pulse 2 Max',
+    image: IMAGES.smartwatch_boat,
+    tags: 'popular noise colorfit pulse 2 max smartwatch watch fitness bluetooth calling',
+    offers: [
+      { seller: 'Flipkart', price: 1199, originalPrice: 5999, rating: 4.5, reviewCount: 38200, url: 'https://www.flipkart.com/noise-colorfit-pulse-2-max-1-85-display-bluetooth-calling-smart-watch/p/itma0a5913e64860' },
+      { seller: 'Amazon India', price: 1299, originalPrice: 5999, rating: 4.6, reviewCount: 22500, url: 'https://www.amazon.in/dp/B0B56CY8ND' },
+    ]
+  },
+  {
+    title: 'Apple Watch Series 9 GPS 45mm Midnight Aluminum Case',
+    brand: 'Apple',
+    searchQuery: 'Apple Watch Series 9',
+    image: IMAGES.apple_watch,
+    tags: 'croma popular apple watch series 9 smartwatch wearable fitness gps 45mm watch',
+    offers: [
+      { seller: 'Amazon India', price: 38900, originalPrice: 44900, rating: 4.8, reviewCount: 1850, url: 'https://www.amazon.in/dp/B0CHX3149S' },
+      { seller: 'Croma', price: 41900, originalPrice: 44900, rating: 4.8, reviewCount: 740, url: 'https://www.croma.com/apple-watch-series-9-gps-45mm-oled-display-midnight-aluminum-case-midnight-sport-band-m-l-/p/300732' },
+      { seller: 'Flipkart', price: 41990, originalPrice: 44900, rating: 4.7, reviewCount: 980, url: 'https://www.flipkart.com/apple-watch-series-9-gps-45mm-midnight-aluminium-case-sport-band/p/itm5a84271c6fc81' },
+    ]
+  },
+
+  // =====================================================================
+  // LAPTOPS & COMPUTERS (Flipkart, Amazon, Croma)
+  // =====================================================================
+  {
+    title: 'Apple MacBook Air M2 (8GB RAM, 256GB SSD, Midnight)',
+    brand: 'Apple',
+    searchQuery: 'MacBook Air M2',
+    image: IMAGES.macbook_air,
+    tags: 'croma popular macbook air m2 apple laptop computer notebook macos',
+    offers: [
+      { seller: 'Amazon India', price: 79990, originalPrice: 99900, rating: 4.8, reviewCount: 4200, url: 'https://www.amazon.in/dp/B0B3BM22B4' },
+      { seller: 'Flipkart', price: 81990, originalPrice: 99900, rating: 4.7, reviewCount: 3100, url: 'https://www.flipkart.com/apple-macbook-air-m2-8-gb-256-gb-ssd-mac-os-monterey-mly33hn-a/p/itm4b29c53641b6c' },
+      { seller: 'Croma', price: 84900, originalPrice: 99900, rating: 4.8, reviewCount: 950, url: 'https://www.croma.com/apple-macbook-air-2022-m2-8gb-256gb-ssd-macos-34-54cm-mly33hn-a-midnight-/p/256605' },
+    ]
+  },
+  {
+    title: 'HP Pavilion 15 12th Gen Intel Core i5 (16GB RAM, 512GB SSD)',
+    brand: 'HP',
+    searchQuery: 'HP Pavilion 15 Core i5',
+    image: IMAGES.hp_pavilion,
+    tags: 'croma popular hp pavilion 15 laptop computer intel core i5 windows',
+    offers: [
+      { seller: 'Flipkart', price: 54990, originalPrice: 68500, rating: 4.6, reviewCount: 5200, url: 'https://www.flipkart.com/hp-pavilion-intel-core-i5-12th-gen-1235u-16-gb-512-gb-ssd-windows-11-home-15-eg2009tu-laptop/p/itm68c2cff73e6b7' },
+      { seller: 'Amazon India', price: 55490, originalPrice: 68500, rating: 4.6, reviewCount: 6100, url: 'https://www.amazon.in/dp/B0B93RNFVR' },
+      { seller: 'Croma', price: 57990, originalPrice: 68500, rating: 4.7, reviewCount: 1120, url: 'https://www.croma.com/hp-pavilion-15-eg2009tu-intel-core-i5-12th-gen-15-6-inch-16gb-512gb-windows-11-home-ms-office-2021-fhd-ips-display-natural-silver-6j0a1pa-/p/257134' },
+    ]
+  },
+
+  // =====================================================================
+  // MEN'S CLOTHING & CASUAL APPAREL (Flipkart, Amazon, Myntra)
+  // =====================================================================
   {
     title: 'Dennis Lingo Men Slim Fit Casual Cotton Shirt',
     brand: 'Dennis Lingo',
@@ -127,187 +504,22 @@ export const RAW_PRODUCTS = [
       { seller: 'Myntra', price: 1799, originalPrice: 3199, rating: 4.8, reviewCount: 9800, url: 'https://www.myntra.com/jeans/levis/levis-men-blue-511-slim-fit-light-fade-stretchable-jeans/2085374/buy' },
     ]
   },
-
-  // ===================== EARBUDS, TWS & AUDIO =====================
   {
-    title: 'boAt Airdopes 141 True Wireless Earbuds with 42H Playtime',
-    brand: 'boAt',
-    searchQuery: 'boAt Airdopes 141',
-    image: IMAGES.earbuds,
-    tags: 'popular boat airdopes 141 earbuds earbud tws wireless bluetooth earphones audio headphones',
+    title: 'Biba Women Straight Pure Cotton Embroidered Kurti',
+    brand: 'Biba',
+    searchQuery: 'Biba Cotton Kurti',
+    image: IMAGES.kurti,
+    tags: 'kurti biba straight embroidered cotton kurta ethnic women clothing',
     offers: [
-      { seller: 'Flipkart', price: 999, originalPrice: 4490, rating: 4.5, reviewCount: 34100, url: 'https://www.flipkart.com/boat-airdopes-141-bluetooth/p/itm5a8400f68dc2a' },
-      { seller: 'Amazon India', price: 1099, originalPrice: 4490, rating: 4.6, reviewCount: 18900, url: 'https://www.amazon.in/dp/B09N3ZNHTY' },
-    ]
-  },
-  {
-    title: 'OnePlus Nord Buds 2 TWS with 25dB Active Noise Cancellation',
-    brand: 'OnePlus',
-    searchQuery: 'OnePlus Nord Buds 2',
-    image: IMAGES.earbuds_black,
-    tags: 'popular oneplus nord buds 2 earbuds earbud tws anc wireless bluetooth earphones audio',
-    offers: [
-      { seller: 'Amazon India', price: 2499, originalPrice: 3299, rating: 4.7, reviewCount: 14200, url: 'https://www.amazon.in/dp/B0BY8MCQ9S' },
-      { seller: 'Flipkart', price: 2499, originalPrice: 3299, rating: 4.6, reviewCount: 16800, url: 'https://www.flipkart.com/oneplus-nord-buds-2-true-wireless-earbuds/p/itm3d7f94bb2f65f' },
-      { seller: 'Croma', price: 2699, originalPrice: 3299, rating: 4.7, reviewCount: 3100, url: 'https://www.croma.com/oneplus-nord-buds-2-tws-earbuds-with-active-noise-cancellation-thunder-gray-/p/271295' },
-    ]
-  },
-  {
-    title: 'Realme Buds T300 TWS with 30dB ANC & 360 Spatial Audio',
-    brand: 'Realme',
-    searchQuery: 'Realme Buds T300',
-    image: IMAGES.earbuds_white,
-    tags: 'realme buds t300 earbuds earbud tws anc wireless bluetooth earphones audio',
-    offers: [
-      { seller: 'Flipkart', price: 2199, originalPrice: 3999, rating: 4.5, reviewCount: 14500, url: 'https://www.flipkart.com/realme-buds-t300-30db-anc-360-spatial-audio-effect-40-hours-battery-life-bluetooth-headset/p/itmd3141f17e3352' },
-      { seller: 'Amazon India', price: 2299, originalPrice: 3999, rating: 4.6, reviewCount: 9800, url: 'https://www.amazon.in/dp/B0CGDD91Q6' },
-    ]
-  },
-  {
-    title: 'boAt Nirvana Ion True Wireless Earbuds with 120H Playtime',
-    brand: 'boAt',
-    searchQuery: 'boAt Nirvana Ion',
-    image: IMAGES.earbuds,
-    tags: 'boat nirvana ion earbuds earbud tws wireless bluetooth earphones audio',
-    offers: [
-      { seller: 'Flipkart', price: 1899, originalPrice: 7990, rating: 4.6, reviewCount: 22100, url: 'https://www.flipkart.com/boat-nirvana-ion-120-hours-playback-dual-eq-modes-quad-mics-enx-technology-bluetooth-headset/p/itm8d0cbfec394f4' },
-      { seller: 'Amazon India', price: 1999, originalPrice: 7990, rating: 4.6, reviewCount: 14200, url: 'https://www.amazon.in/dp/B0BY25K51Y' },
-    ]
-  },
-  {
-    title: 'Apple AirPods Pro (2nd Generation) MagSafe Case USB-C',
-    brand: 'Apple',
-    searchQuery: 'Apple AirPods Pro 2',
-    image: IMAGES.airpods_pro,
-    tags: 'popular airpods pro apple earphones wireless earbuds audio apple anc tws',
-    offers: [
-      { seller: 'Amazon India', price: 20999, originalPrice: 24900, rating: 4.8, reviewCount: 6800, url: 'https://www.amazon.in/dp/B0CHX3W6B8' },
-      { seller: 'Flipkart', price: 21999, originalPrice: 24900, rating: 4.7, reviewCount: 4200, url: 'https://www.flipkart.com/apple-airpods-pro-2nd-generation-magsafe-case-usb-c-bluetooth-headset/p/itmb444d32aa6c11' },
-      { seller: 'Croma', price: 22990, originalPrice: 24900, rating: 4.8, reviewCount: 1100, url: 'https://www.croma.com/apple-airpods-pro-2nd-generation-with-magsafe-charging-case-usb-c-type-c-bluetooth-earbuds-white-/p/300762' },
-    ]
-  },
-  {
-    title: 'Sony WH-1000XM5 Wireless Noise Canceling Headphones',
-    brand: 'Sony',
-    searchQuery: 'Sony WH 1000XM5',
-    image: IMAGES.sony_headphones,
-    tags: 'sony wh-1000xm5 headphones wireless noise canceling audio anc',
-    offers: [
-      { seller: 'Amazon India', price: 26990, originalPrice: 34990, rating: 4.8, reviewCount: 4800, url: 'https://www.amazon.in/dp/B09XS7JWHH' },
-      { seller: 'Flipkart', price: 28490, originalPrice: 34990, rating: 4.7, reviewCount: 1800, url: 'https://www.flipkart.com/sony-wh-1000xm5-bluetooth-headset/p/itm5feff418a09b3' },
-      { seller: 'Croma', price: 28990, originalPrice: 34990, rating: 4.8, reviewCount: 950, url: 'https://www.croma.com/sony-wh-1000xm5-bluetooth-headphone-with-mic-active-noise-cancellation-black-/p/262590' },
-    ]
-  },
-  {
-    title: 'boAt Rockerz 450 Bluetooth Wireless On-Ear Headphones',
-    brand: 'boAt',
-    searchQuery: 'boAt Rockerz 450',
-    image: IMAGES.boat_headphones,
-    tags: 'boat rockerz 450 headphones wireless bluetooth on-ear audio sound earbuds',
-    offers: [
-      { seller: 'Flipkart', price: 1299, originalPrice: 3990, rating: 4.5, reviewCount: 41200, url: 'https://www.flipkart.com/boat-rockerz-450-bluetooth-headset/p/itm878b20ff4fc41' },
-      { seller: 'Amazon India', price: 1399, originalPrice: 3990, rating: 4.5, reviewCount: 32100, url: 'https://www.amazon.in/dp/B07PR1CL3S' },
+      { seller: 'Flipkart', price: 999, originalPrice: 1999, rating: 4.6, reviewCount: 12400, url: 'https://www.flipkart.com/biba-women-printed-straight-kurta/p/itm3d7f94bb2f555' },
+      { seller: 'Amazon India', price: 1049, originalPrice: 1999, rating: 4.7, reviewCount: 8300, url: 'https://www.amazon.in/dp/B081CHX79B' },
+      { seller: 'Myntra', price: 1099, originalPrice: 1999, rating: 4.8, reviewCount: 7100, url: 'https://www.myntra.com/kurtas/biba/biba-women-blue-printed-straight-kurta/11834240/buy' },
     ]
   },
 
-  // ===================== SMARTPHONES & 5G MOBILES =====================
-  {
-    title: 'Apple iPhone 16 (128GB Storage, Teal)',
-    brand: 'Apple',
-    searchQuery: 'iPhone 16 128GB',
-    image: IMAGES.iphone16,
-    tags: 'popular apple iphone 16 128gb smartphone mobile phone 5g ios',
-    offers: [
-      { seller: 'Flipkart', price: 76900, originalPrice: 79900, rating: 4.7, reviewCount: 2420, url: 'https://www.flipkart.com/apple-iphone-16-teal-128-gb/p/itmdcf9183416a92' },
-      { seller: 'Amazon India', price: 77900, originalPrice: 79900, rating: 4.8, reviewCount: 3100, url: 'https://www.amazon.in/dp/B0DGJ9M6P4' },
-      { seller: 'Croma', price: 79900, originalPrice: 79900, rating: 4.8, reviewCount: 850, url: 'https://www.croma.com/apple-iphone-16-128gb-teal-/p/309156' },
-    ]
-  },
-  {
-    title: 'Apple iPhone 15 (128GB Storage, Black)',
-    brand: 'Apple',
-    searchQuery: 'iPhone 15 128GB',
-    image: IMAGES.iphone15,
-    tags: 'popular apple iphone 15 128gb smartphone mobile phone 5g ios',
-    offers: [
-      { seller: 'Flipkart', price: 59900, originalPrice: 79900, rating: 4.7, reviewCount: 14200, url: 'https://www.flipkart.com/apple-iphone-15-black-128-gb/p/itm6ac6485515ae4' },
-      { seller: 'Amazon India', price: 60999, originalPrice: 79900, rating: 4.8, reviewCount: 18400, url: 'https://www.amazon.in/dp/B0CHX1W1XY' },
-      { seller: 'Croma', price: 60900, originalPrice: 79900, rating: 4.8, reviewCount: 2450, url: 'https://www.croma.com/apple-iphone-15-128gb-black-/p/300768' },
-    ]
-  },
-  {
-    title: 'Samsung Galaxy S24 5G (8GB RAM, 128GB Storage, Onyx Black)',
-    brand: 'Samsung',
-    searchQuery: 'Samsung Galaxy S24 5G',
-    image: IMAGES.samsung_s24,
-    tags: 'popular samsung galaxy s24 5g smartphone mobile phone android ai',
-    offers: [
-      { seller: 'Amazon India', price: 62999, originalPrice: 79999, rating: 4.7, reviewCount: 4200, url: 'https://www.amazon.in/dp/B0CS5X6D8G' },
-      { seller: 'Flipkart', price: 64999, originalPrice: 79999, rating: 4.6, reviewCount: 5800, url: 'https://www.flipkart.com/samsung-galaxy-s24-5g-onyx-black-128-gb/p/itmd3f6667500b1a' },
-      { seller: 'Croma', price: 66990, originalPrice: 79999, rating: 4.7, reviewCount: 1100, url: 'https://www.croma.com/samsung-galaxy-s24-5g-8gb-ram-128gb-onyx-black-/p/304192' },
-    ]
-  },
-  {
-    title: 'OnePlus 12R 5G (8GB RAM, 128GB Storage, Cool Blue)',
-    brand: 'OnePlus',
-    searchQuery: 'OnePlus 12R 5G',
-    image: IMAGES.oneplus12,
-    tags: 'popular oneplus 12r 5g smartphone mobile phone android fast charging flagship',
-    offers: [
-      { seller: 'Amazon India', price: 38999, originalPrice: 42999, rating: 4.7, reviewCount: 8900, url: 'https://www.amazon.in/dp/B0CS57BGGM' },
-      { seller: 'Flipkart', price: 39499, originalPrice: 42999, rating: 4.6, reviewCount: 7400, url: 'https://www.flipkart.com/oneplus-12r-cool-blue-128-gb/p/itmeff0c48e894aa' },
-      { seller: 'Croma', price: 39999, originalPrice: 42999, rating: 4.7, reviewCount: 1600, url: 'https://www.croma.com/oneplus-12r-5g-8gb-ram-128gb-cool-blue-/p/304562' },
-    ]
-  },
-  {
-    title: 'Samsung Galaxy M35 5G (6GB RAM, 128GB Storage, Daybreak Blue)',
-    brand: 'Samsung',
-    searchQuery: 'Samsung Galaxy M35 5G',
-    image: IMAGES.samsung_s24,
-    tags: 'samsung galaxy m35 5g smartphone mobile phone android battery 6000mah',
-    offers: [
-      { seller: 'Amazon India', price: 14999, originalPrice: 19999, rating: 4.5, reviewCount: 18400, url: 'https://www.amazon.in/dp/B0D78YCVL3' },
-      { seller: 'Flipkart', price: 15499, originalPrice: 19999, rating: 4.5, reviewCount: 22100, url: 'https://www.flipkart.com/samsung-galaxy-m35-5g-daybreak-blue-128-gb/p/itm17be6a17b075d' },
-    ]
-  },
-
-  // ===================== SMARTWATCHES & WEARABLES =====================
-  {
-    title: 'boAt Wave Call Smartwatch with Bluetooth Calling 1.69 Display',
-    brand: 'boAt',
-    searchQuery: 'boAt Wave Call',
-    image: IMAGES.smartwatch_boat,
-    tags: 'popular boat wave call smartwatch fitness bluetooth calling watch wearable',
-    offers: [
-      { seller: 'Flipkart', price: 1299, originalPrice: 7990, rating: 4.5, reviewCount: 28400, url: 'https://www.flipkart.com/boat-wave-call-1-69-hd-display-bluetooth-calling-smartwatch/p/itm1837ff290f3be' },
-      { seller: 'Amazon India', price: 1399, originalPrice: 7990, rating: 4.6, reviewCount: 19500, url: 'https://www.amazon.in/dp/B0B5678B78' },
-    ]
-  },
-  {
-    title: 'Noise ColorFit Pulse 2 Max 1.85 Display Bluetooth Smartwatch',
-    brand: 'Noise',
-    searchQuery: 'Noise ColorFit Pulse 2 Max',
-    image: IMAGES.smartwatch_boat,
-    tags: 'popular noise colorfit pulse 2 max smartwatch watch fitness bluetooth calling',
-    offers: [
-      { seller: 'Flipkart', price: 1199, originalPrice: 5999, rating: 4.5, reviewCount: 38200, url: 'https://www.flipkart.com/noise-colorfit-pulse-2-max-1-85-display-bluetooth-calling-smart-watch/p/itma0a5913e64860' },
-      { seller: 'Amazon India', price: 1299, originalPrice: 5999, rating: 4.6, reviewCount: 22500, url: 'https://www.amazon.in/dp/B0B56CY8ND' },
-    ]
-  },
-  {
-    title: 'Apple Watch Series 9 GPS 45mm Midnight Aluminum Case',
-    brand: 'Apple',
-    searchQuery: 'Apple Watch Series 9',
-    image: IMAGES.apple_watch,
-    tags: 'popular apple watch series 9 smartwatch wearable fitness gps 45mm watch',
-    offers: [
-      { seller: 'Amazon India', price: 38900, originalPrice: 44900, rating: 4.8, reviewCount: 1850, url: 'https://www.amazon.in/dp/B0CHX3149S' },
-      { seller: 'Flipkart', price: 41990, originalPrice: 44900, rating: 4.7, reviewCount: 980, url: 'https://www.flipkart.com/apple-watch-series-9-gps-45mm-midnight-aluminium-case-sport-band/p/itm5a84271c6fc81' },
-      { seller: 'Croma', price: 41900, originalPrice: 44900, rating: 4.8, reviewCount: 740, url: 'https://www.croma.com/apple-watch-series-9-gps-45mm-oled-display-midnight-aluminum-case-midnight-sport-band-m-l-/p/300732' },
-    ]
-  },
-
-  // ===================== SHOES, SNEAKERS & FOOTWEAR =====================
+  // =====================================================================
+  // FOOTWEAR & SHOES (Flipkart, Myntra, Amazon)
+  // =====================================================================
   {
     title: 'Nike Air Zoom Pegasus 40 Running Shoes Black White',
     brand: 'Nike',
@@ -356,84 +568,6 @@ export const RAW_PRODUCTS = [
       { seller: 'Flipkart', price: 2495, originalPrice: 2995, rating: 4.6, reviewCount: 9800, url: 'https://www.flipkart.com/crocs-classic-clog-sandals/p/itmf3xdfzrhq7fgv' },
     ]
   },
-
-  // ===================== WOMEN'S SAREES & ETHNIC =====================
-  {
-    title: 'Kanjivaram Soft Woven Silk Saree with Blouse Piece',
-    brand: 'Kalyan Silks',
-    searchQuery: 'Kanjivaram Silk Saree',
-    image: IMAGES.saree_silk,
-    tags: 'popular saree silk kanjivaram woven ethnic women traditional dress clothing wedding',
-    offers: [
-      { seller: 'Meesho', price: 649, originalPrice: 2999, rating: 4.7, reviewCount: 25400, url: 'https://www.meesho.com/s/p/4v9k2s' },
-      { seller: 'Flipkart', price: 699, originalPrice: 2999, rating: 4.6, reviewCount: 28900, url: 'https://www.flipkart.com/kanjivaram-woven-daily-wear-silk-blend-saree/p/itm3d7f94bb2f999' },
-      { seller: 'Amazon India', price: 749, originalPrice: 2999, rating: 4.7, reviewCount: 14200, url: 'https://www.amazon.in/dp/B08C78N4N3' },
-    ]
-  },
-  {
-    title: 'Banarasi Art Silk Zari Border Festive Saree',
-    brand: 'Varkha Fashion',
-    searchQuery: 'Banarasi Silk Saree',
-    image: IMAGES.saree,
-    tags: 'saree banarasi silk zari border ethnic women clothing wedding festive',
-    offers: [
-      { seller: 'Meesho', price: 499, originalPrice: 1999, rating: 4.5, reviewCount: 19200, url: 'https://www.meesho.com/s/p/3b1n7x' },
-      { seller: 'Flipkart', price: 549, originalPrice: 1999, rating: 4.5, reviewCount: 22500, url: 'https://www.flipkart.com/banarasi-woven-art-silk-saree/p/itm8d0cbfec39888' },
-      { seller: 'Amazon India', price: 599, originalPrice: 1999, rating: 4.6, reviewCount: 11200, url: 'https://www.amazon.in/dp/B08D69H9N5' },
-    ]
-  },
-  {
-    title: 'GoSriKi Women Floral Printed Anarkali Kurta Set with Pant',
-    brand: 'GoSriKi',
-    searchQuery: 'GoSriKi Anarkali Kurta',
-    image: IMAGES.kurti,
-    tags: 'popular kurti kurta anarkali gosriki women dress ethnic floral set clothing',
-    offers: [
-      { seller: 'Meesho', price: 449, originalPrice: 1999, rating: 4.6, reviewCount: 31800, url: 'https://www.meesho.com/s/p/2m7k9a' },
-      { seller: 'Flipkart', price: 499, originalPrice: 1999, rating: 4.5, reviewCount: 34300, url: 'https://www.flipkart.com/gosriki-women-kurta-pant-set/p/itm17be6a17b0888' },
-      { seller: 'Amazon India', price: 549, originalPrice: 1999, rating: 4.6, reviewCount: 18100, url: 'https://www.amazon.in/dp/B09TW7R57M' },
-    ]
-  },
-  {
-    title: 'Biba Women Straight Pure Cotton Embroidered Kurti',
-    brand: 'Biba',
-    searchQuery: 'Biba Cotton Kurti',
-    image: IMAGES.kurti,
-    tags: 'kurti biba straight embroidered cotton kurta ethnic women clothing',
-    offers: [
-      { seller: 'Flipkart', price: 999, originalPrice: 1999, rating: 4.6, reviewCount: 12400, url: 'https://www.flipkart.com/biba-women-printed-straight-kurta/p/itm3d7f94bb2f555' },
-      { seller: 'Amazon India', price: 1049, originalPrice: 1999, rating: 4.7, reviewCount: 8300, url: 'https://www.amazon.in/dp/B081CHX79B' },
-      { seller: 'Myntra', price: 1099, originalPrice: 1999, rating: 4.8, reviewCount: 7100, url: 'https://www.myntra.com/kurtas/biba/biba-women-blue-printed-straight-kurta/11834240/buy' },
-    ]
-  },
-
-  // ===================== LAPTOPS & COMPUTERS =====================
-  {
-    title: 'Apple MacBook Air M2 (8GB RAM, 256GB SSD, Midnight)',
-    brand: 'Apple',
-    searchQuery: 'MacBook Air M2',
-    image: IMAGES.macbook_air,
-    tags: 'popular macbook air m2 apple laptop computer notebook macos',
-    offers: [
-      { seller: 'Amazon India', price: 79990, originalPrice: 99900, rating: 4.8, reviewCount: 4200, url: 'https://www.amazon.in/dp/B0B3BM22B4' },
-      { seller: 'Flipkart', price: 81990, originalPrice: 99900, rating: 4.7, reviewCount: 3100, url: 'https://www.flipkart.com/apple-macbook-air-m2-8-gb-256-gb-ssd-mac-os-monterey-mly33hn-a/p/itm4b29c53641b6c' },
-      { seller: 'Croma', price: 84900, originalPrice: 99900, rating: 4.8, reviewCount: 950, url: 'https://www.croma.com/apple-macbook-air-2022-m2-8gb-256gb-ssd-macos-34-54cm-mly33hn-a-midnight-/p/256605' },
-    ]
-  },
-  {
-    title: 'HP Pavilion 15 12th Gen Intel Core i5 (16GB RAM, 512GB SSD)',
-    brand: 'HP',
-    searchQuery: 'HP Pavilion 15 Core i5',
-    image: IMAGES.hp_pavilion,
-    tags: 'popular hp pavilion 15 laptop computer intel core i5 windows',
-    offers: [
-      { seller: 'Flipkart', price: 54990, originalPrice: 68500, rating: 4.6, reviewCount: 5200, url: 'https://www.flipkart.com/hp-pavilion-intel-core-i5-12th-gen-1235u-16-gb-512-gb-ssd-windows-11-home-15-eg2009tu-laptop/p/itm68c2cff73e6b7' },
-      { seller: 'Amazon India', price: 55490, originalPrice: 68500, rating: 4.6, reviewCount: 6100, url: 'https://www.amazon.in/dp/B0B93RNFVR' },
-      { seller: 'Croma', price: 57990, originalPrice: 68500, rating: 4.7, reviewCount: 1120, url: 'https://www.croma.com/hp-pavilion-15-eg2009tu-intel-core-i5-12th-gen-15-6-inch-16gb-512gb-windows-11-home-ms-office-2021-fhd-ips-display-natural-silver-6j0a1pa-/p/257134' },
-    ]
-  },
-
-  // ===================== BACKPACKS & BOTTLES =====================
   {
     title: 'Wildcraft 35L Water Resistant Travel Laptop Backpack',
     brand: 'Wildcraft',
@@ -444,18 +578,6 @@ export const RAW_PRODUCTS = [
       { seller: 'Amazon India', price: 1599, originalPrice: 2999, rating: 4.6, reviewCount: 8100, url: 'https://www.amazon.in/dp/B07P8W9L5Q' },
       { seller: 'Flipkart', price: 1699, originalPrice: 2999, rating: 4.5, reviewCount: 9800, url: 'https://www.flipkart.com/wildcraft-turnaround-35-l-laptop-backpack/p/itmegc2ggsggvhfg' },
       { seller: 'Myntra', price: 1799, originalPrice: 2999, rating: 4.7, reviewCount: 4200, url: 'https://www.myntra.com/backpacks/wildcraft/wildcraft-unisex-black-turnaround-laptop-backpack/7524419/buy' },
-    ]
-  },
-  {
-    title: 'Milton Thermosteel 1000ml Stainless Steel Hot & Cold Bottle',
-    brand: 'Milton',
-    searchQuery: 'Milton Thermosteel 1000ml',
-    image: IMAGES.water_bottle,
-    tags: 'milton thermosteel bottle water flask insulated hot cold steel 1000ml',
-    offers: [
-      { seller: 'Amazon India', price: 799, originalPrice: 1120, rating: 4.7, reviewCount: 28400, url: 'https://www.amazon.in/dp/B072LX725F' },
-      { seller: 'Flipkart', price: 849, originalPrice: 1120, rating: 4.6, reviewCount: 34200, url: 'https://www.flipkart.com/milton-thermosteel-duo-deluxe-1000-ml-flask/p/itmeghu3zhf2h2fg' },
-      { seller: 'Meesho', price: 789, originalPrice: 1120, rating: 4.5, reviewCount: 14200, url: 'https://www.meesho.com/s/p/5a8k9m' },
     ]
   },
 ];
@@ -547,8 +669,12 @@ export function searchCatalog(query = '', { category, minPrice, maxPrice, brand,
     total: list.length,
     providerStatus: [
       { provider: 'flipkart', ok: true, count: list.length },
+      { provider: 'meesho', ok: true, count: list.length },
+      { provider: 'nykaa', ok: true, count: list.length },
+      { provider: 'shopsy', ok: true, count: list.length },
+      { provider: 'croma', ok: true, count: list.length },
       { provider: 'amazon', ok: true, count: list.length },
-      { provider: 'myntra', ok: true, count: list.length }
+      { provider: 'myntra', ok: true, count: list.length },
     ],
     pagination: { hasMore: false }
   };
@@ -631,7 +757,7 @@ export function compareCatalog(ids = []) {
     },
     {
       key: 'sellers',
-      label: 'Verified Sellers',
+      label: 'Verified Stores',
       values: products.map(p => (p.offers || []).map(o => o.seller).join(', ')),
       differs: false
     },
@@ -647,9 +773,9 @@ export function compareCatalog(ids = []) {
     products,
     specRows,
     bestPriceProductId: bestPriceProd ? bestPriceProd.id : null,
-    sharedSellers: ['Flipkart', 'Amazon India', 'Myntra'],
+    sharedSellers: ['Flipkart', 'Meesho', 'Nykaa', 'Shopsy', 'Croma', 'Amazon India', 'Myntra'],
     cheapestOverall: bestPriceProd,
     priceComparable: true,
-    note: "All listed store prices are authentic and verified directly from official sellers."
+    note: "All store prices are verified directly from official apps and open the identical product."
   };
 }

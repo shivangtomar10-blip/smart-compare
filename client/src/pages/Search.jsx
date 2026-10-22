@@ -48,7 +48,16 @@ export default function Search() {
         </select></label>
         <label>Min <input type="number" min="0" defaultValue={minPrice} onBlur={e => set('minPrice', e.target.value)} /></label>
         <label>Max <input type="number" min="0" defaultValue={maxPrice} onBlur={e => set('maxPrice', e.target.value)} /></label>
-        <label>Seller <input defaultValue={seller} onBlur={e => set('seller', e.target.value)} /></label>
+        <label>Store <select value={seller} onChange={e => set('seller', e.target.value)}>
+          <option value="">All Stores (Flipkart, Meesho, Nykaa, Shopsy, Croma...)</option>
+          <option value="Flipkart">Flipkart</option>
+          <option value="Meesho">Meesho</option>
+          <option value="Nykaa">Nykaa</option>
+          <option value="Shopsy">Shopsy</option>
+          <option value="Croma">Croma</option>
+          <option value="Amazon">Amazon India</option>
+          <option value="Myntra">Myntra</option>
+        </select></label>
       </div>
       {status.length > 0 && <ul className="status">
         {status.filter(s => s && s.ok).map(s => (

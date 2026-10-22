@@ -12,14 +12,12 @@ const TRENDING_TAGS = [
 
 const APPS = [
   { name: 'Flipkart', cls: 'flipkart', q: 'phone' },
-  { name: 'Meesho', cls: 'meesho', q: 'shirt' },
-  { name: 'Amazon India', cls: 'amazon', q: 'laptop' },
-  { name: 'Myntra', cls: 'myntra', q: 'saree' },
-  { name: 'Nykaa', cls: 'nykaa', q: 'beauty' },
-  { name: 'Croma', cls: 'croma', q: 'tv' },
-  { name: 'Reliance Digital', cls: 'reliance', q: 'apple' },
-  { name: 'Ajio', cls: 'ajio', q: 'jeans' },
-  { name: 'Tata CLiQ', cls: 'tatacliq', q: 'watch' },
+  { name: 'Meesho', cls: 'meesho', q: 'saree' },
+  { name: 'Nykaa', cls: 'nykaa', q: 'lipstick' },
+  { name: 'Shopsy', cls: 'shopsy', q: 'tshirt' },
+  { name: 'Croma', cls: 'croma', q: 'laptop' },
+  { name: 'Amazon India', cls: 'amazon', q: 'earbuds' },
+  { name: 'Myntra', cls: 'myntra', q: 'shirt' },
 ];
 
 const CATEGORIES = [
