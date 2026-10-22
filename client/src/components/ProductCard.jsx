@@ -5,7 +5,10 @@ import { useAuth } from '../context/AuthContext.jsx';
 import { useCompare } from '../context/CompareContext.jsx';
 
 export default function ProductCard({ product: p }) {
-  const best = p.lowestOffer, { user } = useAuth(), cmp = useCompare(), nav = useNavigate();
+  if (!p) return null;
+  const offers = Array.isArray(p.offers) ? p.offers : [];
+  const best = p.lowestOffer || offers[0] || { price: 0, currency: 'INR', seller: 'Store', image: p.image };
+  const { user } = useAuth(), cmp = useCompare(), nav = useNavigate();
   const [msg, setMsg] = useState('');
   async function save() {
     if (!user) return nav('/login');
@@ -16,6 +19,7 @@ export default function ProductCard({ product: p }) {
   const discountPercent = best.originalPrice && best.originalPrice > best.price
     ? Math.round((1 - best.price / best.originalPrice) * 100)
     : null;
+  const sellerClean = (best.seller || 'store').toLowerCase().replace(/[^a-z]/g, '');
 
   return (
     <article className="card prod">
@@ -35,8 +39,8 @@ export default function ProductCard({ product: p }) {
       </div>
 
       <div className="seller-tag-row">
-        <span className={`seller-pill seller-${best.seller.toLowerCase().replace(/[^a-z]/g, '')}`}>
-          {best.seller}
+        <span className={`seller-pill seller-${sellerClean}`}>
+          {best.seller || 'Store'}
         </span>
         <span className="badge-live-real">✓ Real Live Price</span>
       </div>

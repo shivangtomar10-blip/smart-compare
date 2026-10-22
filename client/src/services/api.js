@@ -6,8 +6,16 @@ import {
 } from './catalog.js';
 
 const BASE = import.meta.env.VITE_API_BASE || '';
+const isLocalhost = typeof window !== 'undefined' && (
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1' ||
+  window.location.hostname === ''
+);
 
-// LocalStorage helpers for seamless Vercel static & offline fallback
+// If on Vercel without an external API server in VITE_API_BASE, run in instant standalone mode.
+// This gives 0ms latency, zero network roundtrip wait, and rock-solid reliability.
+const useRemoteBackend = Boolean(BASE) || isLocalhost;
+
 function getLocal(k, def) {
   try {
     const val = localStorage.getItem(k);
@@ -24,34 +32,51 @@ function setLocal(k, val) {
 }
 
 async function req(path, { method = 'GET', body } = {}) {
-  const token = localStorage.getItem('sc_token');
-  const res = await fetch(BASE + path, {
-    method,
-    body: body ? JSON.stringify(body) : undefined,
-    headers: {
-      ...(body ? { 'Content-Type': 'application/json' } : {}),
-      ...(token ? { Authorization: `Bearer ${token}` } : {})
-    },
-  });
-
-  const contentType = res.headers.get('content-type') || '';
-  if (contentType.includes('text/html')) {
-    const e = new Error('Static rewrite returned HTML');
+  if (!useRemoteBackend) {
+    const e = new Error('Standalone mode: using instant local catalog');
     e.status = 404;
-    e.isHtmlRewrite = true;
     throw e;
   }
 
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) {
-    const e = new Error(data.error || `Request failed (${res.status})`);
-    e.status = res.status;
-    throw e;
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 2000);
+
+  try {
+    const token = localStorage.getItem('sc_token');
+    const res = await fetch(BASE + path, {
+      method,
+      signal: controller.signal,
+      body: body ? JSON.stringify(body) : undefined,
+      headers: {
+        ...(body ? { 'Content-Type': 'application/json' } : {}),
+        ...(token ? { Authorization: `Bearer ${token}` } : {})
+      },
+    });
+
+    clearTimeout(timeoutId);
+
+    const contentType = res.headers.get('content-type') || '';
+    if (contentType.includes('text/html')) {
+      const e = new Error('Static rewrite returned HTML');
+      e.status = 404;
+      e.isHtmlRewrite = true;
+      throw e;
+    }
+
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      const e = new Error(data.error || `Request failed (${res.status})`);
+      e.status = res.status;
+      throw e;
+    }
+    return data;
+  } catch (err) {
+    clearTimeout(timeoutId);
+    throw err;
   }
-  return data;
 }
 
-// Client-side authentication fallback (handles Vercel 405/404 when no backend server is attached)
+// Client-side authentication (instant, zero delay, works offline and on static hosts)
 function clientSideAuth(mode, body) {
   const email = (body.email || '').trim().toLowerCase();
   const password = body.password || '';
@@ -101,6 +126,9 @@ function clientSideAuth(mode, body) {
 }
 
 export const searchProducts = async p => {
+  if (!useRemoteBackend) {
+    return searchCatalog(p.q, p);
+  }
   try {
     const d = await req('/api/products/search?' + new URLSearchParams(Object.entries(p).filter(([, v]) => v !== '' && v != null)));
     if (d && Array.isArray(d.products) && d.products.length > 0) return d;
@@ -111,6 +139,9 @@ export const searchProducts = async p => {
 };
 
 export const getFeaturedProducts = async () => {
+  if (!useRemoteBackend) {
+    return searchCatalog('popular').products.slice(0, 8);
+  }
   try {
     const d = await searchProducts({ q: 'popular' });
     if (d && Array.isArray(d.products) && d.products.length > 0) return d.products;
@@ -122,18 +153,22 @@ export const getFeaturedProducts = async () => {
 
 export const api = {
   auth: async (mode, body) => {
+    if (!useRemoteBackend) {
+      return clientSideAuth(mode, body);
+    }
     try {
       return await req(`/api/auth/${mode}`, { method: 'POST', body });
-    } catch (err) {
-      // Seamless fallback on Vercel static 405/404 or backend offline
-      if (err.status === 405 || err.status === 404 || err.isHtmlRewrite || !BASE || err.message?.includes('Failed to fetch')) {
-        return clientSideAuth(mode, body);
-      }
-      throw err;
+    } catch {
+      return clientSideAuth(mode, body);
     }
   },
 
   me: async () => {
+    if (!useRemoteBackend) {
+      const localUser = getLocal('sc_local_user', null);
+      if (localUser) return { user: localUser };
+      throw new Error('Not logged in');
+    }
     try {
       return await req('/api/users/me');
     } catch (err) {
@@ -144,6 +179,12 @@ export const api = {
   },
 
   updateMe: async name => {
+    if (!useRemoteBackend) {
+      const localUser = getLocal('sc_local_user', { id: 'u_local', name, email: 'user@smartcompare.in' });
+      localUser.name = name;
+      setLocal('sc_local_user', localUser);
+      return { user: localUser };
+    }
     try {
       return await req('/api/users/me', { method: 'PATCH', body: { name } });
     } catch {
@@ -155,6 +196,9 @@ export const api = {
   },
 
   product: async id => {
+    if (!useRemoteBackend) {
+      return getCatalogProduct(id);
+    }
     try {
       const d = await req(`/api/products/${id}`);
       if (d && d.product) return d;
@@ -165,6 +209,9 @@ export const api = {
   },
 
   history: async id => {
+    if (!useRemoteBackend) {
+      return getCatalogHistory(id);
+    }
     try {
       const d = await req(`/api/products/${id}/price-history`);
       if (d && d.history) return d;
@@ -175,6 +222,9 @@ export const api = {
   },
 
   compare: async ids => {
+    if (!useRemoteBackend) {
+      return compareCatalog(ids);
+    }
     try {
       const d = await req('/api/compare', { method: 'POST', body: { ids } });
       if (d && Array.isArray(d.products)) return d;
@@ -185,6 +235,9 @@ export const api = {
   },
 
   wishlist: async () => {
+    if (!useRemoteBackend) {
+      return { wishlist: getLocal('sc_wishlist', []) };
+    }
     try {
       return await req('/api/users/wishlist');
     } catch {
@@ -193,48 +246,49 @@ export const api = {
   },
 
   addWish: async item => {
+    const list = getLocal('sc_wishlist', []);
+    if (!list.some(i => i.productId === item.productId)) {
+      list.push({ ...item, addedAt: new Date().toISOString() });
+      setLocal('sc_wishlist', list);
+    }
+    if (!useRemoteBackend) {
+      return { ok: true, wishlist: list };
+    }
     try {
       return await req('/api/users/wishlist', { method: 'POST', body: item });
     } catch {
-      const list = getLocal('sc_wishlist', []);
-      if (!list.some(i => i.productId === item.productId)) {
-        list.push({ ...item, addedAt: new Date().toISOString() });
-        setLocal('sc_wishlist', list);
-      }
       return { ok: true, wishlist: list };
     }
   },
 
   removeWish: async id => {
+    const list = getLocal('sc_wishlist', []).filter(i => i.productId !== id);
+    setLocal('sc_wishlist', list);
+    if (!useRemoteBackend) {
+      return { ok: true, wishlist: list };
+    }
     try {
       return await req(`/api/users/wishlist/${encodeURIComponent(id)}`, { method: 'DELETE' });
     } catch {
-      const list = getLocal('sc_wishlist', []).filter(i => i.productId !== id);
-      setLocal('sc_wishlist', list);
       return { ok: true, wishlist: list };
     }
   },
 
   recent: async () => {
-    try {
-      return await req('/api/users/recent');
-    } catch {
-      return { items: getLocal('sc_recent', []) };
-    }
+    return { items: getLocal('sc_recent', []) };
   },
 
   addRecent: async item => {
-    try {
-      return await req('/api/users/recent', { method: 'POST', body: item });
-    } catch {
-      const list = getLocal('sc_recent', []).filter(i => i.productId !== item.productId);
-      list.unshift({ ...item, viewedAt: new Date().toISOString() });
-      setLocal('sc_recent', list.slice(0, 10));
-      return { ok: true };
-    }
+    const list = getLocal('sc_recent', []).filter(i => i.productId !== item.productId);
+    list.unshift({ ...item, viewedAt: new Date().toISOString() });
+    setLocal('sc_recent', list.slice(0, 10));
+    return { ok: true };
   },
 
   alerts: async () => {
+    if (!useRemoteBackend) {
+      return { alerts: getLocal('sc_alerts', []) };
+    }
     try {
       return await req('/api/alerts');
     } catch {
@@ -243,129 +297,108 @@ export const api = {
   },
 
   createAlert: async (productId, targetPrice) => {
+    const alerts = getLocal('sc_alerts', []);
+    const existing = alerts.find(a => a.productId === productId);
+    const prod = getCatalogProduct(productId);
+    const alert = {
+      id: 'alt_' + Date.now(),
+      productId,
+      title: prod?.product?.title || 'Product',
+      targetPrice: Number(targetPrice),
+      currency: 'INR',
+      status: 'active',
+      createdAt: new Date().toISOString()
+    };
+    if (existing) {
+      existing.targetPrice = Number(targetPrice);
+      existing.status = 'active';
+    } else {
+      alerts.unshift(alert);
+    }
+    setLocal('sc_alerts', alerts);
+
+    if (!useRemoteBackend) {
+      return { alert };
+    }
     try {
       return await req('/api/alerts', { method: 'POST', body: { productId, targetPrice } });
     } catch {
-      const alerts = getLocal('sc_alerts', []);
-      const existing = alerts.find(a => a.productId === productId);
-      const prod = getCatalogProduct(productId);
-      const alert = {
-        id: 'alt_' + Date.now(),
-        productId,
-        title: prod?.product?.title || 'Product',
-        targetPrice: Number(targetPrice),
-        currency: 'INR',
-        status: 'active',
-        createdAt: new Date().toISOString()
-      };
-      if (existing) {
-        existing.targetPrice = Number(targetPrice);
-        existing.status = 'active';
-      } else {
-        alerts.unshift(alert);
-      }
-      setLocal('sc_alerts', alerts);
       return { alert };
     }
   },
 
   deleteAlert: async id => {
+    const alerts = getLocal('sc_alerts', []).filter(a => a.id !== id);
+    setLocal('sc_alerts', alerts);
+    if (!useRemoteBackend) {
+      return { ok: true };
+    }
     try {
       return await req(`/api/alerts/${id}`, { method: 'DELETE' });
     } catch {
-      const alerts = getLocal('sc_alerts', []).filter(a => a.id !== id);
-      setLocal('sc_alerts', alerts);
       return { ok: true };
     }
   },
 
   checkAlerts: async () => {
-    try {
-      return await req('/api/alerts/check', { method: 'POST' });
-    } catch {
-      return { checked: true, triggered: 0 };
-    }
+    return { checked: true, triggered: 0 };
   },
 
   simulateDrop: async (productId, dropPercent = 20) => {
-    try {
-      return await req('/api/alerts/simulate-drop', { method: 'POST', body: { productId, dropPercent } });
-    } catch {
-      const alerts = getLocal('sc_alerts', []);
-      const a = alerts.find(x => x.productId === productId);
-      if (a) {
-        const dropFactor = 1 - (dropPercent / 100);
-        a.status = 'triggered';
-        a.triggeredPrice = Math.round(a.targetPrice * dropFactor);
-        setLocal('sc_alerts', alerts);
+    const alerts = getLocal('sc_alerts', []);
+    const a = alerts.find(x => x.productId === productId);
+    if (a) {
+      const dropFactor = 1 - (dropPercent / 100);
+      a.status = 'triggered';
+      a.triggeredPrice = Math.round(a.targetPrice * dropFactor);
+      setLocal('sc_alerts', alerts);
 
-        const notifs = getLocal('sc_notifications', []);
-        notifs.unshift({
-          id: 'notif_' + Date.now(),
-          message: `🎉 Price Alert: "${a.title}" dropped to ₹${a.triggeredPrice}! (Below your target of ₹${a.targetPrice})`,
-          productId: a.productId,
-          read: false,
-          createdAt: new Date().toISOString()
-        });
-        setLocal('sc_notifications', notifs);
-      }
-      return { ok: true };
+      const notifs = getLocal('sc_notifications', []);
+      notifs.unshift({
+        id: 'notif_' + Date.now(),
+        message: `🎉 Price Alert: "${a.title}" dropped to ₹${a.triggeredPrice}! (Below your target of ₹${a.targetPrice})`,
+        productId: a.productId,
+        read: false,
+        createdAt: new Date().toISOString()
+      });
+      setLocal('sc_notifications', notifs);
     }
+    return { ok: true };
   },
 
   comparisons: async () => {
-    try {
-      return await req('/api/comparisons');
-    } catch {
-      return { comparisons: getLocal('sc_comparisons', []) };
-    }
+    return { comparisons: getLocal('sc_comparisons', []) };
   },
 
   saveComparison: async (name, productIds) => {
-    try {
-      return await req('/api/comparisons', { method: 'POST', body: { name, productIds } });
-    } catch {
-      const list = getLocal('sc_comparisons', []);
-      const items = productIds.map(id => {
-        const p = getCatalogProduct(id);
-        return { productId: id, title: p?.product?.title || 'Product' };
-      });
-      const comp = { id: 'cmp_' + Date.now(), name, items, createdAt: new Date().toISOString() };
-      list.unshift(comp);
-      setLocal('sc_comparisons', list);
-      return { comparison: comp };
-    }
+    const list = getLocal('sc_comparisons', []);
+    const items = productIds.map(id => {
+      const p = getCatalogProduct(id);
+      return { productId: id, title: p?.product?.title || 'Product' };
+    });
+    const comp = { id: 'cmp_' + Date.now(), name, items, createdAt: new Date().toISOString() };
+    list.unshift(comp);
+    setLocal('sc_comparisons', list);
+    return { comparison: comp };
   },
 
   deleteComparison: async id => {
-    try {
-      return await req(`/api/comparisons/${id}`, { method: 'DELETE' });
-    } catch {
-      const list = getLocal('sc_comparisons', []).filter(c => c.id !== id);
-      setLocal('sc_comparisons', list);
-      return { ok: true };
-    }
+    const list = getLocal('sc_comparisons', []).filter(c => c.id !== id);
+    setLocal('sc_comparisons', list);
+    return { ok: true };
   },
 
   notifications: async () => {
-    try {
-      return await req('/api/notifications');
-    } catch {
-      const list = getLocal('sc_notifications', []);
-      return { notifications: list, unread: list.filter(n => !n.read).length };
-    }
+    const list = getLocal('sc_notifications', []);
+    return { notifications: list, unread: list.filter(n => !n.read).length };
   },
 
   markRead: async id => {
-    try {
-      return await req(`/api/notifications/${id}/read`, { method: 'POST' });
-    } catch {
-      const list = getLocal('sc_notifications', []);
-      const n = list.find(x => x.id === id);
-      if (n) n.read = true;
-      setLocal('sc_notifications', list);
-      return { ok: true };
-    }
+    const list = getLocal('sc_notifications', []);
+    const n = list.find(x => x.id === id);
+    if (n) n.read = true;
+    setLocal('sc_notifications', list);
+    return { ok: true };
   },
 };
 

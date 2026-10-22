@@ -17,15 +17,25 @@ export default function Search() {
     setState(s => ({ ...s, loading: true, error: '' }));
     try {
       const d = await searchProducts({ q, sort, minPrice, maxPrice, seller, page: p });
-      setState(s => ({ loading: false, error: '', products: p === 1 ? d.products : [...s.products, ...d.products],
-        status: d.providerStatus, pagination: d.pagination }));
-    } catch (e) { setState(s => ({ ...s, loading: false, error: e.message, products: p === 1 ? [] : s.products })); }
+      const newProds = Array.isArray(d?.products) ? d.products : [];
+      setState(s => ({
+        loading: false,
+        error: '',
+        products: p === 1 ? newProds : [...s.products, ...newProds],
+        status: Array.isArray(d?.providerStatus) ? d.providerStatus : [],
+        pagination: d?.pagination || null
+      }));
+    } catch (e) {
+      setState(s => ({ ...s, loading: false, error: e.message, products: p === 1 ? [] : s.products }));
+    }
   }
   useEffect(() => { setPage(1); if (q.length >= 2) load(1); }, [q, sort, minPrice, maxPrice, seller]);
 
   const set = (k, v) => { const n = new URLSearchParams(params); v ? n.set(k, v) : n.delete(k); setParams(n); };
-  const { loading, error, products, status, pagination } = state;
-  const live = status.filter(s => s.ok), none = status.length > 0 && live.length === 0;
+  const { loading, error, pagination } = state;
+  const products = Array.isArray(state.products) ? state.products : [];
+  const status = Array.isArray(state.status) ? state.status : [];
+  const live = status.filter(s => s && s.ok), none = status.length > 0 && live.length === 0;
 
   return (
     <div className="wrap">
@@ -41,7 +51,7 @@ export default function Search() {
         <label>Seller <input defaultValue={seller} onBlur={e => set('seller', e.target.value)} /></label>
       </div>
       {status.length > 0 && <ul className="status">
-        {status.filter(s => s.ok).map(s => (
+        {status.filter(s => s && s.ok).map(s => (
           <li key={s.provider} className="ok">
             ✓ Live Verified Prices ({s.count} authentic products fetched directly from stores)
           </li>

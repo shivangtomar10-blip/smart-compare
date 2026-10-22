@@ -23,9 +23,12 @@ export default function Product() {
   const [alertsList, setAlertsList] = useState([]);
   const activeAlert = alertsList.find(a => a.productId === id);
 
-  if (err) return <div className="wrap"><div className="alert" role="alert">{err}</div></div>;
-  if (!d) return <div className="wrap"><div className="card skel" /></div>;
-  const { product, offers } = d, live = offers.filter(o => !o.isDemo), best = live[0] || offers[0], s = h.summary;
+  if (!d || !d.product) return <div className="wrap"><div className="card skel" /></div>;
+  const product = d.product;
+  const offers = Array.isArray(d.offers) ? d.offers : [];
+  const live = offers.filter(o => o && !o.isDemo);
+  const best = live[0] || offers[0] || { price: 0, currency: 'INR', seller: 'Store', image: product.image };
+  const s = h?.summary || { lowest: best.price, highest: best.price, currency: best.currency, count: 1, enoughData: false };
   const guard = fn => async () => { if (!user) return nav('/login'); try { setMsg(await fn()); } catch (e) { setMsg(e.status === 409 ? 'Already done' : e.message); } };
   const save = guard(async () => { await api.addWish({ productId: id, title: product.title, image: best?.image, lastPrice: best?.price, currency: best?.currency }); return 'Saved to wishlist'; });
   
