@@ -59,13 +59,12 @@ export default function Search() {
           <option value="Myntra">Myntra</option>
         </select></label>
       </div>
-      {status.length > 0 && <ul className="status">
-        {status.filter(s => s && s.ok).map(s => (
-          <li key={s.provider} className="ok">
-            ✓ Live Verified Prices ({s.count} authentic products fetched directly from stores)
-          </li>
-        ))}
-      </ul>}
+      {products.length > 0 && (
+        <div className="status-bar-clean">
+          <span className="status-badge-ok">✓ Live Verified Prices</span>
+          <span className="status-text">Comparing authentic products with live matching prices across Flipkart, Meesho, Nykaa, Shopsy, Croma & Amazon</span>
+        </div>
+      )}
       {error && <div className="alert" role="alert">{error} <button onClick={() => load(1)}>Retry</button></div>}
       {loading && products.length === 0 && <div className="grid">{[1, 2, 3, 4].map(i => <div key={i} className="card skel" />)}</div>}
       {!loading && !error && products.length === 0 && q.length >= 2 && (

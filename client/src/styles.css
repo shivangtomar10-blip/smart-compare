@@ -1266,3 +1266,32 @@ a {
 .seller-amazon,
 .seller-amazonindia { background: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
 .seller-myntra { background: #fff1f2; color: #be123c; border: 1px solid #fecdd3; }
+
+/* Clean Status Bar */
+.status-bar-clean {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+  color: #166534;
+}
+
+.status-badge-ok {
+  background: #16a34a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 99px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.status-text {
+  font-weight: 600;
+}
