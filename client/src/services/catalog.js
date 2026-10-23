@@ -1,3 +1,5 @@
+import { generate10kProducts } from './catalog10k.js';
+
 // High-Precision Indian Multi-Store Shopping Catalog
 // Covers: Flipkart, Meesho, Nykaa, Shopsy, Croma, Amazon India, Myntra
 // Guarantees:
@@ -2972,7 +2974,12 @@ export function compileCatalog(rawList) {
   return result;
 }
 
-export const ALL_PRODUCTS = compileCatalog(RAW_PRODUCTS);
+const BASE_PRODUCTS = compileCatalog(RAW_PRODUCTS);
+const EXPANDED_10K = generate10kProducts(IMAGES, getStoreDeepLink);
+export const ALL_PRODUCTS = [...BASE_PRODUCTS, ...EXPANDED_10K];
+
+const PRODUCT_MAP = new Map();
+ALL_PRODUCTS.forEach(p => PRODUCT_MAP.set(p.id, p));
 
 export const DYNAMIC_CACHE = new Map();
 
@@ -3601,7 +3608,7 @@ const KNOWN_BRANDS = [
   'fogg', 'wild stone', 'nova', 'zaveri pearls', 'shining diva', 'youbella', 'sukkhi', 'yellow chimes', 'atasi', 'ganesh', 'signoraware', 'spotzero', 'leotude', 'veirdo', 'maniac', 'klosia', 'royal export', 'kraasa', 'denill', 'shoetopia', 'ptron', 'tygot', 'ubon', 'bsb home', 'infinix', 'zebronics', 'thomson', 'blaupunkt', 'butterfly', 'metronaut', 'tokyo talkies', 'webby'
 ];
 
-export function searchCatalog(query = '', { category, minPrice, maxPrice, brand, seller } = {}) {
+export function searchCatalog(query = '', { category, minPrice, maxPrice, brand, seller, page = 1, limit = 24, sort = 'relevance' } = {}) {
   let rawQ = String(query).trim();
   let q = rawQ.toLowerCase();
 
@@ -3723,24 +3730,42 @@ export function searchCatalog(query = '', { category, minPrice, maxPrice, brand,
   if (brand) list = list.filter(g => g.brand && g.brand.toLowerCase().includes(brand.toLowerCase()));
   if (seller) list = list.filter(g => g.offers.some(o => o.seller.toLowerCase().includes(seller.toLowerCase())));
 
+  if (sort === 'price_asc') {
+    list.sort((a, b) => (a.lowestOffer?.price || 0) - (b.lowestOffer?.price || 0));
+  } else if (sort === 'price_desc') {
+    list.sort((a, b) => (b.lowestOffer?.price || 0) - (a.lowestOffer?.price || 0));
+  }
+
+  const total = list.length;
+  const pageNum = Math.max(1, parseInt(page, 10) || 1);
+  const pageSize = Math.max(1, parseInt(limit, 10) || 24);
+  const pagedList = list.slice((pageNum - 1) * pageSize, pageNum * pageSize);
+  const hasMore = pageNum * pageSize < total;
+
   return {
-    products: list,
-    total: list.length,
+    products: pagedList,
+    total,
     providerStatus: [
-      { provider: 'flipkart', ok: true, count: list.length },
-      { provider: 'meesho', ok: true, count: list.length },
-      { provider: 'nykaa', ok: true, count: list.length },
-      { provider: 'shopsy', ok: true, count: list.length },
-      { provider: 'croma', ok: true, count: list.length },
-      { provider: 'amazon', ok: true, count: list.length },
-      { provider: 'myntra', ok: true, count: list.length },
+      { provider: 'flipkart', ok: true, count: total },
+      { provider: 'meesho', ok: true, count: total },
+      { provider: 'nykaa', ok: true, count: total },
+      { provider: 'shopsy', ok: true, count: total },
+      { provider: 'croma', ok: true, count: total },
+      { provider: 'amazon', ok: true, count: total },
+      { provider: 'myntra', ok: true, count: total },
     ],
-    pagination: { hasMore: false }
+    pagination: {
+      page: pageNum,
+      limit: pageSize,
+      total,
+      totalPages: Math.ceil(total / pageSize),
+      hasMore
+    }
   };
 }
 
 export function getCatalogProduct(id) {
-  let found = ALL_PRODUCTS.find(g => g.id === id) || DYNAMIC_CACHE.get(id);
+  let found = PRODUCT_MAP.get(id) || DYNAMIC_CACHE.get(id) || ALL_PRODUCTS[0];
   if (!found) {
     found = ALL_PRODUCTS[0];
   }

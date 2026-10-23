@@ -29,7 +29,7 @@ export default function Search() {
       setState(s => ({ ...s, loading: false, error: e.message, products: p === 1 ? [] : s.products }));
     }
   }
-  useEffect(() => { setPage(1); if (q.length >= 2) load(1); }, [q, sort, minPrice, maxPrice, seller]);
+  useEffect(() => { setPage(1); load(1); }, [q, sort, minPrice, maxPrice, seller]);
 
   const set = (k, v) => { const n = new URLSearchParams(params); v ? n.set(k, v) : n.delete(k); setParams(n); };
   const { loading, error, pagination } = state;
@@ -39,7 +39,15 @@ export default function Search() {
 
   return (
     <div className="wrap">
-      <h2>Results for “{q}”</h2>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.8rem' }}>
+        <h2 style={{ margin: 0 }}>Results for “{q || 'All Products'}”</h2>
+        {pagination?.total ? (
+          <span style={{ fontSize: '0.92rem', color: 'var(--mut)', fontWeight: 700 }}>
+            {pagination.total.toLocaleString()} products available
+          </span>
+        ) : null}
+      </div>
+
       <div className="filters">
         <label>Sort <select value={sort} onChange={e => set('sort', e.target.value)}>
           <option value="relevance">Best Match (Flipkart)</option>
@@ -67,11 +75,25 @@ export default function Search() {
       )}
       {error && <div className="alert" role="alert">{error} <button onClick={() => load(1)}>Retry</button></div>}
       {loading && products.length === 0 && <div className="grid">{[1, 2, 3, 4].map(i => <div key={i} className="card skel" />)}</div>}
-      {!loading && !error && products.length === 0 && q.length >= 2 && (
+      {!loading && !error && products.length === 0 && (
         <div className="empty">{none ? 'No shopping source is configured or reachable. See the setup guide to add API keys.'
           : 'No products found. Try a broader term, a different spelling, or fewer filters.'}</div>)}
       <div className="grid">{products.map(p => <ProductCard key={p.id} product={p} />)}</div>
-      {pagination?.hasMore && <button className="more" disabled={loading} onClick={() => { setPage(page + 1); load(page + 1); }}>{loading ? 'Loading…' : 'Load more'}</button>}
+      {pagination?.hasMore && (
+        <div style={{ textAlign: 'center', margin: '2rem 0' }}>
+          <button
+            className="more"
+            disabled={loading}
+            onClick={() => {
+              const nextPage = page + 1;
+              setPage(nextPage);
+              load(nextPage);
+            }}
+          >
+            {loading ? 'Loading more products…' : `Load more (${pagination.total - products.length} remaining)`}
+          </button>
+        </div>
+      )}
       <p className="note">Prices are listed prices at the time shown. The final checkout price on the seller's site may differ.</p>
     </div>
   );

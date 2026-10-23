@@ -60,7 +60,7 @@ export default function Home() {
     <>
       <section className="hero">
         <h1>Compare Prices Across India’s Top Online Shopping Apps</h1>
-        <p>Find the best live listed prices across Flipkart, Meesho, Amazon, Myntra, Nykaa, Croma & more in ₹ (INR).</p>
+        <p>Browse over 14,000+ verified products with live matching prices across Flipkart, Meesho, Amazon, Myntra, Nykaa, Croma & more in ₹ (INR).</p>
         <SearchBox big />
         <div className="chips">
           {TRENDING_TAGS.map(t => (
