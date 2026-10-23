@@ -2483,7 +2483,88 @@ function generateDynamicProducts(query) {
 
   let categoryItems = [];
 
-  if (/infinix/.test(lower)) {
+  if (/tshirt|t-shirt|t shirt|polo|tee/.test(lower)) {
+    categoryItems = [
+      { title: 'Allen Solly Men Solid Regular Fit Polo Neck Cotton T-Shirt (Navy Blue)', brand: 'Allen Solly', searchQuery: 'Allen Solly Polo T-Shirt Navy', basePrice: 699, image: IMAGES.tshirt_polo, tags: 'tshirt t-shirt tee polo allen solly navy cotton casual' },
+      { title: 'Peter England Men Striped Polo Neck Pure Cotton T-Shirt', brand: 'Peter England', searchQuery: 'Peter England Striped Polo T-Shirt', basePrice: 799, image: IMAGES.tshirt_polo, tags: 'tshirt t-shirt tee polo peter england striped cotton' },
+      { title: 'Van Heusen Men Solid Anti-Bacterial Bio Wash Cotton Crew Neck T-Shirt', brand: 'Van Heusen', searchQuery: 'Van Heusen Crew Neck Cotton T-Shirt', basePrice: 549, image: IMAGES.tshirt, tags: 'tshirt t-shirt tee crew neck van heusen bio wash cotton' },
+      { title: 'Puma Men Graphic Printed Round Neck Polyester Training T-Shirt', brand: 'Puma', searchQuery: 'Puma Men Graphic Training T-Shirt', basePrice: 899, image: IMAGES.tshirt_graphic, tags: 'tshirt t-shirt tee puma graphic printed gym sports' },
+      { title: 'Nike Men Dri-FIT Legend Athletic Training Crew T-Shirt (Black)', brand: 'Nike', searchQuery: 'Nike Dri-FIT Legend Athletic T-Shirt', basePrice: 1295, image: IMAGES.tshirt_black || IMAGES.tshirt, tags: 'tshirt t-shirt tee nike dri fit training athletic black' },
+      { title: 'Adidas Men Essentials Single Jersey Linear Logo T-Shirt (White)', brand: 'Adidas', searchQuery: 'Adidas Essentials Linear Logo T-Shirt', basePrice: 1199, image: IMAGES.tshirt, tags: 'tshirt t-shirt tee adidas essentials linear logo white' },
+      { title: 'Roadster Men Henley Neck Washed Cotton Casual T-Shirt (Olive)', brand: 'Roadster', searchQuery: 'Roadster Henley Neck Cotton T-Shirt', basePrice: 399, image: IMAGES.tshirt, tags: 'tshirt t-shirt tee roadster henley neck washed olive' },
+      { title: 'Wrogn Men Printed Slim Fit Cotton Round Neck T-Shirt', brand: 'Wrogn', searchQuery: 'Wrogn Printed Slim Fit T-Shirt', basePrice: 649, image: IMAGES.tshirt_graphic, tags: 'tshirt t-shirt tee wrogn printed slim fit cotton' },
+      { title: 'Flying Machine Men Typography Printed Casual Cotton T-Shirt', brand: 'Flying Machine', searchQuery: 'Flying Machine Typography T-Shirt', basePrice: 499, image: IMAGES.tshirt_graphic, tags: 'tshirt t-shirt tee flying machine typography cotton' },
+      { title: 'Spykar Men Graphic Slim Fit Crew Neck T-Shirt (Black)', brand: 'Spykar', searchQuery: 'Spykar Graphic Crew Neck T-Shirt', basePrice: 599, image: IMAGES.tshirt_black || IMAGES.tshirt, tags: 'tshirt t-shirt tee spykar graphic crew neck black' },
+      { title: 'Jack & Jones Men Solid Slim Fit Pure Cotton T-Shirt (Maroon)', brand: 'Jack & Jones', searchQuery: 'Jack & Jones Slim Fit Cotton T-Shirt', basePrice: 699, image: IMAGES.tshirt, tags: 'tshirt t-shirt tee jack jones solid slim fit maroon' },
+      { title: 'Max Men Pack of 3 Solid Round Neck Regular Fit Cotton T-Shirts', brand: 'Max', searchQuery: 'Max Pack of 3 Cotton T-Shirts', basePrice: 799, image: IMAGES.tshirt, tags: 'tshirt t-shirt tee max pack of 3 combo round neck' },
+      { title: 'FastColors Men Colorblock Full Sleeve Round Neck Cotton T-Shirt', brand: 'FastColors', searchQuery: 'FastColors Colorblock Full Sleeve T-Shirt', basePrice: 299, image: IMAGES.tshirt, tags: 'tshirt t-shirt tee fastcolors colorblock full sleeve' },
+      { title: 'Dennis Lingo Men Solid Mandarin Collar Casual Cotton T-Shirt', brand: 'Dennis Lingo', searchQuery: 'Dennis Lingo Mandarin Collar T-Shirt', basePrice: 449, image: IMAGES.tshirt_polo, tags: 'tshirt t-shirt tee dennis lingo mandarin collar' },
+      { title: 'U.S. Polo Assn. Men Solid Pique Cotton Polo T-Shirt (Navy)', brand: 'U.S. Polo Assn.', searchQuery: 'U.S. Polo Assn. Men Polo T-Shirt', basePrice: 899, image: IMAGES.tshirt_polo, tags: 'tshirt t-shirt tee polo us polo assn cotton collar' },
+      { title: 'Bewakoof Men Oversized Graphic Cotton T-Shirt (Anime Print)', brand: 'Bewakoof', searchQuery: 'Bewakoof Oversized Anime Graphic T-Shirt', basePrice: 449, image: IMAGES.tshirt_graphic, tags: 'tshirt t-shirt tee bewakoof oversized anime graphic' },
+      { title: 'The Souled Store Men Official Marvel Graphic Oversized Cotton T-Shirt', brand: 'The Souled Store', searchQuery: 'The Souled Store Marvel Oversized T-Shirt', basePrice: 799, image: IMAGES.tshirt_graphic, tags: 'tshirt t-shirt tee souled store marvel graphic oversized' },
+      { title: 'Eyebogler Men Printed Round Neck Cotton T-Shirt (Pack of 2)', brand: 'Eyebogler', searchQuery: 'Eyebogler Pack of 2 Cotton T-Shirts', basePrice: 299, image: IMAGES.tshirt, tags: 'tshirt t-shirt tee eyebogler printed combo pack of 2' },
+    ];
+  } else if (/shirt/.test(lower) && !/tshirt|t-shirt|tee|polo/.test(lower)) {
+    categoryItems = [
+      { title: 'Dennis Lingo Men Solid Casual Yellow Cotton Shirt', brand: 'Dennis Lingo', searchQuery: 'Dennis Lingo Casual Cotton Shirt', basePrice: 511, image: IMAGES.shirt_casual, tags: 'shirt casual dennis lingo cotton full sleeve' },
+      { title: 'Allen Solly Men Solid Casual White Pure Cotton Shirt', brand: 'Allen Solly', searchQuery: 'Allen Solly White Cotton Shirt', basePrice: 679, image: IMAGES.shirt_formal, tags: 'shirt formal allen solly white pure cotton office' },
+      { title: 'Roadster Men Checkered Casual Blue Cotton Shirt', brand: 'Roadster', searchQuery: 'Roadster Checkered Cotton Shirt', basePrice: 347, image: IMAGES.shirt_check, tags: 'shirt check checked roadster casual cotton blue' },
+      { title: 'Peter England Men Classic Formal Sky Blue Striped Shirt', brand: 'Peter England', searchQuery: 'Peter England Striped Formal Shirt', basePrice: 799, image: IMAGES.shirt_striped, tags: 'shirt formal peter england striped sky blue office' },
+      { title: 'Louis Philippe Men Classic White Formal Work Shirt', brand: 'Louis Philippe', searchQuery: 'Louis Philippe White Formal Shirt', basePrice: 1299, image: IMAGES.shirt_formal_blue, tags: 'shirt formal louis philippe white luxury office' },
+      { title: "Levi's Men Standard Fit Western Casual Denim Shirt", brand: "Levi's", searchQuery: "Levi's Western Denim Casual Shirt", basePrice: 1499, image: IMAGES.shirt_denim, tags: 'shirt levis western denim casual cotton blue' },
+      { title: 'Highlander Men Slim Fit Casual Indigo Denim Shirt', brand: 'Highlander', searchQuery: 'Highlander Slim Fit Denim Shirt', basePrice: 599, image: IMAGES.shirt_denim, tags: 'shirt denim highlander casual blue cotton slim' },
+      { title: 'Raymond Men Contemporary Fit Solid Formal White Cotton Shirt', brand: 'Raymond', searchQuery: 'Raymond Formal White Cotton Shirt', basePrice: 1199, image: IMAGES.shirt_formal, tags: 'shirt formal raymond white solid cotton premium' },
+      { title: 'Arrow Men Regular Fit Spread Collar Formal Shirt', brand: 'Arrow', searchQuery: 'Arrow Spread Collar Formal Shirt', basePrice: 1099, image: IMAGES.shirt_formal, tags: 'shirt formal arrow regular fit spread collar' },
+      { title: 'Van Heusen Men Slim Fit Formal Poplin Shirt', brand: 'Van Heusen', searchQuery: 'Van Heusen Slim Fit Poplin Shirt', basePrice: 999, image: IMAGES.shirt_formal, tags: 'shirt formal van heusen slim fit poplin' },
+      { title: 'Red Tape Men Solid Casual Cotton Full Sleeve Shirt', brand: 'Red Tape', searchQuery: 'Red Tape Casual Cotton Shirt', basePrice: 699, image: IMAGES.shirt_casual, tags: 'shirt casual red tape solid cotton full sleeve' },
+      { title: 'Mufti Men Slim Fit Casual Double Pocket Denim Shirt', brand: 'Mufti', searchQuery: 'Mufti Double Pocket Denim Shirt', basePrice: 1399, image: IMAGES.shirt_denim, tags: 'shirt casual mufti double pocket denim shirt' },
+    ];
+  } else if (/jeans|denim/.test(lower)) {
+    categoryItems = [
+      { title: "Levi's Men 511 Slim Fit Stretchable Denim Jeans (Dark Indigo)", brand: "Levi's", searchQuery: "Levi's 511 Slim Fit Jeans", basePrice: 1899, image: IMAGES.jeans, tags: 'jeans levis 511 slim fit stretchable denim dark indigo' },
+      { title: "Levi's Men 512 Tapered Fit Dark Blue Denim Jeans", brand: "Levi's", searchQuery: "Levi's 512 Tapered Fit Jeans", basePrice: 2199, image: IMAGES.jeans, tags: 'jeans levis 512 tapered fit stretch denim' },
+      { title: 'Spykar Men Slim Fit Low Rise Indigo Blue Washed Jeans', brand: 'Spykar', searchQuery: 'Spykar Slim Fit Blue Jeans', basePrice: 1499, image: IMAGES.jeans, tags: 'jeans spykar slim fit denim washed stretchable' },
+      { title: 'Wrangler Men Regular Fit Dark Blue Stonewash Jeans', brand: 'Wrangler', searchQuery: 'Wrangler Regular Fit Blue Jeans', basePrice: 1699, image: IMAGES.jeans, tags: 'jeans wrangler regular fit stonewash dark blue' },
+      { title: 'Flying Machine Men Skinny Fit Mid Rise Black Clean Jeans', brand: 'Flying Machine', searchQuery: 'Flying Machine Men Black Jeans', basePrice: 1199, image: IMAGES.jeans, tags: 'jeans flying machine skinny fit black denim' },
+      { title: 'Metronaut Men Slim Fit Washed Casual Stretchable Denim Jeans', brand: 'Metronaut', searchQuery: 'Metronaut Men Slim Fit Stretch Jeans', basePrice: 599, image: IMAGES.jeans, tags: 'jeans metronaut slim fit stretchable denim casual' },
+      { title: 'Pepe Jeans Men Regular Fit Classic Mid Rise Jeans', brand: 'Pepe Jeans', searchQuery: 'Pepe Jeans Regular Fit Jeans', basePrice: 1599, image: IMAGES.jeans, tags: 'jeans pepe jeans regular fit classic mid rise' },
+      { title: 'Killer Men Slim Fit Dark Wash Cotton Stretch Jeans', brand: 'Killer', searchQuery: 'Killer Slim Fit Stretch Jeans', basePrice: 1399, image: IMAGES.jeans, tags: 'jeans killer slim fit dark wash stretch cotton' },
+      { title: 'Mufti Men Super Slim Fit Clean Indigo Denim Jeans', brand: 'Mufti', searchQuery: 'Mufti Clean Indigo Denim Jeans', basePrice: 1799, image: IMAGES.jeans, tags: 'jeans mufti super slim fit clean indigo denim' },
+      { title: 'Jack & Jones Men Slim Fit Distressed Ripped Denim Jeans', brand: 'Jack & Jones', searchQuery: 'Jack & Jones Distressed Ripped Jeans', basePrice: 1699, image: IMAGES.jeans, tags: 'jeans jack jones distressed ripped slim fit' },
+      { title: 'Highlander Men Tapered Fit Light Fade Blue Jeans', brand: 'Highlander', searchQuery: 'Highlander Tapered Fade Blue Jeans', basePrice: 699, image: IMAGES.jeans, tags: 'jeans highlander tapered fit light fade blue' },
+      { title: 'Roadies by Roadster Men Cargo Style Denim Joggers', brand: 'Roadster', searchQuery: 'Roadster Cargo Denim Joggers', basePrice: 799, image: IMAGES.jeans, tags: 'jeans roadster cargo denim joggers streetwear' },
+    ];
+  } else if (/saree/.test(lower)) {
+    categoryItems = [
+      { title: 'AVANTIKA FASHION Woven Kanjivaram Pure Silk Saree with Blouse Piece', brand: 'Avantika Fashion', searchQuery: 'Avantika Fashion Kanjivaram Silk Saree', basePrice: 458, image: IMAGES.saree_silk, tags: 'saree silk kanjivaram ethnic wedding festive' },
+      { title: 'HouseOfCommon Woven, Printed Banarasi Art Silk Saree (Royal Blue)', brand: 'HouseOfCommon', searchQuery: 'HouseOfCommon Banarasi Silk Saree', basePrice: 499, image: IMAGES.saree, tags: 'saree banarasi silk art ethnic festive party' },
+      { title: 'Siril Georgette Bandhani Printed Daily Wear Saree with Blouse', brand: 'Siril', searchQuery: 'Siril Bandhani Printed Saree', basePrice: 349, image: IMAGES.saree, tags: 'saree georgette bandhani siril floral printed daily' },
+      { title: 'Kalini Woven Zari Design Traditional Kanjeevaram Silk Saree', brand: 'Kalini', searchQuery: 'Kalini Kanjeevaram Zari Saree', basePrice: 699, image: IMAGES.saree_silk, tags: 'saree kalini kanjeevaram zari traditional silk festive' },
+      { title: 'Soru Fashion Woven Banarasi Jacquard Silk Saree (Wine Red)', brand: 'Soru Fashion', searchQuery: 'Soru Fashion Banarasi Jacquard Saree', basePrice: 599, image: IMAGES.saree, tags: 'saree soru fashion banarasi jacquard wine red' },
+      { title: 'Mitera Embroidered Chiffon Party Wear Bollywood Saree', brand: 'Mitera', searchQuery: 'Mitera Embroidered Chiffon Saree', basePrice: 849, image: IMAGES.saree, tags: 'saree mitera embroidered chiffon bollywood party' },
+      { title: 'Jaanvi Fashion Poly Georgette Floral Printed Casual Saree', brand: 'Jaanvi Fashion', searchQuery: 'Jaanvi Fashion Floral Georgette Saree', basePrice: 299, image: IMAGES.saree, tags: 'saree jaanvi fashion floral georgette casual daily' },
+      { title: 'Anand Sarees Printed Mysore Art Silk Saree (Mustard)', brand: 'Anand Sarees', searchQuery: 'Anand Sarees Mysore Art Silk Saree', basePrice: 389, image: IMAGES.saree, tags: 'saree anand sarees mysore art silk mustard' },
+      { title: 'Varkala Silk Sarees Woven Kanjivaram Pattu Silk Bridal Saree', brand: 'Varkala Silk', searchQuery: 'Varkala Silk Kanjivaram Bridal Saree', basePrice: 1299, image: IMAGES.saree_silk, tags: 'saree varkala silk kanjivaram bridal wedding pattu' },
+      { title: 'Anouk Women Zari Pure Chiffon Festive Evening Saree', brand: 'Anouk', searchQuery: 'Anouk Zari Chiffon Festive Saree', basePrice: 899, image: IMAGES.saree, tags: 'saree anouk zari chiffon festive evening party' },
+      { title: 'Mimosa Traditional Soft Art Silk Kanjivaram Style Saree', brand: 'Mimosa', searchQuery: 'Mimosa Soft Art Silk Saree', basePrice: 799, image: IMAGES.saree_silk, tags: 'saree mimosa soft art silk kanjivaram traditional' },
+      { title: 'Tikhi Imli Printed Poly Chiffon Ruffle Saree (Party Wear)', brand: 'Tikhi Imli', searchQuery: 'Tikhi Imli Ruffle Chiffon Saree', basePrice: 649, image: IMAGES.saree, tags: 'saree tikhi imli ruffle chiffon party wear ready to wear' },
+    ];
+  } else if (/kurti|kurta|dress|ethnic|suit/.test(lower)) {
+    categoryItems = [
+      { title: 'GoSriKi Women Cotton Blend Straight Printed Kurta with Pant & Dupatta', brand: 'GoSriKi', searchQuery: 'GoSriKi Cotton Kurta Pant Set', basePrice: 599, image: IMAGES.kurti, tags: 'kurti kurta gosriki cotton printed ethnic set dupatta' },
+      { title: 'Hisham Embroidered Anarkali Kurta, Bottom & Dupatta Set', brand: 'Hisham', searchQuery: 'Hisham Embroidered Anarkali Kurta Set', basePrice: 458, image: IMAGES.dress, tags: 'kurti anarkali kurta ethnic festive embroidery' },
+      { title: 'Janasya Women Poly Silk Straight Kurta with Pant & Dupatta Set', brand: 'Janasya', searchQuery: 'Janasya Poly Silk Kurta Set Teal', basePrice: 899, image: IMAGES.kurti, tags: 'kurti kurta janasya poly silk straight pant dupatta' },
+      { title: 'Tokyo Talkies Women Floral Print A-Line Casual Dress (Navy Blue)', brand: 'Tokyo Talkies', searchQuery: 'Tokyo Talkies Floral A-Line Dress', basePrice: 499, image: IMAGES.dress, tags: 'dress tokyo talkies floral printed a line women western wear' },
+      { title: 'Libas Women Maroon Embroidered Straight Kurta with Palazzos', brand: 'Libas', searchQuery: 'Libas Embroidered Kurta Palazzo Set', basePrice: 899, image: IMAGES.kurti, tags: 'kurti libas palazzo ethnic festive embroidery maroon' },
+      { title: 'Biba Women Printed Pure Cotton Straight Daily Kurti', brand: 'Biba', searchQuery: 'Biba Cotton Straight Daily Kurti', basePrice: 699, image: IMAGES.dress, tags: 'kurti biba cotton straight daily office casual' },
+      { title: 'Berrylush Women Floral Print Wrap Front Tiered Maxi Dress', brand: 'Berrylush', searchQuery: 'Berrylush Floral Tiered Maxi Dress', basePrice: 799, image: IMAGES.dress, tags: 'dress berrylush floral wrap tiered maxi casual western' },
+      { title: 'W for Woman Geometric Print Cotton Straight Kurta', brand: 'W for Woman', searchQuery: 'W for Woman Cotton Straight Kurta', basePrice: 849, image: IMAGES.kurti, tags: 'kurti w for woman geometric cotton straight daily' },
+      { title: 'Aurelia Women Floral Foil Print A-Line Festive Kurta', brand: 'Aurelia', searchQuery: 'Aurelia Floral Foil A-Line Kurta', basePrice: 749, image: IMAGES.kurti, tags: 'kurti aurelia floral foil a line festive ethnic' },
+      { title: 'Vishudh Women Printed Anarkali Flared Ethnic Kurti', brand: 'Vishudh', searchQuery: 'Vishudh Anarkali Flared Ethnic Kurti', basePrice: 499, image: IMAGES.dress, tags: 'kurti vishudh anarkali flared ethnic printed casual' },
+      { title: 'Ziyaa Women Foil Printed Crepe Straight Festive Kurti', brand: 'Ziyaa', searchQuery: 'Ziyaa Foil Printed Crepe Kurti', basePrice: 399, image: IMAGES.kurti, tags: 'kurti ziyaa crepe foil printed festive budget' },
+      { title: 'Indya Women Embroidered Georgette Peplum Kurta with Sharara', brand: 'Indya', searchQuery: 'Indya Embroidered Peplum Sharara Set', basePrice: 1499, image: IMAGES.dress, tags: 'kurti indya peplum sharara georgette wedding festive' },
+    ];
+  } else if (/infinix/.test(lower)) {
     categoryItems = [
       { title: 'Infinix Note 40 Pro 5G (8GB RAM, 256GB Storage, Wireless MagCharge)', brand: 'Infinix', searchQuery: 'Infinix Note 40 Pro 5G', basePrice: 19999, image: IMAGES.samsung_s24, tags: 'phone mobile infinix note 40 pro 5g magcharge' },
       { title: 'Infinix Smart 8 HD (Timber Black, 3GB RAM, 64GB Storage)', brand: 'Infinix', searchQuery: 'Infinix Smart 8 HD', basePrice: 6299, image: IMAGES.samsung_m35, tags: 'phone mobile infinix smart 8 hd budget android' },
@@ -2494,12 +2575,22 @@ function generateDynamicProducts(query) {
       { title: 'Apple iPad (10th Gen, 10.9-inch Liquid Retina, Wi-Fi, 64GB, Blue)', brand: 'Apple', searchQuery: 'Apple iPad 10th Gen 64GB', basePrice: 32900, image: IMAGES.tablet || IMAGES.hp_laptop, tags: 'tablet ipad apple 10th gen 10.9 inch wifi 64gb' },
       { title: 'Samsung Galaxy Tab S9 FE (10.9-inch WQXGA, 6GB RAM, 128GB, S-Pen)', brand: 'Samsung', searchQuery: 'Samsung Galaxy Tab S9 FE', basePrice: 31999, image: IMAGES.tablet || IMAGES.hp_laptop, tags: 'tablet samsung galaxy tab s9 fe spen android' },
       { title: 'Realme Pad 2 (11.5-inch 2K 120Hz Display, 6GB RAM, 128GB Storage)', brand: 'Realme', searchQuery: 'Realme Pad 2 128GB', basePrice: 17999, image: IMAGES.tablet || IMAGES.hp_laptop, tags: 'tablet realme pad 2 120hz 2k display quad speakers' },
+      { title: 'Lenovo Tab M11 (11-inch WUXGA 90Hz, 8GB RAM, 128GB, Pen Included)', brand: 'Lenovo', searchQuery: 'Lenovo Tab M11 128GB', basePrice: 14999, image: IMAGES.tablet || IMAGES.hp_laptop, tags: 'tablet lenovo tab m11 90hz pen included quad speakers' },
+      { title: 'Xiaomi Pad 6 (11-inch 2.8K 144Hz, Snapdragon 870, 8GB RAM, 256GB)', brand: 'Xiaomi', searchQuery: 'Xiaomi Pad 6 Snapdragon 870 256GB', basePrice: 26999, image: IMAGES.tablet || IMAGES.hp_laptop, tags: 'tablet xiaomi pad 6 snapdragon 870 144hz metal' },
+      { title: 'OnePlus Pad Go (11.35-inch 2.4K Display, 8GB RAM, 128GB, Quad Speakers)', brand: 'OnePlus', searchQuery: 'OnePlus Pad Go 128GB', basePrice: 19999, image: IMAGES.tablet || IMAGES.hp_laptop, tags: 'tablet oneplus pad go 2.4k eye care quad speakers' },
+      { title: 'Samsung Galaxy Tab A9+ (11-inch Display, 8GB RAM, 128GB Storage, 5G)', brand: 'Samsung', searchQuery: 'Samsung Galaxy Tab A9 Plus 5G', basePrice: 20999, image: IMAGES.tablet || IMAGES.hp_laptop, tags: 'tablet samsung galaxy tab a9 plus 5g snapdragon' },
+      { title: 'Apple iPad Air 11-inch (M2 Chip, Wi-Fi, 128GB, Space Grey)', brand: 'Apple', searchQuery: 'Apple iPad Air M2 128GB', basePrice: 59900, image: IMAGES.tablet || IMAGES.hp_laptop, tags: 'tablet ipad air apple m2 chip 11 inch liquid retina' },
     ];
   } else if (/monitor|screen|display/.test(lower)) {
     categoryItems = [
       { title: 'Samsung 24-inch FHD IPS 75Hz Bezel-Less Flat Monitor (LS24C310EAWXXL)', brand: 'Samsung', searchQuery: 'Samsung 24 inch IPS Monitor LS24C310', basePrice: 7499, image: IMAGES.monitor || IMAGES.tv, tags: 'monitor screen samsung 24 inch fhd ips 75hz' },
       { title: 'LG 27-inch UltraGear FHD IPS 144Hz 1ms Gaming Monitor (27GN65R)', brand: 'LG', searchQuery: 'LG 27 inch UltraGear Gaming Monitor 144Hz', basePrice: 13999, image: IMAGES.monitor || IMAGES.tv, tags: 'monitor screen lg ultragear 27 inch 144hz 1ms gaming' },
-      { title: 'Acer EK220Q 21.5-inch Full HD VA Panel Monitor (75Hz, 5ms)', brand: 'Acer', searchQuery: 'Acer 21.5 inch FHD Monitor EK220Q', basePrice: 5499, image: IMAGES.monitor || IMAGES.tv, tags: 'monitor screen acer 21.5 inch fhd 75hz hdmi vga' },
+      { title: 'Acer EK220Q 21.5-inch Full HD VA Panel Monitor (75Hz, 5ms, HDMI)', brand: 'Acer', searchQuery: 'Acer 21.5 inch FHD Monitor EK220Q', basePrice: 5499, image: IMAGES.monitor || IMAGES.tv, tags: 'monitor screen acer 21.5 inch fhd 75hz hdmi vga' },
+      { title: 'BenQ GW2480 24-inch Eye-Care Full HD IPS Monitor (Brightness Intelligence)', brand: 'BenQ', searchQuery: 'BenQ GW2480 24 inch IPS Monitor', basePrice: 8490, image: IMAGES.monitor || IMAGES.tv, tags: 'monitor screen benq gw2480 24 inch fhd ips eye care' },
+      { title: 'Dell 24-inch FHD IPS 75Hz Monitor with AMD FreeSync (S2421HN)', brand: 'Dell', searchQuery: 'Dell S2421HN 24 inch IPS Monitor', basePrice: 8999, image: IMAGES.monitor || IMAGES.tv, tags: 'monitor screen dell s2421hn 24 inch ips fhd dual hdmi' },
+      { title: 'ASUS TUF Gaming 24-inch 165Hz 1ms IPS Gaming Monitor (VG249Q1A)', brand: 'ASUS', searchQuery: 'ASUS TUF Gaming 24 inch 165Hz Monitor', basePrice: 11999, image: IMAGES.monitor || IMAGES.tv, tags: 'monitor screen asus tuf gaming 24 inch 165hz 1ms' },
+      { title: 'MSI PRO MP241X 23.8-inch Full HD 75Hz Professional Office Monitor', brand: 'MSI', searchQuery: 'MSI PRO MP241X 23.8 inch Monitor', basePrice: 6299, image: IMAGES.monitor || IMAGES.tv, tags: 'monitor screen msi pro mp241x 23.8 inch fhd 75hz office' },
+      { title: 'Zebronics 24-inch 75Hz Curved Gaming Monitor with HDMI & VGA (A24FHD)', brand: 'Zebronics', searchQuery: 'Zebronics 24 inch Curved Monitor', basePrice: 6999, image: IMAGES.monitor || IMAGES.tv, tags: 'monitor screen zebronics 24 inch curved gaming 75hz' },
     ];
   } else if (/soundbar|home theatre/.test(lower)) {
     categoryItems = [
@@ -2512,6 +2603,11 @@ function generateDynamicProducts(query) {
       { title: 'Pigeon by Stovekraft Cruise 1800W Induction Cooktop (7 Preset Indian Menus)', brand: 'Pigeon', searchQuery: 'Pigeon Cruise 1800W Induction Cooktop', basePrice: 1499, image: IMAGES.induction || IMAGES.air_fryer, tags: 'induction cooktop stove pigeon cruise 1800w electric' },
       { title: 'Prestige PIC 20 1600W Induction Cooktop with Push Button Controls', brand: 'Prestige', searchQuery: 'Prestige PIC 20 Induction Cooktop', basePrice: 1899, image: IMAGES.induction || IMAGES.air_fryer, tags: 'induction cooktop prestige pic 20 1600w indian menu' },
       { title: 'Philips Viva Collection HD4928/01 2100W Induction Cooktop', brand: 'Philips', searchQuery: 'Philips HD4928 2100W Induction Cooktop', basePrice: 3199, image: IMAGES.induction || IMAGES.air_fryer, tags: 'induction cooktop philips viva 2100w fast cooking' },
+      { title: 'Havells Insta Cook ET-X 1900W Induction Cooktop (Soft Touch, 8 Menus)', brand: 'Havells', searchQuery: 'Havells Insta Cook ET-X Induction Cooktop', basePrice: 2899, image: IMAGES.induction || IMAGES.air_fryer, tags: 'induction cooktop havells insta cook 1900w soft touch' },
+      { title: 'Bajaj Majesty ICX 7 1900W Induction Cooktop with 8 Preset Menus', brand: 'Bajaj', searchQuery: 'Bajaj Majesty ICX 7 Induction Cooktop', basePrice: 2699, image: IMAGES.induction || IMAGES.air_fryer, tags: 'induction cooktop bajaj majesty icx 7 1900w' },
+      { title: 'Usha Cook Joy 1600W Induction Cooktop with Smart Pause Function', brand: 'Usha', searchQuery: 'Usha Cook Joy 1600W Induction Cooktop', basePrice: 2199, image: IMAGES.induction || IMAGES.air_fryer, tags: 'induction cooktop usha cook joy 1600w copper' },
+      { title: 'Crompton Instaserve 2000W Induction Cooktop with Touch Control', brand: 'Crompton', searchQuery: 'Crompton Instaserve 2000W Induction Cooktop', basePrice: 2799, image: IMAGES.induction || IMAGES.air_fryer, tags: 'induction cooktop crompton instaserve 2000w touch' },
+      { title: 'Kent 16045 Induction Cooktop 2000W with 8 Preset Functions', brand: 'Kent', searchQuery: 'Kent Induction Cooktop 2000W', basePrice: 2499, image: IMAGES.induction || IMAGES.air_fryer, tags: 'induction cooktop kent 2000w microcrystalline glass' },
     ];
   } else if (/cookware|tawa|pan|kadhai/.test(lower)) {
     categoryItems = [
@@ -2623,13 +2719,28 @@ function generateDynamicProducts(query) {
       { title: 'Daikin 1.5 Ton 5 Star Inverter Split AC (Copper Condenser, PM 2.5 Filter)', brand: 'Daikin', searchQuery: 'Daikin 1.5 Ton 5 Star Inverter AC', basePrice: 44990, image: IMAGES.ac, tags: 'ac air conditioner daikin 1.5 ton 5 star inverter' },
       { title: 'Voltas 1.5 Ton 3 Star Inverter Split AC (Copper, 183V Vectra Prism)', brand: 'Voltas', searchQuery: 'Voltas 1.5 Ton 3 Star Split AC', basePrice: 32990, image: IMAGES.ac, tags: 'ac air conditioner voltas 1.5 ton 3 star inverter' },
       { title: 'Lloyd 1.5 Ton 3 Star Inverter Split AC (Copper, 5 in 1 Convertible)', brand: 'Lloyd', searchQuery: 'Lloyd 1.5 Ton 3 Star Inverter AC', basePrice: 32490, image: IMAGES.ac, tags: 'ac air conditioner lloyd 1.5 ton 3 star convertible' },
+      { title: 'Blue Star 1.5 Ton 3 Star Inverter Split AC (Turbo Cool, Copper, IA318YNU)', brand: 'Blue Star', searchQuery: 'Blue Star 1.5 Ton 3 Star Split AC', basePrice: 34990, image: IMAGES.ac, tags: 'ac air conditioner blue star 1.5 ton 3 star turbo cool' },
+      { title: 'Godrej 1.5 Ton 3 Star 5-in-1 Convertible Inverter Split AC (Copper)', brand: 'Godrej', searchQuery: 'Godrej 1.5 Ton 3 Star Inverter AC', basePrice: 30990, image: IMAGES.ac, tags: 'ac air conditioner godrej 1.5 ton 3 star convertible' },
+      { title: 'Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Split AC (Miraie App, PM 0.1 Filter)', brand: 'Panasonic', searchQuery: 'Panasonic 1.5 Ton Wi-Fi Inverter AC', basePrice: 36990, image: IMAGES.ac, tags: 'ac air conditioner panasonic 1.5 ton wifi inverter' },
+      { title: 'Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, 6-in-1)', brand: 'Carrier', searchQuery: 'Carrier 1.5 Ton AI Flexicool Split AC', basePrice: 33990, image: IMAGES.ac, tags: 'ac air conditioner carrier 1.5 ton flexicool inverter' },
+      { title: 'Whirlpool 1.5 Ton 3 Star Magicool Inverter Split AC (Copper Condenser)', brand: 'Whirlpool', searchQuery: 'Whirlpool 1.5 Ton Magicool Inverter AC', basePrice: 31990, image: IMAGES.ac, tags: 'ac air conditioner whirlpool 1.5 ton magicool inverter' },
+      { title: 'Hitachi 1.5 Ton 3 Star Inverter Split AC (Copper, Ice Clean Feature)', brand: 'Hitachi', searchQuery: 'Hitachi 1.5 Ton 3 Star Inverter AC', basePrice: 35990, image: IMAGES.ac, tags: 'ac air conditioner hitachi 1.5 ton inverter ice clean' },
+      { title: 'Haier 1.5 Ton 3 Star Triple Inverter Split AC (54 Deg C Extreme Cooling)', brand: 'Haier', searchQuery: 'Haier 1.5 Ton Triple Inverter AC', basePrice: 32490, image: IMAGES.ac, tags: 'ac air conditioner haier 1.5 ton triple inverter' },
+      { title: 'Symphony Diet 3D 30i Personal Tower Air Cooler (30L Tank, i-Pure Filter)', brand: 'Symphony', searchQuery: 'Symphony Diet 3D 30i Personal Air Cooler', basePrice: 6999, image: IMAGES.cooler || IMAGES.ac, tags: 'cooler air cooler symphony personal tower 30l' },
+      { title: 'Crompton Ozone 75L Desert Air Cooler (Honeycomb Pads, Everlast Pump)', brand: 'Crompton', searchQuery: 'Crompton Ozone 75L Desert Air Cooler', basePrice: 9990, image: IMAGES.cooler || IMAGES.ac, tags: 'cooler air cooler crompton desert 75l room cooling' },
     ];
   } else if (/fridge|refrigerator|single door|double door/.test(lower)) {
     categoryItems = [
       { title: 'Samsung 236L 2 Star Digital Inverter Frost Free Double Door Refrigerator', brand: 'Samsung', searchQuery: 'Samsung 236L Double Door Refrigerator', basePrice: 22490, image: IMAGES.refrigerator, tags: 'fridge refrigerator samsung double door 236l frost free' },
+      { title: 'Samsung 183L 4 Star Digital Inverter Direct-Cool Single Door Refrigerator', brand: 'Samsung', searchQuery: 'Samsung 183L Single Door Refrigerator', basePrice: 15490, image: IMAGES.refrigerator, tags: 'fridge refrigerator samsung single door 183l 4 star' },
       { title: 'LG 185L 5 Star Inverter Direct-Cool Single Door Refrigerator', brand: 'LG', searchQuery: 'LG 185L Single Door Refrigerator', basePrice: 16990, image: IMAGES.refrigerator, tags: 'fridge refrigerator lg single door 185l 5 star inverter' },
+      { title: 'LG 242L 3 Star Smart Inverter Frost-Free Double Door Refrigerator', brand: 'LG', searchQuery: 'LG 242L Double Door Refrigerator', basePrice: 25990, image: IMAGES.refrigerator, tags: 'fridge refrigerator lg double door 242l smart inverter' },
       { title: 'Whirlpool 240L Frost Free Triple Door Refrigerator (Protton FP 343D)', brand: 'Whirlpool', searchQuery: 'Whirlpool 240L Triple Door Refrigerator', basePrice: 25990, image: IMAGES.refrigerator, tags: 'fridge refrigerator whirlpool triple door 240l' },
+      { title: 'Whirlpool 192L 3 Star Direct-Cool Single Door Refrigerator', brand: 'Whirlpool', searchQuery: 'Whirlpool 192L Single Door Refrigerator', basePrice: 13990, image: IMAGES.refrigerator, tags: 'fridge refrigerator whirlpool single door 192l' },
       { title: 'Haier 190L 4 Star Direct Cool Single Door Refrigerator', brand: 'Haier', searchQuery: 'Haier 190L Single Door Refrigerator', basePrice: 14990, image: IMAGES.refrigerator, tags: 'fridge refrigerator haier single door 190l 4 star' },
+      { title: 'Haier 240L 3 Star Frost Free Double Door Refrigerator', brand: 'Haier', searchQuery: 'Haier 240L Double Door Refrigerator', basePrice: 21990, image: IMAGES.refrigerator, tags: 'fridge refrigerator haier double door 240l frost free' },
+      { title: 'Godrej 223L 3 Star Nano Shield Inverter Frost Free Double Door Refrigerator', brand: 'Godrej', searchQuery: 'Godrej 223L Double Door Refrigerator', basePrice: 21490, image: IMAGES.refrigerator, tags: 'fridge refrigerator godrej double door 223l frost free' },
+      { title: 'Godrej 180L 3 Star Direct Cool Single Door Refrigerator', brand: 'Godrej', searchQuery: 'Godrej 180L Single Door Refrigerator', basePrice: 13290, image: IMAGES.refrigerator, tags: 'fridge refrigerator godrej single door 180l 3 star' },
     ];
   } else if (/washing machine|washer/.test(lower)) {
     categoryItems = [
@@ -2643,12 +2754,27 @@ function generateDynamicProducts(query) {
       { title: 'Samsung 43-inch Crystal 4K Vivid Pro Ultra HD Smart TV', brand: 'Samsung', searchQuery: 'Samsung 43 Inch Crystal 4K Vivid Pro TV', basePrice: 28990, image: IMAGES.tv, tags: 'tv smart tv samsung 43 inch crystal 4k uhd' },
       { title: 'LG 43-inch 4K Ultra HD Smart WebOS LED TV (AI ThinQ, HDR 10)', brand: 'LG', searchQuery: 'LG 43 Inch 4K WebOS Smart TV', basePrice: 30490, image: IMAGES.tv, tags: 'tv smart tv lg 43 inch 4k webos ai thinq' },
       { title: 'Sony Bravia 55-inch 4K Ultra HD Smart LED Google TV (KD-55X74L)', brand: 'Sony', searchQuery: 'Sony Bravia 55 Inch 4K Google TV', basePrice: 57990, image: IMAGES.tv, tags: 'tv smart tv sony bravia 55 inch 4k ultra hd google tv' },
+      { title: 'Thomson 43-inch 4K Ultra HD Smart Google TV with Dolby Audio', brand: 'Thomson', searchQuery: 'Thomson 43 inch 4K Google TV', basePrice: 19999, image: IMAGES.tv, tags: 'tv smart tv thomson 43 inch 4k google tv dolby' },
+      { title: 'Blaupunkt 50-inch CyberSound 4K Ultra HD Google TV (60W Speaker)', brand: 'Blaupunkt', searchQuery: 'Blaupunkt 50 inch 4K Google TV 60W', basePrice: 26999, image: IMAGES.tv, tags: 'tv smart tv blaupunkt 50 inch 4k uhd google tv 60w' },
+      { title: 'OnePlus 43-inch Y1S Pro 4K Ultra HD Smart Android LED TV', brand: 'OnePlus', searchQuery: 'OnePlus 43 inch Y1S Pro 4K TV', basePrice: 24999, image: IMAGES.tv, tags: 'tv smart tv oneplus 43 inch 4k y1s pro android' },
+      { title: 'TCL 55-inch 4K Ultra HD Smart QLED TV (Dolby Vision Atmos, Metallic)', brand: 'TCL', searchQuery: 'TCL 55 inch 4K QLED TV', basePrice: 34990, image: IMAGES.tv, tags: 'tv smart tv tcl 55 inch 4k qled dolby vision' },
+      { title: 'Acer 43-inch Advanced I Series 4K Ultra HD Google TV (30W Speaker)', brand: 'Acer', searchQuery: 'Acer 43 inch 4K Google TV', basePrice: 22999, image: IMAGES.tv, tags: 'tv smart tv acer 43 inch 4k uhd google tv' },
+      { title: 'Mi 32-inch Horizon Edition HD Ready Smart Android TV (20W Stereo)', brand: 'Xiaomi', searchQuery: 'Mi 32 inch Horizon Edition TV', basePrice: 12999, image: IMAGES.tv, tags: 'tv smart tv mi 32 inch hd ready horizon edition' },
+      { title: 'Kodak 43-inch Matrix QLED 4K Ultra HD Google TV', brand: 'Kodak', searchQuery: 'Kodak 43 inch Matrix QLED 4K TV', basePrice: 21999, image: IMAGES.tv, tags: 'tv smart tv kodak 43 inch qled 4k ultra hd google' },
+      { title: 'Sansui 55-inch 4K Ultra HD Smart Google TV with Dolby Vision', brand: 'Sansui', searchQuery: 'Sansui 55 inch 4K Google TV', basePrice: 29990, image: IMAGES.tv, tags: 'tv smart tv sansui 55 inch 4k google tv dolby' },
+      { title: 'Hisense 55-inch 4K Ultra HD Smart Google QLED TV (120Hz HR)', brand: 'Hisense', searchQuery: 'Hisense 55 inch 4K QLED Google TV', basePrice: 32990, image: IMAGES.tv, tags: 'tv smart tv hisense 55 inch 4k qled google tv' },
+      { title: 'Toshiba 43-inch 4K Ultra HD Smart Google TV (REGZA Engine ZR)', brand: 'Toshiba', searchQuery: 'Toshiba 43 inch 4K Google TV REGZA', basePrice: 23990, image: IMAGES.tv, tags: 'tv smart tv toshiba 43 inch 4k regza google tv' },
     ];
   } else if (/mixer|grinder|blender|juicer/.test(lower)) {
     categoryItems = [
       { title: 'Preethi Zodiac MG-218 750W Mixer Grinder with 5 Jars', brand: 'Preethi', searchQuery: 'Preethi Zodiac 750W Mixer Grinder', basePrice: 8499, image: IMAGES.mixer_grinder, tags: 'mixer grinder preethi zodiac 750w 5 jars kitchen' },
       { title: 'Philips HL7756/00 750W Mixer Grinder with 3 Stainless Steel Jars', brand: 'Philips', searchQuery: 'Philips HL7756 750W Mixer Grinder', basePrice: 3499, image: IMAGES.mixer_grinder, tags: 'mixer grinder philips hl7756 750w 3 jars' },
+      { title: 'Prestige Iris Plus 750W Mixer Grinder with 4 Jars (3 Stainless Steel + 1 Juicer)', brand: 'Prestige', searchQuery: 'Prestige Iris Plus 750W Mixer Grinder', basePrice: 2999, image: IMAGES.mixer_grinder, tags: 'mixer grinder prestige iris plus 750w 4 jars juicer' },
+      { title: 'Bajaj Rex 500W Mixer Grinder with 3 Stainless Steel Jars', brand: 'Bajaj', searchQuery: 'Bajaj Rex 500W Mixer Grinder', basePrice: 1999, image: IMAGES.mixer_grinder, tags: 'mixer grinder bajaj rex 500w 3 jars kitchen' },
+      { title: 'Butterfly Jet Elite 750W Mixer Grinder with 4 Jars', brand: 'Butterfly', searchQuery: 'Butterfly Jet Elite 750W Mixer Grinder', basePrice: 2899, image: IMAGES.mixer_grinder, tags: 'mixer grinder butterfly jet elite 750w 4 jars' },
       { title: 'Sujata Dynamix 900W Mixer Grinder with 3 Jars (Heavy Duty Motor)', brand: 'Sujata', searchQuery: 'Sujata Dynamix 900W Mixer Grinder', basePrice: 5799, image: IMAGES.mixer_grinder, tags: 'mixer grinder sujata dynamix 900w commercial heavy duty' },
+      { title: 'Crompton Ameo 750W Mixer Grinder with MaxiGrind Technology (3 Jars)', brand: 'Crompton', searchQuery: 'Crompton Ameo 750W Mixer Grinder', basePrice: 3199, image: IMAGES.mixer_grinder, tags: 'mixer grinder crompton ameo 750w 3 jars maxigrind' },
+      { title: 'Bosch TrueMixx Pro 1000W Mixer Grinder with 4 Jars (MGM8842MIN)', brand: 'Bosch', searchQuery: 'Bosch TrueMixx Pro 1000W Mixer Grinder', basePrice: 6999, image: IMAGES.mixer_grinder, tags: 'mixer grinder bosch truemixx pro 1000w 4 jars' },
     ];
   } else if (/air fryer|airfryer|microwave|oven|otg/.test(lower)) {
     categoryItems = [
@@ -2661,31 +2787,65 @@ function generateDynamicProducts(query) {
       { title: 'Philips GC181 Heavy Weight 1000W Dry Iron with Black American Heritage Coating', brand: 'Philips', searchQuery: 'Philips GC181 Heavy Weight Dry Iron', basePrice: 1199, image: IMAGES.iron, tags: 'iron dry iron philips gc181 heavy weight 1000w' },
       { title: 'Bajaj DX 7 1000W Dry Iron with Non-Stick Golden Soleplate', brand: 'Bajaj', searchQuery: 'Bajaj DX 7 1000W Dry Iron', basePrice: 699, image: IMAGES.iron, tags: 'iron dry iron bajaj dx7 1000w non stick' },
       { title: 'Havells Fabio 1250W Steam Iron with Non-Stick Coated Soleplate', brand: 'Havells', searchQuery: 'Havells Fabio 1250W Steam Iron', basePrice: 1299, image: IMAGES.iron, tags: 'iron steam iron havells fabio 1250w steam burst' },
+      { title: 'Philips Handheld Garment Steamer 1000W (STH3000/20, Compact Foldable)', brand: 'Philips', searchQuery: 'Philips Handheld Garment Steamer STH3000', basePrice: 2499, image: IMAGES.iron, tags: 'iron garment steamer philips portable vertical steam' },
+      { title: 'Crompton Insta Glide 1000W Dry Iron with Curved Soleplate', brand: 'Crompton', searchQuery: 'Crompton Insta Glide 1000W Dry Iron', basePrice: 599, image: IMAGES.iron, tags: 'iron dry iron crompton insta glide 1000w non stick' },
+      { title: 'Usha EI 1602 1000W Lightweight Dry Iron with Non-Stick PTFE Coating', brand: 'Usha', searchQuery: 'Usha EI 1602 1000W Dry Iron', basePrice: 549, image: IMAGES.iron, tags: 'iron dry iron usha ei 1602 lightweight 1000w ptfe' },
+      { title: 'Morphy Richards Super Glide 2000W Steam Iron with Ceramic Soleplate', brand: 'Morphy Richards', searchQuery: 'Morphy Richards Super Glide 2000W Steam Iron', basePrice: 1799, image: IMAGES.iron, tags: 'iron steam iron morphy richards 2000w ceramic' },
+      { title: 'Philips GC1905 1440W Steam Iron with Aluminum Soleplate', brand: 'Philips', searchQuery: 'Philips GC1905 Steam Iron 1440W', basePrice: 1499, image: IMAGES.iron, tags: 'iron steam iron philips gc1905 continuous steam spray' },
+      { title: 'Havells Dazzle 1100W Dry Iron with American Heritage Soleplate', brand: 'Havells', searchQuery: 'Havells Dazzle 1100W Dry Iron', basePrice: 799, image: IMAGES.iron, tags: 'iron dry iron havells dazzle 1100w american heritage' },
+      { title: 'Orient Electric Fabrijoy 1000W Heavyweight Dry Iron', brand: 'Orient', searchQuery: 'Orient Electric Fabrijoy Dry Iron', basePrice: 699, image: IMAGES.iron, tags: 'iron dry iron orient electric fabrijoy 1000w' },
     ];
   } else if (/kettle|electric kettle|tea kettle/.test(lower)) {
     categoryItems = [
       { title: 'Prestige PKOSS 1.5L Stainless Steel Electric Kettle (1500W, Auto Cut-Off)', brand: 'Prestige', searchQuery: 'Prestige PKOSS 1.5L Electric Kettle', basePrice: 699, image: IMAGES.kettle, tags: 'kettle electric kettle prestige pkoss 1.5l stainless steel' },
       { title: 'Pigeon by Stovekraft 1.5L Stainless Steel Electric Kettle (1500W)', brand: 'Pigeon', searchQuery: 'Pigeon 1.5L Electric Kettle', basePrice: 549, image: IMAGES.kettle, tags: 'kettle electric kettle pigeon 1.5l auto shut off' },
       { title: 'Kent 1.7L Glass Electric Kettle (1500W, Borosilicate Glass, LED Light)', brand: 'Kent', searchQuery: 'Kent 1.7L Glass Electric Kettle', basePrice: 1199, image: IMAGES.kettle, tags: 'kettle electric kettle kent glass 1.7l led' },
+      { title: 'Butterfly Wave 1.5L Stainless Steel Electric Kettle (1500W)', brand: 'Butterfly', searchQuery: 'Butterfly Wave 1.5L Electric Kettle', basePrice: 599, image: IMAGES.kettle, tags: 'kettle electric kettle butterfly wave 1.5l auto cut off' },
+      { title: 'Havells Aqua Plus 1.2L Double Wall Stainless Steel Electric Kettle', brand: 'Havells', searchQuery: 'Havells Aqua Plus 1.2L Electric Kettle', basePrice: 1399, image: IMAGES.kettle, tags: 'kettle electric kettle havells aqua plus double wall cool touch' },
+      { title: 'Bajaj Majesty KTX 15 1.5L Stainless Steel Electric Kettle', brand: 'Bajaj', searchQuery: 'Bajaj Majesty KTX 15 Kettle', basePrice: 899, image: IMAGES.kettle, tags: 'kettle electric kettle bajaj majesty ktx 1.5l' },
+      { title: 'Inalsa Prisma 1.5L Stainless Steel Cordless Electric Kettle', brand: 'Inalsa', searchQuery: 'Inalsa Prisma 1.5L Electric Kettle', basePrice: 649, image: IMAGES.kettle, tags: 'kettle electric kettle inalsa prisma 1.5l cordless' },
+      { title: 'Wipro Vesta 1.8L Stainless Steel Electric Kettle with Cool Touch Handle', brand: 'Wipro', searchQuery: 'Wipro Vesta 1.8L Electric Kettle', basePrice: 799, image: IMAGES.kettle, tags: 'kettle electric kettle wipro vesta 1.8l large capacity' },
+      { title: 'Crompton Deluxe 1.5L Stainless Steel Fast Boil Electric Kettle', brand: 'Crompton', searchQuery: 'Crompton Deluxe 1.5L Electric Kettle', basePrice: 849, image: IMAGES.kettle, tags: 'kettle electric kettle crompton deluxe 1.5l fast boil' },
+      { title: 'Borosil Rio 1.5L Electric Kettle with Concealed Heating Element', brand: 'Borosil', searchQuery: 'Borosil Rio 1.5L Electric Kettle', basePrice: 999, image: IMAGES.kettle, tags: 'kettle electric kettle borosil rio 1.5l concealed' },
     ];
   } else if (/purifier|water purifier|ro purifier|kent|aquaguard/.test(lower)) {
     categoryItems = [
       { title: 'Kent Grand Plus RO + UV + UF + TDS Control 9L Water Purifier', brand: 'Kent', searchQuery: 'Kent Grand Plus RO Water Purifier', basePrice: 14999, image: IMAGES.water_purifier || IMAGES.water_bottle, tags: 'purifier water purifier kent grand plus ro uv uf' },
       { title: 'Aquaguard Aura 7L RO + UV + Active Copper Water Purifier', brand: 'Aquaguard', searchQuery: 'Aquaguard Aura 7L RO Water Purifier', basePrice: 13499, image: IMAGES.water_purifier || IMAGES.water_bottle, tags: 'purifier water purifier aquaguard aura ro uv copper' },
       { title: 'Pureit Advanced Pro Mineral RO + UV 7L Water Purifier', brand: 'Pureit', searchQuery: 'Pureit Advanced Pro RO Water Purifier', basePrice: 9999, image: IMAGES.water_purifier || IMAGES.water_bottle, tags: 'purifier water purifier pureit advanced pro ro uv' },
+      { title: 'Livpure Glo Star 7L RO + UV + Mineralizer Water Purifier', brand: 'Livpure', searchQuery: 'Livpure Glo Star 7L RO Water Purifier', basePrice: 7999, image: IMAGES.water_purifier || IMAGES.water_bottle, tags: 'purifier water purifier livpure glo star 7l ro uv mineralizer' },
+      { title: 'Eureka Forbes Aquaguard Marvel 6.2L RO + UV + Active Copper Purifier', brand: 'Aquaguard', searchQuery: 'Aquaguard Marvel 6.2L RO UV Water Purifier', basePrice: 11999, image: IMAGES.water_purifier || IMAGES.water_bottle, tags: 'purifier water purifier aquaguard marvel 6.2l ro uv' },
+      { title: 'V-Guard Zenora RO + UV + MB 7L Water Purifier', brand: 'V-Guard', searchQuery: 'V-Guard Zenora 7L RO UV Water Purifier', basePrice: 8499, image: IMAGES.water_purifier || IMAGES.water_bottle, tags: 'purifier water purifier v guard zenora 7l ro uv mb' },
+      { title: 'Blue Star Aristo 7L RO + UV Water Purifier (Triple Layered Protection)', brand: 'Blue Star', searchQuery: 'Blue Star Aristo 7L RO Water Purifier', basePrice: 8999, image: IMAGES.water_purifier || IMAGES.water_bottle, tags: 'purifier water purifier blue star aristo 7l ro uv' },
+      { title: 'AO Smith Z9 10L Green RO + SCMT Hot & Normal Water Purifier', brand: 'AO Smith', searchQuery: 'AO Smith Z9 10L Hot RO Water Purifier', basePrice: 22999, image: IMAGES.water_purifier || IMAGES.water_bottle, tags: 'purifier water purifier ao smith z9 hot ro mineralizer' },
     ];
   } else if (/geyser|water heater/.test(lower)) {
     categoryItems = [
       { title: 'AO Smith SDS 15L Storage Water Heater Geyser (Blue Diamond Glass Lined)', brand: 'AO Smith', searchQuery: 'AO Smith SDS 15L Water Heater Geyser', basePrice: 7299, image: IMAGES.geyser || IMAGES.kettle, tags: 'geyser water heater ao smith 15l storage' },
       { title: 'Bajaj New Shakti Neo 15L Vertical Storage Water Heater Geyser', brand: 'Bajaj', searchQuery: 'Bajaj New Shakti Neo 15L Geyser', basePrice: 5699, image: IMAGES.geyser || IMAGES.kettle, tags: 'geyser water heater bajaj new shakti 15l' },
       { title: 'Crompton Arno Neo 15L 5 Star Storage Water Heater Geyser', brand: 'Crompton', searchQuery: 'Crompton Arno Neo 15L Geyser', basePrice: 5999, image: IMAGES.geyser || IMAGES.kettle, tags: 'geyser water heater crompton arno neo 15l 5 star' },
+      { title: 'V-Guard Victo 15L 5 Star Water Heater Geyser with Free Installation', brand: 'V-Guard', searchQuery: 'V-Guard Victo 15L Water Heater Geyser', basePrice: 6299, image: IMAGES.geyser || IMAGES.kettle, tags: 'geyser water heater v guard victo 15l 5 star' },
+      { title: 'Havells Monza EC 15L Storage Water Heater Geyser (Feroglas Tech)', brand: 'Havells', searchQuery: 'Havells Monza EC 15L Geyser', basePrice: 6899, image: IMAGES.geyser || IMAGES.kettle, tags: 'geyser water heater havells monza ec 15l feroglas' },
+      { title: 'Racold Eterno Pro 15L Vertical 5 Star Storage Water Heater', brand: 'Racold', searchQuery: 'Racold Eterno Pro 15L Water Heater', basePrice: 7499, image: IMAGES.geyser || IMAGES.kettle, tags: 'geyser water heater racold eterno pro 15l titanium' },
+      { title: 'Orient Electric Enamour Plus 15L Glassline Storage Geyser', brand: 'Orient', searchQuery: 'Orient Enamour Plus 15L Geyser', basePrice: 5499, image: IMAGES.geyser || IMAGES.kettle, tags: 'geyser water heater orient enamour plus 15l glassline' },
+      { title: 'Crompton Solarium Care 15L 5 Star Storage Water Heater Geyser', brand: 'Crompton', searchQuery: 'Crompton Solarium Care 15L Geyser', basePrice: 6499, image: IMAGES.geyser || IMAGES.kettle, tags: 'geyser water heater crompton solarium care 15l' },
+      { title: 'Haier 15L 5 Star Storage Water Heater Geyser with Shock Proof Feature', brand: 'Haier', searchQuery: 'Haier 15L 5 Star Water Heater Geyser', basePrice: 5999, image: IMAGES.geyser || IMAGES.kettle, tags: 'geyser water heater haier 15l shock proof bathroom' },
+      { title: 'Bajaj Calenta Mechanical 15L 5 Star Storage Geyser', brand: 'Bajaj', searchQuery: 'Bajaj Calenta 15L Geyser', basePrice: 6199, image: IMAGES.geyser || IMAGES.kettle, tags: 'geyser water heater bajaj calenta 15l titanium glass' },
     ];
   } else if (/cooler|air cooler|fan|ceiling fan|table fan/.test(lower)) {
     categoryItems = [
       { title: 'Symphony Diet 3D 30i Personal Tower Air Cooler (30L Tank, i-Pure Filter)', brand: 'Symphony', searchQuery: 'Symphony Diet 3D 30i Personal Air Cooler', basePrice: 6999, image: IMAGES.cooler || IMAGES.ac, tags: 'cooler air cooler symphony personal tower 30l' },
       { title: 'Crompton Ozone 75L Desert Air Cooler (Honeycomb Pads, Everlast Pump)', brand: 'Crompton', searchQuery: 'Crompton Ozone 75L Desert Air Cooler', basePrice: 9990, image: IMAGES.cooler || IMAGES.ac, tags: 'cooler air cooler crompton desert 75l room cooling' },
+      { title: 'Bajaj DMH 65 Neo 65L Desert Air Cooler with Anti-Bacterial Hexacool', brand: 'Bajaj', searchQuery: 'Bajaj DMH 65 Neo 65L Desert Air Cooler', basePrice: 8999, image: IMAGES.cooler || IMAGES.ac, tags: 'cooler air cooler bajaj desert 65l hexacool room' },
+      { title: 'Havells Celia 55L Desert Air Cooler with Fully Collapsible Louvres', brand: 'Havells', searchQuery: 'Havells Celia 55L Desert Air Cooler', basePrice: 9499, image: IMAGES.cooler || IMAGES.ac, tags: 'cooler air cooler havells celia 55l desert room' },
+      { title: 'Symphony Siesta 70 XL Desert Air Cooler (70L Tank, Powerful Air Throw)', brand: 'Symphony', searchQuery: 'Symphony Siesta 70 XL Desert Cooler', basePrice: 10499, image: IMAGES.cooler || IMAGES.ac, tags: 'cooler air cooler symphony siesta 70l desert powerful' },
+      { title: 'Orient Electric Ultimo 65L Desert Air Cooler with DenseNest Honeycomb', brand: 'Orient', searchQuery: 'Orient Electric Ultimo 65L Air Cooler', basePrice: 8799, image: IMAGES.cooler || IMAGES.ac, tags: 'cooler air cooler orient electric ultimo 65l' },
+      { title: 'Kenstar Glam 50L Honeycomb Air Cooler with Smart Remote', brand: 'Kenstar', searchQuery: 'Kenstar Glam 50L Honeycomb Air Cooler', basePrice: 7499, image: IMAGES.cooler || IMAGES.ac, tags: 'cooler air cooler kenstar glam 50l personal' },
+      { title: 'Usha Striker 70L Desert Air Cooler (EcoCool Honeycomb Pads)', brand: 'Usha', searchQuery: 'Usha Striker 70L Desert Air Cooler', basePrice: 9899, image: IMAGES.cooler || IMAGES.ac, tags: 'cooler air cooler usha striker 70l desert room' },
       { title: 'Atomberg Renesa 1200mm BLDC Motor Smart Ceiling Fan with Remote', brand: 'Atomberg', searchQuery: 'Atomberg Renesa 1200mm BLDC Ceiling Fan', basePrice: 3699, image: IMAGES.fan || IMAGES.ac, tags: 'fan ceiling fan atomberg renesa bldc remote 28w' },
-      { title: 'Havells Glaze 1200mm High Speed Ceiling Fan', brand: 'Havells', searchQuery: 'Havells Glaze 1200mm Ceiling Fan', basePrice: 2299, image: IMAGES.fan || IMAGES.ac, tags: 'fan ceiling fan havells glaze 1200mm high speed' },
+      { title: 'Havells Glaze 1200mm High Speed Ceiling Fan (White)', brand: 'Havells', searchQuery: 'Havells Glaze 1200mm Ceiling Fan', basePrice: 2299, image: IMAGES.fan || IMAGES.ac, tags: 'fan ceiling fan havells glaze 1200mm high speed' },
+      { title: 'Crompton Hill Briz 1200mm High Speed Ceiling Fan (Brown)', brand: 'Crompton', searchQuery: 'Crompton Hill Briz 1200mm Ceiling Fan', basePrice: 1599, image: IMAGES.fan || IMAGES.ac, tags: 'fan ceiling fan crompton hill briz 1200mm high speed' },
+      { title: 'Orient Electric Stand-37 400mm High Speed Pedestal Stand Fan', brand: 'Orient', searchQuery: 'Orient Stand 37 Pedestal Fan', basePrice: 2499, image: IMAGES.fan || IMAGES.ac, tags: 'fan pedestal stand fan orient electric 400mm high speed' },
     ];
   } else if (/cricket|bat/.test(lower) && !/battery|battle/.test(lower)) {
     categoryItems = [
@@ -2721,6 +2881,15 @@ function generateDynamicProducts(query) {
       { title: 'Bella Vita Luxury CEO Man Eau De Parfum Long Lasting Perfume (100ml)', brand: 'Bella Vita', searchQuery: 'Bella Vita CEO Man Perfume 100ml', basePrice: 549, image: IMAGES.perfume, tags: 'perfume bella vita ceo man luxury fragrance edp' },
       { title: 'Fogg Scent Xpressio Eau De Parfum Long Lasting Fragrance (100ml)', brand: 'Fogg', searchQuery: 'Fogg Scent Xpressio Perfume 100ml', basePrice: 399, image: IMAGES.perfume, tags: 'perfume fogg scent xpressio men fragrance long lasting' },
       { title: 'Wild Stone Edge Eau De Parfum Luxury Fragrance For Men (100ml)', brand: 'Wild Stone', searchQuery: 'Wild Stone Edge Perfume 100ml', basePrice: 449, image: IMAGES.perfume, tags: 'perfume wild stone edge men woody aromatic edp' },
+      { title: 'The Man Company Blanc Eau De Parfum Premium Long Lasting (100ml)', brand: 'The Man Company', searchQuery: 'The Man Company Blanc Perfume 100ml', basePrice: 599, image: IMAGES.perfume, tags: 'perfume the man company blanc edp premium luxury men' },
+      { title: 'Engage W1 Perfume Spray For Women (Floral & Fruity, 120ml)', brand: 'Engage', searchQuery: 'Engage W1 Perfume Spray Women 120ml', basePrice: 249, image: IMAGES.perfume, tags: 'perfume engage w1 women floral fruity body spray' },
+      { title: 'Denver Hamilton Deodorant Body Spray For Men (Long Lasting, 165ml)', brand: 'Denver', searchQuery: 'Denver Hamilton Deodorant Spray 165ml', basePrice: 199, image: IMAGES.perfume, tags: 'perfume deo deodorant denver hamilton men body spray' },
+      { title: 'Skinn by Titan Raw Eau De Parfum for Men (Fresh Woody, 100ml)', brand: 'Titan', searchQuery: 'Titan Skinn Raw Perfume 100ml', basePrice: 1995, image: IMAGES.perfume, tags: 'perfume titan skinn raw edp luxury fresh woody men' },
+      { title: 'Beardo Dark Side Eau De Parfum for Men (Long Lasting, 100ml)', brand: 'Beardo', searchQuery: 'Beardo Dark Side Perfume 100ml', basePrice: 699, image: IMAGES.perfume, tags: 'perfume beardo dark side edp masculine woody' },
+      { title: 'Park Avenue Voyage Signature Deodorant for Men (150ml)', brand: 'Park Avenue', searchQuery: 'Park Avenue Voyage Deodorant 150ml', basePrice: 189, image: IMAGES.perfume, tags: 'perfume deo park avenue voyage signature deodorant' },
+      { title: 'Yardley London Gentleman Classic Eau De Parfum (100ml)', brand: 'Yardley', searchQuery: 'Yardley London Gentleman Classic EDP 100ml', basePrice: 499, image: IMAGES.perfume, tags: 'perfume yardley london gentleman classic edp' },
+      { title: 'Villain Snake Eau De Parfum for Men (Long Lasting, 100ml)', brand: 'Villain', searchQuery: 'Villain Snake Perfume 100ml', basePrice: 549, image: IMAGES.perfume, tags: 'perfume villain snake edp masculine spicy woody' },
+      { title: 'Plum BodyLovin\' Vanilla Vibes Body Mist for Women (150ml)', brand: 'Plum', searchQuery: 'Plum BodyLovin Vanilla Vibes Mist 150ml', basePrice: 349, image: IMAGES.perfume, tags: 'perfume mist plum bodylovin vanilla vibes sweet women' },
     ];
   } else if (/trimmer|beard trimmer|shaver|grooming/.test(lower)) {
     categoryItems = [
@@ -2801,8 +2970,15 @@ function generateDynamicProducts(query) {
   } else if (/earbud|headphone|earphone|audio|tws|sound|speaker/.test(lower)) {
     categoryItems = [
       { title: 'boAt Airdopes 141 Bluetooth Truly Wireless Earbuds (42H Playtime, Beast Mode)', brand: 'boAt', searchQuery: 'boAt Airdopes 141 Earbuds', basePrice: 999, image: IMAGES.earbuds, tags: 'earbuds tws boat airdopes 141 bluetooth wireless' },
+      { title: 'Realme Buds T300 TWS with 30dB Active Noise Cancellation & 40H Playtime', brand: 'Realme', searchQuery: 'Realme Buds T300 ANC TWS', basePrice: 2199, image: IMAGES.earbuds_black, tags: 'earbuds tws realme buds t300 anc 30db spatial audio' },
       { title: 'OnePlus Nord Buds 2 TWS with 25dB ANC & Dolby Atmos Support', brand: 'OnePlus', searchQuery: 'OnePlus Nord Buds 2 ANC TWS', basePrice: 2499, image: IMAGES.earbuds_black, tags: 'earbuds tws oneplus nord buds 2 anc wireless' },
+      { title: 'boAt Nirvana Ion True Wireless Earbuds with 120H Playtime & Dual EQ Modes', brand: 'boAt', searchQuery: 'boAt Nirvana Ion Earbuds 120H', basePrice: 1999, image: IMAGES.earbuds, tags: 'earbuds tws boat nirvana ion 120h crystal bionic' },
+      { title: 'Boult Audio Z40 Pro TWS Earbuds with 100H Playtime & Quad Mic ENC', brand: 'Boult', searchQuery: 'Boult Z40 Pro TWS Earbuds 100H', basePrice: 1199, image: IMAGES.earbuds, tags: 'earbuds tws boult z40 pro 100h quad mic enc' },
       { title: 'OnePlus Bullets Wireless Z2 Bluetooth Neckband Earphones with Mic', brand: 'OnePlus', searchQuery: 'OnePlus Bullets Wireless Z2 Neckband', basePrice: 1299, image: IMAGES.boat_headphones, tags: 'earphones headphones oneplus bullets wireless z2 neckband' },
+      { title: 'Noise Buds VS102 with 50H Playtime & Instacharge Technology', brand: 'Noise', searchQuery: 'Noise Buds VS102 Earbuds', basePrice: 999, image: IMAGES.earbuds, tags: 'earbuds tws noise vs102 50h instacharge' },
+      { title: 'JBL Wave Beam True Wireless Earbuds with 32H Playtime & Deep Bass', brand: 'JBL', searchQuery: 'JBL Wave Beam TWS Earbuds', basePrice: 2999, image: IMAGES.earbuds_black, tags: 'earbuds tws jbl wave beam deep bass 32h' },
+      { title: 'Sony WF-C500 True Wireless Bluetooth Earbuds (20H Playtime, DSEE)', brand: 'Sony', searchQuery: 'Sony WF-C500 True Wireless Earbuds', basePrice: 4490, image: IMAGES.earbuds_black, tags: 'earbuds tws sony wf c500 dsee 360 audio' },
+      { title: 'Apple AirPods Pro (2nd Gen with USB-C MagSafe Case, H2 Chip, ANC)', brand: 'Apple', searchQuery: 'Apple AirPods Pro 2nd Gen USB-C', basePrice: 24900, image: IMAGES.airpods_pro, tags: 'earbuds tws apple airpods pro 2 usb c anc spatial' },
       { title: 'JBL Flip 6 Wireless Portable Bluetooth Speaker (IP67 Waterproof, 30W Output)', brand: 'JBL', searchQuery: 'JBL Flip 6 Bluetooth Speaker', basePrice: 9999, image: IMAGES.neutral_product, tags: 'speaker bluetooth jbl flip 6 portable waterproof' },
     ];
   } else if (/watch|smartwatch/.test(lower)) {
@@ -2811,6 +2987,17 @@ function generateDynamicProducts(query) {
       { title: 'Fire-Boltt Ninja Call Pro Plus 1.83" Bluetooth Calling Smartwatch', brand: 'Fire-Boltt', searchQuery: 'Fire-Boltt Ninja Call Pro Plus Smartwatch', basePrice: 1099, image: IMAGES.smartwatch_boat, tags: 'watch smartwatch fire-boltt ninja call pro plus' },
       { title: 'boAt Wave Sigma 3 Smartwatch with Bluetooth Calling & 1.96" HD Display', brand: 'boAt', searchQuery: 'boAt Wave Sigma 3 Smartwatch', basePrice: 1499, image: IMAGES.smartwatch_boat, tags: 'watch smartwatch boat wave sigma 3 calling' },
       { title: 'Fastrack Limitless FS1 Pro 1.96" Super AMOLED Display Smartwatch', brand: 'Fastrack', searchQuery: 'Fastrack Limitless FS1 Pro Smartwatch', basePrice: 1999, image: IMAGES.smartwatch_boat, tags: 'watch smartwatch fastrack limitless fs1 pro amoled' },
+      { title: 'Noise Twist Round Dial Bluetooth Calling Smartwatch with 1.38" Display', brand: 'Noise', searchQuery: 'Noise Twist Round Smartwatch Calling', basePrice: 1399, image: IMAGES.smartwatch_boat, tags: 'watch smartwatch noise twist round dial calling' },
+      { title: 'boAt Wave Call 2 with 1.83" HD Display & 700+ Active Modes', brand: 'boAt', searchQuery: 'boAt Wave Call 2 Smartwatch', basePrice: 1199, image: IMAGES.smartwatch_boat, tags: 'watch smartwatch boat wave call 2 hd calling' },
+      { title: 'Fire-Boltt Phoenix Pro 1.39" Round Bluetooth Calling Smartwatch', brand: 'Fire-Boltt', searchQuery: 'Fire-Boltt Phoenix Pro Smartwatch', basePrice: 1299, image: IMAGES.smartwatch_boat, tags: 'watch smartwatch fire-boltt phoenix pro calling' },
+      { title: 'Titan Karishma Analog Black Dial Men\'s Watch (1584SM04)', brand: 'Titan', searchQuery: 'Titan Karishma Analog Men Watch', basePrice: 1795, image: IMAGES.smartwatch_boat, tags: 'watch analog titan karishma black dial formal men' },
+      { title: 'Fastrack Casual Analog White Dial Men\'s Watch (3121SL02)', brand: 'Fastrack', searchQuery: 'Fastrack Casual Analog Watch Men', basePrice: 995, image: IMAGES.smartwatch_boat, tags: 'watch analog fastrack white dial leather casual men' },
+      { title: 'Sonata Volt Analog Black Dial Men\'s Watch with Silicone Strap', brand: 'Sonata', searchQuery: 'Sonata Volt Analog Watch Men', basePrice: 599, image: IMAGES.smartwatch_boat, tags: 'watch analog sonata volt black dial budget' },
+      { title: 'Timex Analog Blue Dial Men\'s Classic Leather Watch (TWEG19602)', brand: 'Timex', searchQuery: 'Timex Classic Analog Blue Dial Watch', basePrice: 1295, image: IMAGES.smartwatch_boat, tags: 'watch analog timex classic blue dial leather strap' },
+      { title: 'Casio Vintage Digital Black Dial Stainless Steel Watch (A158WA-1DF)', brand: 'Casio', searchQuery: 'Casio Vintage Digital Watch A158WA', basePrice: 1895, image: IMAGES.smartwatch_boat, tags: 'watch digital casio vintage retro stainless steel' },
+      { title: 'Fossil Grant Chronograph Dark Blue Leather Watch (FS4835)', brand: 'Fossil', searchQuery: 'Fossil Grant Chronograph Watch', basePrice: 7495, image: IMAGES.apple_watch, tags: 'watch chronograph fossil grant luxury leather men' },
+      { title: 'Apple Watch SE (2nd Gen, GPS 40mm) Smartwatch (Starlight)', brand: 'Apple', searchQuery: 'Apple Watch SE 2nd Gen 40mm', basePrice: 24900, image: IMAGES.apple_watch, tags: 'watch smartwatch apple se 2nd gen retina gps' },
+      { title: 'Samsung Galaxy Watch 4 Bluetooth (44mm, Super AMOLED, WearOS)', brand: 'Samsung', searchQuery: 'Samsung Galaxy Watch 4 44mm', basePrice: 9999, image: IMAGES.apple_watch, tags: 'watch smartwatch samsung galaxy watch 4 amoled' },
     ];
   } else if (/brush|toothbrush|comb|teeth/.test(lower)) {
     categoryItems = [
@@ -2919,6 +3106,13 @@ export function searchCatalog(query = '', { category, minPrice, maxPrice, brand,
   if (q === 'shopsey') q = 'shopsy';
   if (q === 'crooma') q = 'croma';
 
+  // Compound query normalization (e.g. "t shirt" -> "tshirt")
+  q = q.replace(/\bt\s*shirt\b/g, 'tshirt').replace(/\bt-shirt\b/g, 'tshirt');
+  q = q.replace(/\bwater\s*bottle\b/g, 'bottle');
+  q = q.replace(/\bair\s*conditioner\b/g, 'ac');
+  q = q.replace(/\bsmart\s*tv\b/g, 'tv');
+  q = q.replace(/\bpower\s*bank\b/g, 'powerbank');
+
   // Normalize typos for each term
   const rawTerms = q.split(/\s+/).filter(Boolean);
   const terms = rawTerms.map(t => SEARCH_TYPO_MAP[t] || t);
@@ -3000,9 +3194,16 @@ export function searchCatalog(query = '', { category, minPrice, maxPrice, brand,
       return scoreProd(bText, b) - scoreProd(aText, a);
     });
 
-    // If no static match, generate category-accurate verified products for this term!
-    if (list.length === 0 && terms.length > 0) {
-      list = generateDynamicProducts(query);
+    // If results are fewer than 18, enrich with authentic category-smart products to provide a complete shopping catalog!
+    if (list.length < 18 && terms.length > 0 && !brand) {
+      const dynamicList = generateDynamicProducts(query);
+      const existingIds = new Set(list.map(p => p.id));
+      const existingTitles = new Set(list.map(p => p.title.toLowerCase().replace(/[^a-z0-9]/g, '')));
+      const additional = dynamicList.filter(d => {
+        const cleanTitle = d.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+        return !existingIds.has(d.id) && !existingTitles.has(cleanTitle);
+      });
+      list = [...list, ...additional];
     }
   }
 
