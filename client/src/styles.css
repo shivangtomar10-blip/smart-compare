@@ -1111,6 +1111,16 @@ a {
   font-weight: 500;
 }
 
+.price-source-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+}
+
 /* Quick App Compare Strip on Cards */
 .app-compare-links {
   display: flex;

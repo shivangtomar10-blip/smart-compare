@@ -109,6 +109,11 @@ export const IMAGES = {
   fan: 'https://images.unsplash.com/photo-1618220179428-22790b461013?w=500&auto=format&fit=crop',
   sunglasses: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500&auto=format&fit=crop',
   trimmer: 'https://images.unsplash.com/photo-1621607512214-68297480165e?w=500&auto=format&fit=crop',
+  tablet: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&auto=format&fit=crop',
+  monitor: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&auto=format&fit=crop',
+  induction: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500&auto=format&fit=crop',
+  toys: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500&auto=format&fit=crop',
+
 };
 
 export const RAW_PRODUCTS = [
@@ -1919,6 +1924,424 @@ export const RAW_PRODUCTS = [
       { seller: 'Flipkart', price: 63490, originalPrice: 82500, rating: 4.6, reviewCount: 34100 },
       { seller: 'Croma', price: 64990, originalPrice: 82500, rating: 4.6, reviewCount: 7800 },
     ]
+  },
+
+  // =====================================================================
+  // FLIPKART BESTSELLERS: MOBILES & TABLETS
+  // =====================================================================
+  {
+    title: 'Infinix Note 40 Pro 5G (8GB RAM, 256GB Storage, Wireless MagCharge)',
+    brand: 'Infinix',
+    searchQuery: 'Infinix Note 40 Pro 5G',
+    image: IMAGES.samsung_s24,
+    tags: 'phone mobile infinix note 40 pro 5g magcharge wireless 108mp curved amoled flipkart exclusive',
+    offers: [
+      { seller: 'Flipkart', price: 19999, originalPrice: 27999, rating: 4.5, reviewCount: 38400 },
+      { seller: 'Amazon India', price: 20499, originalPrice: 27999, rating: 4.4, reviewCount: 12100 },
+      { seller: 'Shopsy', price: 19499, originalPrice: 27999, rating: 4.4, reviewCount: 8900 },
+    ]
+  },
+  {
+    title: 'Infinix Smart 8 HD (Timber Black, 3GB RAM, 64GB Storage, 90Hz Display)',
+    brand: 'Infinix',
+    searchQuery: 'Infinix Smart 8 HD',
+    image: IMAGES.samsung_m35,
+    tags: 'phone mobile infinix smart 8 hd budget android 90hz 5000mah magic ring flipkart',
+    offers: [
+      { seller: 'Flipkart', price: 6299, originalPrice: 8999, rating: 4.4, reviewCount: 52100 },
+      { seller: 'Shopsy', price: 6199, originalPrice: 8999, rating: 4.3, reviewCount: 16800 },
+      { seller: 'Amazon India', price: 6499, originalPrice: 8999, rating: 4.4, reviewCount: 9400 },
+    ]
+  },
+  {
+    title: 'POCO C65 (Pastel Blue, 6GB RAM, 128GB Storage, 50MP AI Triple Camera)',
+    brand: 'POCO',
+    searchQuery: 'POCO C65 128GB',
+    image: IMAGES.samsung_m35,
+    tags: 'phone mobile poco c65 budget 128gb 50mp 5000mah gorilla glass flipkart',
+    offers: [
+      { seller: 'Flipkart', price: 6799, originalPrice: 10999, rating: 4.4, reviewCount: 89200 },
+      { seller: 'Amazon India', price: 6999, originalPrice: 10999, rating: 4.4, reviewCount: 34100 },
+    ]
+  },
+  {
+    title: 'Realme 12x 5G (Twilight Purple, 6GB RAM, 128GB Storage, 45W SUPERVOOC)',
+    brand: 'Realme',
+    searchQuery: 'Realme 12x 5G',
+    image: IMAGES.samsung_s24,
+    tags: 'phone mobile realme 12x 5g 45w fast charge dimensity 6100 120hz flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 12999, originalPrice: 16999, rating: 4.5, reviewCount: 68400 },
+      { seller: 'Amazon India', price: 13299, originalPrice: 16999, rating: 4.5, reviewCount: 22400 },
+    ]
+  },
+  {
+    title: 'Samsung Galaxy F15 5G (Jazzy Green, 6GB RAM, 128GB Storage, 6000mAh Battery)',
+    brand: 'Samsung',
+    searchQuery: 'Samsung Galaxy F15 5G',
+    image: IMAGES.samsung_m35,
+    tags: 'phone mobile samsung galaxy f15 5g 6000mah samoled 4 gen os update flipkart exclusive',
+    offers: [
+      { seller: 'Flipkart', price: 12999, originalPrice: 16999, rating: 4.5, reviewCount: 114200 },
+      { seller: 'Amazon India', price: 13499, originalPrice: 16999, rating: 4.5, reviewCount: 42100 },
+    ]
+  },
+  {
+    title: 'Samsung Galaxy F54 5G (Meteor Blue, 8GB RAM, 256GB Storage, 108MP No Shake Cam)',
+    brand: 'Samsung',
+    searchQuery: 'Samsung Galaxy F54 5G',
+    image: IMAGES.samsung_s24,
+    tags: 'phone mobile samsung galaxy f54 5g 108mp ois 6000mah samoled 120hz flipkart exclusive',
+    offers: [
+      { seller: 'Flipkart', price: 22999, originalPrice: 35999, rating: 4.5, reviewCount: 49800 },
+      { seller: 'Amazon India', price: 23499, originalPrice: 35999, rating: 4.5, reviewCount: 18400 },
+    ]
+  },
+  {
+    title: 'Apple iPad (10th Gen, 10.9-inch Liquid Retina, Wi-Fi, 64GB, Blue, A14 Bionic)',
+    brand: 'Apple',
+    searchQuery: 'Apple iPad 10th Gen 64GB',
+    image: IMAGES.tablet || IMAGES.hp_laptop,
+    tags: 'tablet ipad apple 10th gen 10.9 inch wifi 64gb liquid retina a14 bionic flipkart croma amazon',
+    offers: [
+      { seller: 'Flipkart', price: 32900, originalPrice: 39900, rating: 4.7, reviewCount: 48900 },
+      { seller: 'Amazon India', price: 32900, originalPrice: 39900, rating: 4.7, reviewCount: 39800 },
+      { seller: 'Croma', price: 33490, originalPrice: 39900, rating: 4.7, reviewCount: 8400 },
+    ]
+  },
+  {
+    title: 'Samsung Galaxy Tab S9 FE (10.9-inch WQXGA Display, 6GB RAM, 128GB, S-Pen In-Box)',
+    brand: 'Samsung',
+    searchQuery: 'Samsung Galaxy Tab S9 FE',
+    image: IMAGES.tablet || IMAGES.hp_laptop,
+    tags: 'tablet samsung galaxy tab s9 fe spen 10.9 inch 90hz ip68 android flipkart amazon croma',
+    offers: [
+      { seller: 'Flipkart', price: 31999, originalPrice: 44999, rating: 4.6, reviewCount: 18200 },
+      { seller: 'Amazon India', price: 32499, originalPrice: 44999, rating: 4.6, reviewCount: 14100 },
+      { seller: 'Croma', price: 32999, originalPrice: 44999, rating: 4.6, reviewCount: 3800 },
+    ]
+  },
+
+  // =====================================================================
+  // FLIPKART MONITORS & COMPUTER ACCESSORIES
+  // =====================================================================
+  {
+    title: 'Samsung 24-inch FHD IPS 75Hz Bezel-Less Flat Monitor (AMD FreeSync, LS24C310EAWXXL)',
+    brand: 'Samsung',
+    searchQuery: 'Samsung 24 inch IPS Monitor LS24C310',
+    image: IMAGES.monitor || IMAGES.tv,
+    tags: 'monitor screen samsung 24 inch fhd ips 75hz bezel less freesync hdmi pc flipkart amazon croma',
+    offers: [
+      { seller: 'Flipkart', price: 7499, originalPrice: 12500, rating: 4.6, reviewCount: 38900 },
+      { seller: 'Amazon India', price: 7599, originalPrice: 12500, rating: 4.6, reviewCount: 29400 },
+      { seller: 'Croma', price: 7999, originalPrice: 12500, rating: 4.6, reviewCount: 4200 },
+    ]
+  },
+  {
+    title: 'LG 27-inch UltraGear FHD IPS 144Hz 1ms Gaming Monitor (HDR 10, G-Sync, 27GN65R)',
+    brand: 'LG',
+    searchQuery: 'LG 27 inch UltraGear Gaming Monitor 144Hz',
+    image: IMAGES.monitor || IMAGES.tv,
+    tags: 'monitor screen lg ultragear 27 inch 144hz 1ms gaming ips hdr10 g-sync flipkart amazon croma',
+    offers: [
+      { seller: 'Flipkart', price: 13999, originalPrice: 22000, rating: 4.7, reviewCount: 14200 },
+      { seller: 'Amazon India', price: 14299, originalPrice: 22000, rating: 4.6, reviewCount: 11800 },
+      { seller: 'Croma', price: 14999, originalPrice: 22000, rating: 4.6, reviewCount: 2900 },
+    ]
+  },
+  {
+    title: 'Zebronics Transformer Gaming Keyboard and Mouse Combo with Multi-Color LED',
+    brand: 'Zebronics',
+    searchQuery: 'Zebronics Transformer Gaming Combo',
+    image: IMAGES.keyboard,
+    tags: 'keyboard mouse combo zebronics transformer gaming led backlit aluminium body flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 1199, originalPrice: 2499, rating: 4.4, reviewCount: 58200 },
+      { seller: 'Amazon India', price: 1249, originalPrice: 2499, rating: 4.4, reviewCount: 41800 },
+      { seller: 'Shopsy', price: 1149, originalPrice: 2499, rating: 4.3, reviewCount: 12100 },
+    ]
+  },
+
+  // =====================================================================
+  // FLIPKART TV, SOUNDBARS & ENTERTAINMENT
+  // =====================================================================
+  {
+    title: 'Thomson 43-inch 4K Ultra HD Smart Google TV with Dolby Audio (43OPMAX9055)',
+    brand: 'Thomson',
+    searchQuery: 'Thomson 43 inch 4K Google TV',
+    image: IMAGES.tv,
+    tags: 'tv smart tv thomson 43 inch 4k uhd google tv dolby vision 40w speaker flipkart exclusive',
+    offers: [
+      { seller: 'Flipkart', price: 19999, originalPrice: 33999, rating: 4.5, reviewCount: 68400 },
+      { seller: 'Shopsy', price: 19499, originalPrice: 33999, rating: 4.4, reviewCount: 14200 },
+    ]
+  },
+  {
+    title: 'Blaupunkt 50-inch CyberSound 4K Ultra HD Smart Google TV (60W Sound Output, 50CSGT7022)',
+    brand: 'Blaupunkt',
+    searchQuery: 'Blaupunkt 50 inch 4K Google TV 60W',
+    image: IMAGES.tv,
+    tags: 'tv smart tv blaupunkt 50 inch 4k uhd google tv 60w speaker dolby audio flipkart',
+    offers: [
+      { seller: 'Flipkart', price: 26999, originalPrice: 47999, rating: 4.6, reviewCount: 31200 },
+      { seller: 'Amazon India', price: 27499, originalPrice: 47999, rating: 4.5, reviewCount: 18400 },
+    ]
+  },
+  {
+    title: 'Mi Soundbar with 8 Sound Drivers (Bluetooth, Optical, S/PDIF, AUX, 28W)',
+    brand: 'Xiaomi',
+    searchQuery: 'Mi Soundbar 8 Drivers Bluetooth',
+    image: IMAGES.neutral_product,
+    tags: 'soundbar speaker mi xiaomi 8 sound drivers bluetooth audio tv speaker flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 4999, originalPrice: 5999, rating: 4.5, reviewCount: 42800 },
+      { seller: 'Amazon India', price: 5099, originalPrice: 5999, rating: 4.5, reviewCount: 31400 },
+      { seller: 'Croma', price: 5299, originalPrice: 5999, rating: 4.5, reviewCount: 5800 },
+    ]
+  },
+  {
+    title: 'boAt Aavante Bar 1160 60W Bluetooth Soundbar with 2.0 Channel System',
+    brand: 'boAt',
+    searchQuery: 'boAt Aavante Bar 1160 Soundbar 60W',
+    image: IMAGES.neutral_product,
+    tags: 'soundbar speaker boat aavante bar 1160 60w bluetooth usb aux optical flipkart amazon croma',
+    offers: [
+      { seller: 'Flipkart', price: 3999, originalPrice: 9990, rating: 4.5, reviewCount: 89400 },
+      { seller: 'Amazon India', price: 3999, originalPrice: 9990, rating: 4.5, reviewCount: 71200 },
+      { seller: 'Croma', price: 4199, originalPrice: 9990, rating: 4.5, reviewCount: 8400 },
+    ]
+  },
+
+  // =====================================================================
+  // FLIPKART KITCHEN & HOME APPLIANCES
+  // =====================================================================
+  {
+    title: 'Pigeon by Stovekraft Cruise 1800W Induction Cooktop (7 Preset Indian Menus)',
+    brand: 'Pigeon',
+    searchQuery: 'Pigeon Cruise 1800W Induction Cooktop',
+    image: IMAGES.induction || IMAGES.air_fryer,
+    tags: 'induction cooktop stove pigeon cruise 1800w electric kitchen auto cut off flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 1499, originalPrice: 3195, rating: 4.5, reviewCount: 142000 },
+      { seller: 'Amazon India', price: 1549, originalPrice: 3195, rating: 4.5, reviewCount: 98400 },
+      { seller: 'Shopsy', price: 1449, originalPrice: 3195, rating: 4.4, reviewCount: 28900 },
+    ]
+  },
+  {
+    title: 'Prestige Iris Plus 750W Mixer Grinder with 4 Jars (3 Stainless Steel + 1 Juicer)',
+    brand: 'Prestige',
+    searchQuery: 'Prestige Iris Plus 750W Mixer Grinder',
+    image: IMAGES.mixer_grinder,
+    tags: 'mixer grinder prestige iris plus 750w 4 jars juicer kitchen flipkart amazon croma',
+    offers: [
+      { seller: 'Flipkart', price: 2999, originalPrice: 6295, rating: 4.5, reviewCount: 98400 },
+      { seller: 'Amazon India', price: 3049, originalPrice: 6295, rating: 4.5, reviewCount: 72100 },
+      { seller: 'Croma', price: 3199, originalPrice: 6295, rating: 4.5, reviewCount: 9800 },
+    ]
+  },
+  {
+    title: 'Bajaj Rex 500W Mixer Grinder with 3 Stainless Steel Jars (Nutri-Pro Feature)',
+    brand: 'Bajaj',
+    searchQuery: 'Bajaj Rex 500W Mixer Grinder',
+    image: IMAGES.mixer_grinder,
+    tags: 'mixer grinder bajaj rex 500w 3 jars kitchen nutri pro motor overload flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 1999, originalPrice: 3650, rating: 4.4, reviewCount: 88200 },
+      { seller: 'Amazon India', price: 2049, originalPrice: 3650, rating: 4.4, reviewCount: 61400 },
+      { seller: 'Shopsy', price: 1949, originalPrice: 3650, rating: 4.3, reviewCount: 18900 },
+    ]
+  },
+  {
+    title: 'Kent Instant Egg Boiler (360W, 7 Eggs Capacity, 3 Boiling Modes, Stainless Steel)',
+    brand: 'Kent',
+    searchQuery: 'Kent Instant Egg Boiler 360W',
+    image: IMAGES.kettle,
+    tags: 'egg boiler kent electric 360w stainless steel automatic breakfast kitchen flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 999, originalPrice: 1800, rating: 4.5, reviewCount: 34200 },
+      { seller: 'Amazon India', price: 1049, originalPrice: 1800, rating: 4.5, reviewCount: 26800 },
+      { seller: 'Croma', price: 1099, originalPrice: 1800, rating: 4.5, reviewCount: 4200 },
+    ]
+  },
+  {
+    title: 'Pigeon Stainless Steel Non-Stick 3-Piece Cookware Set (Fry Pan, Kadhai with Lid, Tawa)',
+    brand: 'Pigeon',
+    searchQuery: 'Pigeon Non Stick 3 Piece Cookware Set',
+    image: IMAGES.induction || IMAGES.air_fryer,
+    tags: 'cookware set tawa kadhai fry pan pigeon non stick 3 piece induction gas kitchen flipkart',
+    offers: [
+      { seller: 'Flipkart', price: 1199, originalPrice: 2495, rating: 4.4, reviewCount: 68900 },
+      { seller: 'Amazon India', price: 1249, originalPrice: 2495, rating: 4.4, reviewCount: 48200 },
+      { seller: 'Shopsy', price: 1149, originalPrice: 2495, rating: 4.3, reviewCount: 22100 },
+    ]
+  },
+
+  // =====================================================================
+  // FLIPKART FASHION & FOOTWEAR
+  // =====================================================================
+  {
+    title: 'Metronaut Men Slim Fit Washed Casual Stretchable Denim Jeans (Dark Blue)',
+    brand: 'Metronaut',
+    searchQuery: 'Metronaut Men Slim Fit Stretch Jeans',
+    image: IMAGES.jeans,
+    tags: 'jeans metronaut slim fit stretchable denim casual dark blue men flipkart exclusive',
+    offers: [
+      { seller: 'Flipkart', price: 599, originalPrice: 1999, rating: 4.4, reviewCount: 124000 },
+      { seller: 'Shopsy', price: 549, originalPrice: 1999, rating: 4.3, reviewCount: 48900 },
+    ]
+  },
+  {
+    title: 'Tokyo Talkies Women Floral Print A-Line Casual Dress (Navy Blue)',
+    brand: 'Tokyo Talkies',
+    searchQuery: 'Tokyo Talkies Floral A-Line Dress',
+    image: IMAGES.dress,
+    tags: 'dress tokyo talkies floral printed a line women western wear navy blue flipkart myntra',
+    offers: [
+      { seller: 'Flipkart', price: 499, originalPrice: 1599, rating: 4.5, reviewCount: 84200 },
+      { seller: 'Myntra', price: 549, originalPrice: 1599, rating: 4.6, reviewCount: 38400 },
+      { seller: 'Shopsy', price: 479, originalPrice: 1599, rating: 4.4, reviewCount: 19800 },
+    ]
+  },
+  {
+    title: 'Janasya Women Poly Silk Straight Kurta with Pant & Dupatta Set (Teal)',
+    brand: 'Janasya',
+    searchQuery: 'Janasya Poly Silk Kurta Set Teal',
+    image: IMAGES.kurti,
+    tags: 'kurti kurta janasya poly silk straight pant dupatta ethnic set festive wedding flipkart amazon myntra',
+    offers: [
+      { seller: 'Flipkart', price: 899, originalPrice: 2899, rating: 4.5, reviewCount: 42100 },
+      { seller: 'Amazon India', price: 949, originalPrice: 2899, rating: 4.5, reviewCount: 28900 },
+      { seller: 'Myntra', price: 949, originalPrice: 2899, rating: 4.6, reviewCount: 18400 },
+    ]
+  },
+  {
+    title: 'Campus Men North Plus Running Shoes (Mesh Upper, Memory Tech Insole, Black)',
+    brand: 'Campus',
+    searchQuery: 'Campus North Plus Running Shoes',
+    image: IMAGES.shoes_sports,
+    tags: 'shoes sneakers campus north plus running sports mesh memory foam men footwear flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 1149, originalPrice: 1899, rating: 4.5, reviewCount: 78900 },
+      { seller: 'Amazon India', price: 1199, originalPrice: 1899, rating: 4.5, reviewCount: 52100 },
+      { seller: 'Meesho', price: 1099, originalPrice: 1899, rating: 4.4, reviewCount: 18400 },
+    ]
+  },
+  {
+    title: 'Asian Men Tarzan-11 Casual White High-Ankle Sneakers',
+    brand: 'Asian',
+    searchQuery: 'Asian Tarzan 11 White High Ankle Sneakers',
+    image: IMAGES.puma_sneakers,
+    tags: 'shoes sneakers asian tarzan high ankle white casual streetwear footwear flipkart meesho shopsy',
+    offers: [
+      { seller: 'Flipkart', price: 699, originalPrice: 1499, rating: 4.4, reviewCount: 64200 },
+      { seller: 'Meesho', price: 649, originalPrice: 1499, rating: 4.4, reviewCount: 41200 },
+      { seller: 'Shopsy', price: 669, originalPrice: 1499, rating: 4.3, reviewCount: 19800 },
+      { seller: 'Amazon India', price: 749, originalPrice: 1499, rating: 4.4, reviewCount: 28400 },
+    ]
+  },
+  {
+    title: 'Sparx Men SM-734 Casual Mesh Sports Running Shoes (Navy/Silver)',
+    brand: 'Sparx',
+    searchQuery: 'Sparx SM 734 Running Shoes',
+    image: IMAGES.shoes_sports,
+    tags: 'shoes sneakers sparx sm 734 mesh sports running lightweight footwear flipkart amazon meesho',
+    offers: [
+      { seller: 'Flipkart', price: 849, originalPrice: 1299, rating: 4.5, reviewCount: 89400 },
+      { seller: 'Amazon India', price: 899, originalPrice: 1299, rating: 4.5, reviewCount: 58200 },
+      { seller: 'Meesho', price: 799, originalPrice: 1299, rating: 4.4, reviewCount: 24800 },
+    ]
+  },
+
+  // =====================================================================
+  // FLIPKART AUDIO & SMARTWATCHES
+  // =====================================================================
+  {
+    title: 'Realme Buds T300 TWS with 30dB Active Noise Cancellation & 40H Playtime',
+    brand: 'Realme',
+    searchQuery: 'Realme Buds T300 ANC TWS',
+    image: IMAGES.earbuds_black,
+    tags: 'earbuds tws realme buds t300 anc 30db spatial audio 40h fast charge flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 2199, originalPrice: 3999, rating: 4.6, reviewCount: 94200 },
+      { seller: 'Amazon India', price: 2249, originalPrice: 3999, rating: 4.5, reviewCount: 48900 },
+      { seller: 'Croma', price: 2299, originalPrice: 3999, rating: 4.5, reviewCount: 6800 },
+    ]
+  },
+  {
+    title: 'boAt Nirvana Ion True Wireless Earbuds with 120H Playtime & Dual EQ Modes',
+    brand: 'boAt',
+    searchQuery: 'boAt Nirvana Ion Earbuds 120H',
+    image: IMAGES.earbuds,
+    tags: 'earbuds tws boat nirvana ion 120h crystal bionic sound dual eq quad mic enc flipkart amazon croma',
+    offers: [
+      { seller: 'Flipkart', price: 1999, originalPrice: 7990, rating: 4.6, reviewCount: 148900 },
+      { seller: 'Amazon India', price: 2049, originalPrice: 7990, rating: 4.5, reviewCount: 94100 },
+      { seller: 'Croma', price: 2199, originalPrice: 7990, rating: 4.5, reviewCount: 11200 },
+    ]
+  },
+  {
+    title: 'Boult Audio Z40 Pro TWS Earbuds with 100H Playtime & Quad Mic ENC (Rubber Grip)',
+    brand: 'Boult',
+    searchQuery: 'Boult Z40 Pro TWS Earbuds 100H',
+    image: IMAGES.earbuds,
+    tags: 'earbuds tws boult z40 pro 100h quad mic enc bluetooth 5.3 fast charge flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 1199, originalPrice: 5499, rating: 4.5, reviewCount: 78900 },
+      { seller: 'Amazon India', price: 1249, originalPrice: 5499, rating: 4.4, reviewCount: 48200 },
+      { seller: 'Shopsy', price: 1149, originalPrice: 5499, rating: 4.4, reviewCount: 19400 },
+    ]
+  },
+  {
+    title: 'Noise Twist Round Dial Bluetooth Calling Smartwatch with 1.38" TFT Display',
+    brand: 'Noise',
+    searchQuery: 'Noise Twist Round Smartwatch Calling',
+    image: IMAGES.smartwatch_boat,
+    tags: 'watch smartwatch noise twist round dial bluetooth calling ip68 metallic finish flipkart amazon croma',
+    offers: [
+      { seller: 'Flipkart', price: 1399, originalPrice: 4999, rating: 4.5, reviewCount: 112000 },
+      { seller: 'Amazon India', price: 1449, originalPrice: 4999, rating: 4.5, reviewCount: 78900 },
+      { seller: 'Croma', price: 1499, originalPrice: 4999, rating: 4.5, reviewCount: 12400 },
+    ]
+  },
+
+  // =====================================================================
+  // FLIPKART GROOMING, TOYS & KIDS
+  // =====================================================================
+  {
+    title: 'Vega 3-in-1 Hair Styler (Straightener, Curler & Crimper, VHSCC-01)',
+    brand: 'Vega',
+    searchQuery: 'Vega 3-in-1 Hair Styler VHSCC-01',
+    image: IMAGES.neutral_product,
+    tags: 'hair styler straightener curler crimper vega 3 in 1 grooming ceramic coated women flipkart nykaa amazon',
+    offers: [
+      { seller: 'Flipkart', price: 1299, originalPrice: 1999, rating: 4.5, reviewCount: 68400 },
+      { seller: 'Nykaa', price: 1349, originalPrice: 1999, rating: 4.6, reviewCount: 38200 },
+      { seller: 'Amazon India', price: 1349, originalPrice: 1999, rating: 4.5, reviewCount: 42100 },
+    ]
+  },
+  {
+    title: 'Nova Foldable 1000W Hair Dryer with Hot and Cold Air Flow (NV-1290)',
+    brand: 'Nova',
+    searchQuery: 'Nova Foldable 1000W Hair Dryer NV-1290',
+    image: IMAGES.neutral_product,
+    tags: 'hair dryer nova 1000w hot cold air foldable compact grooming travel flipkart amazon shopsy',
+    offers: [
+      { seller: 'Flipkart', price: 399, originalPrice: 899, rating: 4.4, reviewCount: 94100 },
+      { seller: 'Shopsy', price: 379, originalPrice: 899, rating: 4.3, reviewCount: 34800 },
+      { seller: 'Amazon India', price: 429, originalPrice: 899, rating: 4.4, reviewCount: 48900 },
+    ]
+  },
+  {
+    title: 'Webby 1:18 Scale High Speed Remote Control Racing Car Toy with LED Headlights',
+    brand: 'Webby',
+    searchQuery: 'Webby 1:18 Scale RC Racing Car Toy',
+    image: IMAGES.toys || IMAGES.neutral_product,
+    tags: 'toys remote control car rc car webby high speed racing kids vehicle led lights flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 699, originalPrice: 1499, rating: 4.4, reviewCount: 28400 },
+      { seller: 'Amazon India', price: 749, originalPrice: 1499, rating: 4.4, reviewCount: 19200 },
+      { seller: 'Shopsy', price: 669, originalPrice: 1499, rating: 4.3, reviewCount: 8400 },
+    ]
   }
 ];
 
@@ -2060,7 +2483,58 @@ function generateDynamicProducts(query) {
 
   let categoryItems = [];
 
-  if (/vivo/.test(lower)) {
+  if (/infinix/.test(lower)) {
+    categoryItems = [
+      { title: 'Infinix Note 40 Pro 5G (8GB RAM, 256GB Storage, Wireless MagCharge)', brand: 'Infinix', searchQuery: 'Infinix Note 40 Pro 5G', basePrice: 19999, image: IMAGES.samsung_s24, tags: 'phone mobile infinix note 40 pro 5g magcharge' },
+      { title: 'Infinix Smart 8 HD (Timber Black, 3GB RAM, 64GB Storage)', brand: 'Infinix', searchQuery: 'Infinix Smart 8 HD', basePrice: 6299, image: IMAGES.samsung_m35, tags: 'phone mobile infinix smart 8 hd budget android' },
+      { title: 'Infinix GT 20 Pro 5G (8GB RAM, 256GB Storage, Cyber Mecha Design)', brand: 'Infinix', searchQuery: 'Infinix GT 20 Pro 5G', basePrice: 24999, image: IMAGES.samsung_s24, tags: 'phone mobile infinix gt 20 pro gaming 5g' },
+    ];
+  } else if (/tablet|ipad|tab/.test(lower)) {
+    categoryItems = [
+      { title: 'Apple iPad (10th Gen, 10.9-inch Liquid Retina, Wi-Fi, 64GB, Blue)', brand: 'Apple', searchQuery: 'Apple iPad 10th Gen 64GB', basePrice: 32900, image: IMAGES.tablet || IMAGES.hp_laptop, tags: 'tablet ipad apple 10th gen 10.9 inch wifi 64gb' },
+      { title: 'Samsung Galaxy Tab S9 FE (10.9-inch WQXGA, 6GB RAM, 128GB, S-Pen)', brand: 'Samsung', searchQuery: 'Samsung Galaxy Tab S9 FE', basePrice: 31999, image: IMAGES.tablet || IMAGES.hp_laptop, tags: 'tablet samsung galaxy tab s9 fe spen android' },
+      { title: 'Realme Pad 2 (11.5-inch 2K 120Hz Display, 6GB RAM, 128GB Storage)', brand: 'Realme', searchQuery: 'Realme Pad 2 128GB', basePrice: 17999, image: IMAGES.tablet || IMAGES.hp_laptop, tags: 'tablet realme pad 2 120hz 2k display quad speakers' },
+    ];
+  } else if (/monitor|screen|display/.test(lower)) {
+    categoryItems = [
+      { title: 'Samsung 24-inch FHD IPS 75Hz Bezel-Less Flat Monitor (LS24C310EAWXXL)', brand: 'Samsung', searchQuery: 'Samsung 24 inch IPS Monitor LS24C310', basePrice: 7499, image: IMAGES.monitor || IMAGES.tv, tags: 'monitor screen samsung 24 inch fhd ips 75hz' },
+      { title: 'LG 27-inch UltraGear FHD IPS 144Hz 1ms Gaming Monitor (27GN65R)', brand: 'LG', searchQuery: 'LG 27 inch UltraGear Gaming Monitor 144Hz', basePrice: 13999, image: IMAGES.monitor || IMAGES.tv, tags: 'monitor screen lg ultragear 27 inch 144hz 1ms gaming' },
+      { title: 'Acer EK220Q 21.5-inch Full HD VA Panel Monitor (75Hz, 5ms)', brand: 'Acer', searchQuery: 'Acer 21.5 inch FHD Monitor EK220Q', basePrice: 5499, image: IMAGES.monitor || IMAGES.tv, tags: 'monitor screen acer 21.5 inch fhd 75hz hdmi vga' },
+    ];
+  } else if (/soundbar|home theatre/.test(lower)) {
+    categoryItems = [
+      { title: 'boAt Aavante Bar 1160 60W Bluetooth Soundbar with 2.0 Channel System', brand: 'boAt', searchQuery: 'boAt Aavante Bar 1160 Soundbar 60W', basePrice: 3999, image: IMAGES.neutral_product, tags: 'soundbar speaker boat aavante bar 1160 60w bluetooth' },
+      { title: 'Mi Soundbar with 8 Sound Drivers (Bluetooth, Optical, S/PDIF, AUX, 28W)', brand: 'Xiaomi', searchQuery: 'Mi Soundbar 8 Drivers Bluetooth', basePrice: 4999, image: IMAGES.neutral_product, tags: 'soundbar speaker mi xiaomi 8 sound drivers bluetooth' },
+      { title: 'ZEBRONICS Juke BAR 3900 80W Bluetooth Soundbar with Subwoofer', brand: 'Zebronics', searchQuery: 'Zebronics Juke Bar 3900 Soundbar', basePrice: 4499, image: IMAGES.neutral_product, tags: 'soundbar speaker zebronics juke bar 80w subwoofer' },
+    ];
+  } else if (/induction|cooktop|stove/.test(lower)) {
+    categoryItems = [
+      { title: 'Pigeon by Stovekraft Cruise 1800W Induction Cooktop (7 Preset Indian Menus)', brand: 'Pigeon', searchQuery: 'Pigeon Cruise 1800W Induction Cooktop', basePrice: 1499, image: IMAGES.induction || IMAGES.air_fryer, tags: 'induction cooktop stove pigeon cruise 1800w electric' },
+      { title: 'Prestige PIC 20 1600W Induction Cooktop with Push Button Controls', brand: 'Prestige', searchQuery: 'Prestige PIC 20 Induction Cooktop', basePrice: 1899, image: IMAGES.induction || IMAGES.air_fryer, tags: 'induction cooktop prestige pic 20 1600w indian menu' },
+      { title: 'Philips Viva Collection HD4928/01 2100W Induction Cooktop', brand: 'Philips', searchQuery: 'Philips HD4928 2100W Induction Cooktop', basePrice: 3199, image: IMAGES.induction || IMAGES.air_fryer, tags: 'induction cooktop philips viva 2100w fast cooking' },
+    ];
+  } else if (/cookware|tawa|pan|kadhai/.test(lower)) {
+    categoryItems = [
+      { title: 'Pigeon Stainless Steel Non-Stick 3-Piece Cookware Set (Fry Pan, Kadhai, Tawa)', brand: 'Pigeon', searchQuery: 'Pigeon Non Stick 3 Piece Cookware Set', basePrice: 1199, image: IMAGES.induction || IMAGES.air_fryer, tags: 'cookware set tawa kadhai fry pan pigeon non stick' },
+      { title: 'Prestige Omega Deluxe Granite 3-Piece Non-Stick Cookware Set', brand: 'Prestige', searchQuery: 'Prestige Omega Deluxe Granite Cookware Set', basePrice: 2199, image: IMAGES.induction || IMAGES.air_fryer, tags: 'cookware prestige granite non stick kadhai pan tawa' },
+    ];
+  } else if (/hair dryer|straightener|styler/.test(lower)) {
+    categoryItems = [
+      { title: 'Vega 3-in-1 Hair Styler (Straightener, Curler & Crimper, VHSCC-01)', brand: 'Vega', searchQuery: 'Vega 3-in-1 Hair Styler VHSCC-01', basePrice: 1299, image: IMAGES.neutral_product, tags: 'hair styler straightener curler crimper vega 3 in 1' },
+      { title: 'Nova Foldable 1000W Hair Dryer with Hot and Cold Air Flow (NV-1290)', brand: 'Nova', searchQuery: 'Nova Foldable 1000W Hair Dryer NV-1290', basePrice: 399, image: IMAGES.neutral_product, tags: 'hair dryer nova 1000w hot cold air foldable compact' },
+      { title: 'Philips BHD006/00 1600W Compact Foldable Hair Dryer', brand: 'Philips', searchQuery: 'Philips BHD006 Hair Dryer 1600W', basePrice: 1499, image: IMAGES.neutral_product, tags: 'hair dryer philips 1600w quiet compact ionic' },
+    ];
+  } else if (/toy|remote car|rc car|lego|board game/.test(lower)) {
+    categoryItems = [
+      { title: 'Webby 1:18 Scale High Speed Remote Control Racing Car Toy with LED Lights', brand: 'Webby', searchQuery: 'Webby 1:18 Scale RC Racing Car Toy', basePrice: 699, image: IMAGES.toys || IMAGES.neutral_product, tags: 'toys remote control car rc car webby high speed racing' },
+      { title: 'Funskool Classic Monopoly Deluxe Board Game for Kids & Family', brand: 'Funskool', searchQuery: 'Funskool Classic Monopoly Board Game', basePrice: 599, image: IMAGES.toys || IMAGES.neutral_product, tags: 'toys monopoly board game funskool trading family' },
+    ];
+  } else if (/bedsheet|curtain|pillow|blanket|home decor/.test(lower)) {
+    categoryItems = [
+      { title: 'Solimo 100% Cotton Double Bedsheet with 2 Pillow Covers (220 TC, Geometric)', brand: 'Solimo', searchQuery: 'Solimo 100 Cotton Double Bedsheet', basePrice: 699, image: IMAGES.neutral_product, tags: 'bedsheet cotton double bed sheet pillow covers home decor' },
+      { title: 'Home Sizzler Set of 2 Polyester Blackout Eyelet Window Curtains (5 Feet)', brand: 'Home Sizzler', searchQuery: 'Home Sizzler Eyelet Window Curtains', basePrice: 449, image: IMAGES.neutral_product, tags: 'curtains window door blackout eyelet home sizzler' },
+    ];
+  } else if (/vivo/.test(lower)) {
     categoryItems = [
       { title: 'Vivo V40 5G (8GB RAM, 128GB Storage, Titanium Grey)', brand: 'Vivo', searchQuery: 'Vivo V40 5G', basePrice: 34999, image: IMAGES.samsung_s24, tags: 'phone mobile vivo v40 5g zeiss camera' },
       { title: 'Vivo T3 Pro 5G (8GB RAM, 128GB Storage, Sandstone Orange)', brand: 'Vivo', searchQuery: 'Vivo T3 Pro 5G', basePrice: 24999, image: IMAGES.samsung_s24, tags: 'phone mobile vivo t3 pro 5g snapdragon' },
@@ -2432,7 +2906,7 @@ const KNOWN_BRANDS = [
   "l'oreal", 'loreal', 'bella vita', 'sandisk', 'logitech', 'ambrane', 'urbn', 'portronics',
   'american tourister', 'wildcraft', 'safari', 'skybags', 'sg', 'ss', 'yonex', 'li-ning',
   'nivia', 'firefox', 'vincent chase', 'fort collins', 'alan jones', 'tresemme', 'indulekha',
-  'fogg', 'wild stone', 'nova'
+  'fogg', 'wild stone', 'nova', 'infinix', 'zebronics', 'thomson', 'blaupunkt', 'butterfly', 'metronaut', 'tokyo talkies', 'webby'
 ];
 
 export function searchCatalog(query = '', { category, minPrice, maxPrice, brand, seller } = {}) {
