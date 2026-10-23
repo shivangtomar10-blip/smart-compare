@@ -20,6 +20,7 @@ export default function ProductCard({ product: p }) {
     : null;
   const sellerClean = (best.seller || 'store').toLowerCase().replace(/[^a-z]/g, '');
 
+  const meeshoOffer = offers.find(o => o.seller.toLowerCase().includes('meesho'));
   const flipkartOffer = offers.find(o => o.seller.toLowerCase().includes('flipkart'));
 
   return (
@@ -40,11 +41,17 @@ export default function ProductCard({ product: p }) {
       </div>
 
       <div className="seller-tag-row">
-        {flipkartOffer ? (
+        {meeshoOffer && (
+          <span className="seller-pill seller-meesho" title="Meesho Price">
+            Meesho: {money(meeshoOffer.price, meeshoOffer.currency)}
+          </span>
+        )}
+        {flipkartOffer && (
           <span className="seller-pill seller-flipkart" title="Flipkart Price">
             Flipkart: {money(flipkartOffer.price, flipkartOffer.currency)}
           </span>
-        ) : (
+        )}
+        {!meeshoOffer && !flipkartOffer && (
           <span className={`seller-pill seller-${sellerClean}`}>
             {best.seller || 'Store'}
           </span>
@@ -55,16 +62,20 @@ export default function ProductCard({ product: p }) {
       <h3><Link to={`/product/${p.id}`} title={p.title}>{p.title}</Link></h3>
 
       <div className="price-row">
-        <span className="price-main">{money(flipkartOffer ? flipkartOffer.price : best.price, best.currency)}</span>
-        <span className="price-source-tag">on Flipkart</span>
-        {best.originalPrice && best.originalPrice > (flipkartOffer ? flipkartOffer.price : best.price) && (
+        <span className="price-main">{money(best.price, best.currency)}</span>
+        <span className="price-source-tag">on {best.seller}</span>
+        {best.originalPrice && best.originalPrice > best.price && (
           <span className="price-mrp">{money(best.originalPrice, best.currency)}</span>
         )}
       </div>
 
-      {best.seller && !best.seller.toLowerCase().includes('flipkart') && best.price < (flipkartOffer ? flipkartOffer.price : best.price) ? (
+      {flipkartOffer && best.seller && !best.seller.toLowerCase().includes('flipkart') && best.price < flipkartOffer.price ? (
         <div className="save">
-          Lowest on {best.seller} at {money(best.price, best.currency)} (Save {money((flipkartOffer ? flipkartOffer.price : best.price) - best.price, best.currency)} vs Flipkart)
+          Lowest on {best.seller} at {money(best.price, best.currency)} (Save {money(flipkartOffer.price - best.price, best.currency)} vs Flipkart)
+        </div>
+      ) : meeshoOffer && best.seller && !best.seller.toLowerCase().includes('meesho') && best.price < meeshoOffer.price ? (
+        <div className="save">
+          Lowest on {best.seller} at {money(best.price, best.currency)} (Save {money(meeshoOffer.price - best.price, best.currency)} vs Meesho)
         </div>
       ) : p.maxSavings > 0 ? (
         <div className="save">Save up to {money(p.maxSavings, best.currency)} across {offers.length} stores</div>
@@ -85,10 +96,14 @@ export default function ProductCard({ product: p }) {
         <span className="app-compare-label">Stores:</span>
         {(() => {
           const sortedOffers = [...offers].sort((a, b) => {
-            const aIsFk = a.seller.toLowerCase().includes('flipkart');
-            const bIsFk = b.seller.toLowerCase().includes('flipkart');
-            if (aIsFk && !bIsFk) return -1;
-            if (!aIsFk && bIsFk) return 1;
+            const aM = a.seller.toLowerCase().includes('meesho');
+            const bM = b.seller.toLowerCase().includes('meesho');
+            const aF = a.seller.toLowerCase().includes('flipkart');
+            const bF = b.seller.toLowerCase().includes('flipkart');
+            if (aM && !bM) return -1;
+            if (!aM && bM) return 1;
+            if (aF && !bF) return -1;
+            if (!aF && bF) return 1;
             return a.price - b.price;
           });
           return sortedOffers.map(o => {

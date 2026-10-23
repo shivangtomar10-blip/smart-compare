@@ -113,6 +113,14 @@ export const IMAGES = {
   monitor: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&auto=format&fit=crop',
   induction: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500&auto=format&fit=crop',
   toys: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500&auto=format&fit=crop',
+  // Meesho Lifestyle & Ethnic Images
+  jewelry: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&auto=format&fit=crop',
+  jhumka: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500&auto=format&fit=crop',
+  necklace: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=500&auto=format&fit=crop',
+  bangles: 'https://images.unsplash.com/photo-1611591475155-426c04a74288?w=500&auto=format&fit=crop',
+  tripod: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&auto=format&fit=crop',
+  bedsheet: 'https://images.unsplash.com/photo-1629949009765-40fc74c95018?w=500&auto=format&fit=crop',
+  curtains: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=500&auto=format&fit=crop',
 
 };
 
@@ -2342,7 +2350,504 @@ export const RAW_PRODUCTS = [
       { seller: 'Amazon India', price: 749, originalPrice: 1499, rating: 4.4, reviewCount: 19200 },
       { seller: 'Shopsy', price: 669, originalPrice: 1499, rating: 4.3, reviewCount: 8400 },
     ]
+  },
+
+  // =====================================================================
+  // MEESHO BESTSELLERS: JEWELLERY, JHUMKAS & ETHNIC ACCESSORIES
+  // =====================================================================
+  {
+    title: 'Zaveri Pearls Traditional Kundan & Pearls Choker Necklace Set with Earrings & Maangtikka',
+    brand: 'Zaveri Pearls',
+    searchQuery: 'Zaveri Pearls Kundan Choker Necklace Set',
+    image: IMAGES.necklace || IMAGES.jewelry,
+    tags: 'meesho jewelry kundan choker necklace set earrings zaveri pearls wedding festive traditional bridal',
+    offers: [
+      { seller: 'Meesho', price: 249, originalPrice: 999, rating: 4.6, reviewCount: 84200 },
+      { seller: 'Shopsy', price: 269, originalPrice: 999, rating: 4.5, reviewCount: 42100 },
+      { seller: 'Flipkart', price: 349, originalPrice: 999, rating: 4.5, reviewCount: 61400 },
+      { seller: 'Amazon India', price: 399, originalPrice: 999, rating: 4.5, reviewCount: 38200 }
+    ]
+  },
+  {
+    title: 'Shining Diva Fashion Oxidised Silver Tribal Afghan Jhumka Earrings (Pack of 4 Pairs)',
+    brand: 'Shining Diva',
+    searchQuery: 'Shining Diva Oxidised Silver Jhumka Pack of 4',
+    image: IMAGES.jhumka || IMAGES.jewelry,
+    tags: 'meesho jewelry earrings jhumka oxidised silver tribal boho shining diva combo pack of 4 women',
+    offers: [
+      { seller: 'Meesho', price: 149, originalPrice: 699, rating: 4.6, reviewCount: 114000 },
+      { seller: 'Shopsy', price: 169, originalPrice: 699, rating: 4.5, reviewCount: 52400 },
+      { seller: 'Flipkart', price: 249, originalPrice: 699, rating: 4.5, reviewCount: 78900 },
+      { seller: 'Amazon India', price: 299, originalPrice: 699, rating: 4.5, reviewCount: 41200 }
+    ]
+  },
+  {
+    title: 'YouBella Bohemian Multilayer Charm Crystal Pearl Bracelet for Women & Girls',
+    brand: 'YouBella',
+    searchQuery: 'YouBella Multilayer Charm Bracelet',
+    image: IMAGES.jewelry,
+    tags: 'meesho jewelry bracelet charm crystal youbella bohemian western fashion accessories',
+    offers: [
+      { seller: 'Meesho', price: 149, originalPrice: 799, rating: 4.5, reviewCount: 68400 },
+      { seller: 'Shopsy', price: 169, originalPrice: 799, rating: 4.4, reviewCount: 31200 },
+      { seller: 'Flipkart', price: 249, originalPrice: 799, rating: 4.4, reviewCount: 48900 },
+      { seller: 'Amazon India', price: 299, originalPrice: 799, rating: 4.5, reviewCount: 28400 }
+    ]
+  },
+  {
+    title: 'Sukkhi Traditional 24k Gold Plated Temple Jewellery Choker Necklace Set with Earrings',
+    brand: 'Sukkhi',
+    searchQuery: 'Sukkhi Gold Plated Temple Jewellery Set',
+    image: IMAGES.necklace || IMAGES.jewelry,
+    tags: 'meesho jewelry sukkhi gold plated temple necklace set festive wedding traditional south indian',
+    offers: [
+      { seller: 'Meesho', price: 299, originalPrice: 1499, rating: 4.5, reviewCount: 74200 },
+      { seller: 'Shopsy', price: 329, originalPrice: 1499, rating: 4.4, reviewCount: 38400 },
+      { seller: 'Flipkart', price: 399, originalPrice: 1499, rating: 4.5, reviewCount: 62100 },
+      { seller: 'Amazon India', price: 449, originalPrice: 1499, rating: 4.5, reviewCount: 31800 }
+    ]
+  },
+  {
+    title: 'Yellow Chimes Oxidised Silver Plated Afghan Boho Tribal Choker Necklace',
+    brand: 'Yellow Chimes',
+    searchQuery: 'Yellow Chimes Oxidised Afghan Boho Choker',
+    image: IMAGES.necklace || IMAGES.jewelry,
+    tags: 'meesho jewelry choker yellow chimes oxidised afghan boho tribal silver necklace',
+    offers: [
+      { seller: 'Meesho', price: 199, originalPrice: 999, rating: 4.5, reviewCount: 52800 },
+      { seller: 'Shopsy', price: 219, originalPrice: 999, rating: 4.4, reviewCount: 24100 },
+      { seller: 'Flipkart', price: 299, originalPrice: 999, rating: 4.5, reviewCount: 41200 },
+      { seller: 'Amazon India', price: 349, originalPrice: 999, rating: 4.5, reviewCount: 22800 }
+    ]
+  },
+  {
+    title: 'Atasi International 1 Gram Gold Plated Traditional Broad Bangles Kada (Set of 4)',
+    brand: 'Atasi',
+    searchQuery: 'Atasi 1 Gram Gold Plated Bangles Set of 4',
+    image: IMAGES.bangles || IMAGES.jewelry,
+    tags: 'meesho jewelry bangles gold plated atasi traditional bridal kada set of 4 wedding',
+    offers: [
+      { seller: 'Meesho', price: 229, originalPrice: 1199, rating: 4.5, reviewCount: 48900 },
+      { seller: 'Shopsy', price: 249, originalPrice: 1199, rating: 4.4, reviewCount: 21200 },
+      { seller: 'Flipkart', price: 349, originalPrice: 1199, rating: 4.4, reviewCount: 38400 },
+      { seller: 'Amazon India', price: 389, originalPrice: 1199, rating: 4.4, reviewCount: 19800 }
+    ]
+  },
+  {
+    title: 'Shining Diva Fashion Multicolour Meenakari Dome Shaped Jhumki Earrings Combo (Pack of 3)',
+    brand: 'Shining Diva',
+    searchQuery: 'Shining Diva Meenakari Jhumki Combo Pack of 3',
+    image: IMAGES.jhumka || IMAGES.jewelry,
+    tags: 'meesho jewelry jhumka meenakari shining diva dome shaped festive combo pack women',
+    offers: [
+      { seller: 'Meesho', price: 179, originalPrice: 899, rating: 4.6, reviewCount: 64200 },
+      { seller: 'Shopsy', price: 199, originalPrice: 899, rating: 4.5, reviewCount: 28400 },
+      { seller: 'Flipkart', price: 279, originalPrice: 899, rating: 4.5, reviewCount: 42100 },
+      { seller: 'Amazon India', price: 319, originalPrice: 899, rating: 4.5, reviewCount: 21200 }
+    ]
+  },
+
+  // =====================================================================
+  // MEESHO KITCHEN & HOME UTILITIES
+  // =====================================================================
+  {
+    title: 'Ganesh Quick Plastic Hand Vegetable Chopper with 3 Stainless Steel Blades (725ml)',
+    brand: 'Ganesh',
+    searchQuery: 'Ganesh Quick Hand Vegetable Chopper 725ml',
+    image: IMAGES.chopper || IMAGES.neutral_product,
+    tags: 'meesho chopper vegetable cutter ganesh hand pull manual 725ml onion cutter kitchen',
+    offers: [
+      { seller: 'Meesho', price: 189, originalPrice: 599, rating: 4.6, reviewCount: 148900 },
+      { seller: 'Shopsy', price: 199, originalPrice: 599, rating: 4.5, reviewCount: 68400 },
+      { seller: 'Flipkart', price: 279, originalPrice: 599, rating: 4.5, reviewCount: 94200 },
+      { seller: 'Amazon India', price: 299, originalPrice: 599, rating: 4.5, reviewCount: 61200 }
+    ]
+  },
+  {
+    title: 'Pigeon by Stovekraft Handy Polypropylene Fruit & Vegetable Chopper (350ml)',
+    brand: 'Pigeon',
+    searchQuery: 'Pigeon Handy Vegetable Chopper 350ml',
+    image: IMAGES.chopper || IMAGES.neutral_product,
+    tags: 'meesho chopper vegetable cutter pigeon handy 350ml string pull kitchen',
+    offers: [
+      { seller: 'Meesho', price: 179, originalPrice: 495, rating: 4.5, reviewCount: 124000 },
+      { seller: 'Shopsy', price: 199, originalPrice: 495, rating: 4.4, reviewCount: 52100 },
+      { seller: 'Flipkart', price: 249, originalPrice: 495, rating: 4.5, reviewCount: 89400 },
+      { seller: 'Amazon India', price: 269, originalPrice: 495, rating: 4.5, reviewCount: 64200 }
+    ]
+  },
+  {
+    title: 'Signoraware Executive Insulated Lunch Box with Fabric Bag (3 Containers)',
+    brand: 'Signoraware',
+    searchQuery: 'Signoraware Executive Insulated Lunch Box',
+    image: IMAGES.water_bottle || IMAGES.neutral_product,
+    tags: 'meesho lunch box signoraware executive insulated office school bpa free microwave safe',
+    offers: [
+      { seller: 'Meesho', price: 349, originalPrice: 895, rating: 4.5, reviewCount: 42100 },
+      { seller: 'Shopsy', price: 369, originalPrice: 895, rating: 4.4, reviewCount: 19800 },
+      { seller: 'Flipkart', price: 449, originalPrice: 895, rating: 4.5, reviewCount: 38900 },
+      { seller: 'Amazon India', price: 499, originalPrice: 895, rating: 4.5, reviewCount: 27400 }
+    ]
+  },
+  {
+    title: 'Spotzero by Milton Prime Spin Mop with Microfiber Refills & Steel Wringer',
+    brand: 'Spotzero',
+    searchQuery: 'Spotzero Milton Prime Spin Mop',
+    image: IMAGES.neutral_product,
+    tags: 'meesho mop spin mop spotzero milton cleaning floor bucket 360 degree',
+    offers: [
+      { seller: 'Meesho', price: 699, originalPrice: 1699, rating: 4.5, reviewCount: 58400 },
+      { seller: 'Shopsy', price: 749, originalPrice: 1699, rating: 4.4, reviewCount: 26800 },
+      { seller: 'Flipkart', price: 899, originalPrice: 1699, rating: 4.5, reviewCount: 62400 },
+      { seller: 'Amazon India', price: 999, originalPrice: 1699, rating: 4.5, reviewCount: 48900 }
+    ]
+  },
+  {
+    title: 'Stainless Steel 2-Tier Kitchen Dish Drainer Rack with Removable Drip Tray',
+    brand: 'KitchenKing',
+    searchQuery: 'Stainless Steel 2 Tier Dish Drainer Rack',
+    image: IMAGES.neutral_product,
+    tags: 'meesho dish drainer rack plate organizer stainless steel kitchen sink counter',
+    offers: [
+      { seller: 'Meesho', price: 449, originalPrice: 1299, rating: 4.5, reviewCount: 38900 },
+      { seller: 'Shopsy', price: 479, originalPrice: 1299, rating: 4.4, reviewCount: 18400 },
+      { seller: 'Flipkart', price: 599, originalPrice: 1299, rating: 4.4, reviewCount: 29400 },
+      { seller: 'Amazon India', price: 649, originalPrice: 1299, rating: 4.4, reviewCount: 19800 }
+    ]
+  },
+  {
+    title: 'Multipurpose 6-Piece Reusable Silicone Stretch Lids for Food Storage Bowls',
+    brand: 'SmartKitchen',
+    searchQuery: 'Reusable Silicone Stretch Lids Pack of 6',
+    image: IMAGES.neutral_product,
+    tags: 'meesho silicone lids stretch food cover airtight reusable microwave safe pack of 6',
+    offers: [
+      { seller: 'Meesho', price: 119, originalPrice: 499, rating: 4.5, reviewCount: 48200 },
+      { seller: 'Shopsy', price: 139, originalPrice: 499, rating: 4.4, reviewCount: 19400 },
+      { seller: 'Flipkart', price: 199, originalPrice: 499, rating: 4.4, reviewCount: 32100 },
+      { seller: 'Amazon India', price: 249, originalPrice: 499, rating: 4.4, reviewCount: 18900 }
+    ]
+  },
+  {
+    title: 'Instant Automatic 7-Egg Boiler Steamer with Dual Boil Modes (Stainless Steel Heater)',
+    brand: 'EggPro',
+    searchQuery: 'Instant Automatic 7 Egg Boiler Steamer',
+    image: IMAGES.neutral_product,
+    tags: 'meesho egg boiler steamer instant automatic breakfast kitchen electric egg maker',
+    offers: [
+      { seller: 'Meesho', price: 289, originalPrice: 899, rating: 4.5, reviewCount: 52100 },
+      { seller: 'Shopsy', price: 319, originalPrice: 899, rating: 4.4, reviewCount: 22400 },
+      { seller: 'Flipkart', price: 399, originalPrice: 899, rating: 4.5, reviewCount: 41200 },
+      { seller: 'Amazon India', price: 449, originalPrice: 899, rating: 4.5, reviewCount: 28900 }
+    ]
+  },
+
+  // =====================================================================
+  // MEESHO WOMEN'S ETHNIC SAREES & KURTIS
+  // =====================================================================
+  {
+    title: 'Jaanvi Fashion Poly Georgette Floral Printed Daily Wear Saree with Blouse',
+    brand: 'Jaanvi Fashion',
+    searchQuery: 'Jaanvi Fashion Floral Georgette Saree',
+    image: IMAGES.saree,
+    tags: 'meesho saree floral georgette jaanvi fashion daily wear light weight printed',
+    offers: [
+      { seller: 'Meesho', price: 249, originalPrice: 999, rating: 4.5, reviewCount: 128400 },
+      { seller: 'Shopsy', price: 269, originalPrice: 999, rating: 4.4, reviewCount: 48900 },
+      { seller: 'Flipkart', price: 299, originalPrice: 999, rating: 4.5, reviewCount: 68400 },
+      { seller: 'Amazon India', price: 349, originalPrice: 999, rating: 4.4, reviewCount: 31200 }
+    ]
+  },
+  {
+    title: 'Soru Fashion Woven Banarasi Jacquard Silk Saree (Wine Red with Gold Zari)',
+    brand: 'Soru Fashion',
+    searchQuery: 'Soru Fashion Banarasi Jacquard Saree',
+    image: IMAGES.saree_silk,
+    tags: 'meesho saree banarasi silk jacquard soru fashion festive wedding wine red gold zari',
+    offers: [
+      { seller: 'Meesho', price: 449, originalPrice: 1999, rating: 4.6, reviewCount: 89400 },
+      { seller: 'Shopsy', price: 479, originalPrice: 1999, rating: 4.5, reviewCount: 38200 },
+      { seller: 'Flipkart', price: 599, originalPrice: 1999, rating: 4.5, reviewCount: 52100 },
+      { seller: 'Amazon India', price: 649, originalPrice: 1999, rating: 4.5, reviewCount: 26400 }
+    ]
+  },
+  {
+    title: 'Anand Sarees Printed Mysore Art Silk Saree (Mustard Yellow with Running Blouse)',
+    brand: 'Anand Sarees',
+    searchQuery: 'Anand Sarees Mysore Art Silk Saree',
+    image: IMAGES.saree,
+    tags: 'meesho saree mysore art silk anand sarees mustard yellow daily wear light weight',
+    offers: [
+      { seller: 'Meesho', price: 289, originalPrice: 1299, rating: 4.5, reviewCount: 64100 },
+      { seller: 'Shopsy', price: 319, originalPrice: 1299, rating: 4.4, reviewCount: 28400 },
+      { seller: 'Flipkart', price: 389, originalPrice: 1299, rating: 4.4, reviewCount: 41200 },
+      { seller: 'Amazon India', price: 429, originalPrice: 1299, rating: 4.4, reviewCount: 21900 }
+    ]
+  },
+  {
+    title: 'Ziyaa Women Foil Printed Crepe Straight Festive Kurti (Pink)',
+    brand: 'Ziyaa',
+    searchQuery: 'Ziyaa Foil Printed Crepe Kurti',
+    image: IMAGES.kurti,
+    tags: 'meesho kurti ziyaa foil printed crepe straight festive pink daily wear',
+    offers: [
+      { seller: 'Meesho', price: 299, originalPrice: 1199, rating: 4.5, reviewCount: 78900 },
+      { seller: 'Shopsy', price: 329, originalPrice: 1199, rating: 4.4, reviewCount: 34100 },
+      { seller: 'Flipkart', price: 399, originalPrice: 1199, rating: 4.5, reviewCount: 48900 },
+      { seller: 'Myntra', price: 449, originalPrice: 1199, rating: 4.5, reviewCount: 19800 }
+    ]
+  },
+  {
+    title: 'Klosia Women Printed Viscose Rayon Kurta with Palazzo & Dupatta Set',
+    brand: 'Klosia',
+    searchQuery: 'Klosia Printed Kurta Palazzo Dupatta Set',
+    image: IMAGES.dress,
+    tags: 'meesho kurti kurta set klosia rayon printed palazzo dupatta festive ethnic',
+    offers: [
+      { seller: 'Meesho', price: 499, originalPrice: 1999, rating: 4.6, reviewCount: 94200 },
+      { seller: 'Shopsy', price: 529, originalPrice: 1999, rating: 4.5, reviewCount: 41800 },
+      { seller: 'Flipkart', price: 649, originalPrice: 1999, rating: 4.5, reviewCount: 68400 },
+      { seller: 'Amazon India', price: 699, originalPrice: 1999, rating: 4.5, reviewCount: 32100 }
+    ]
+  },
+  {
+    title: 'Royal Export Bandhani Printed Pure Cotton Traditional Daily Casual Saree',
+    brand: 'Royal Export',
+    searchQuery: 'Royal Export Bandhani Cotton Saree',
+    image: IMAGES.saree,
+    tags: 'meesho saree bandhani royal export cotton printed jaipuri traditional daily wear',
+    offers: [
+      { seller: 'Meesho', price: 269, originalPrice: 1199, rating: 4.5, reviewCount: 48900 },
+      { seller: 'Shopsy', price: 289, originalPrice: 1199, rating: 4.4, reviewCount: 22100 },
+      { seller: 'Flipkart', price: 349, originalPrice: 1199, rating: 4.4, reviewCount: 38200 },
+      { seller: 'Amazon India', price: 399, originalPrice: 1199, rating: 4.4, reviewCount: 19800 }
+    ]
+  },
+
+  // =====================================================================
+  // MEESHO MEN'S APPAREL & DAILY WEAR
+  // =====================================================================
+  {
+    title: 'Tripr Men Printed Half Sleeve Hooded Cotton T-Shirt',
+    brand: 'Tripr',
+    searchQuery: 'Tripr Men Hooded Cotton T-Shirt',
+    image: IMAGES.tshirt_graphic,
+    tags: 'meesho tshirt hooded tee tripr printed half sleeve casual cotton streetwear',
+    offers: [
+      { seller: 'Meesho', price: 279, originalPrice: 899, rating: 4.4, reviewCount: 48900 },
+      { seller: 'Shopsy', price: 299, originalPrice: 899, rating: 4.3, reviewCount: 22100 },
+      { seller: 'Flipkart', price: 349, originalPrice: 899, rating: 4.4, reviewCount: 38400 },
+      { seller: 'Amazon India', price: 399, originalPrice: 899, rating: 4.4, reviewCount: 19400 }
+    ]
+  },
+  {
+    title: 'Veirdo Men Striped Oversized Drop Shoulder Cotton T-Shirt',
+    brand: 'Veirdo',
+    searchQuery: 'Veirdo Striped Oversized T-Shirt',
+    image: IMAGES.tshirt,
+    tags: 'meesho tshirt veirdo striped oversized drop shoulder loose fit cotton',
+    offers: [
+      { seller: 'Meesho', price: 329, originalPrice: 999, rating: 4.5, reviewCount: 68400 },
+      { seller: 'Shopsy', price: 349, originalPrice: 999, rating: 4.4, reviewCount: 29800 },
+      { seller: 'Flipkart', price: 399, originalPrice: 999, rating: 4.5, reviewCount: 52100 },
+      { seller: 'Amazon India', price: 449, originalPrice: 999, rating: 4.5, reviewCount: 26400 }
+    ]
+  },
+  {
+    title: 'Leotude Men Oversized Cotton Blend Half Sleeve Graphic T-Shirt',
+    brand: 'Leotude',
+    searchQuery: 'Leotude Oversized Graphic T-Shirt',
+    image: IMAGES.tshirt_graphic,
+    tags: 'meesho tshirt leotude oversized graphic half sleeve cotton blend casual',
+    offers: [
+      { seller: 'Meesho', price: 299, originalPrice: 999, rating: 4.4, reviewCount: 58200 },
+      { seller: 'Shopsy', price: 329, originalPrice: 999, rating: 4.3, reviewCount: 24800 },
+      { seller: 'Flipkart', price: 399, originalPrice: 999, rating: 4.4, reviewCount: 41200 },
+      { seller: 'Amazon India', price: 449, originalPrice: 999, rating: 4.4, reviewCount: 21800 }
+    ]
+  },
+  {
+    title: 'Maniac Men Checkered Slim Fit Casual Full Sleeve Cotton Shirt',
+    brand: 'Maniac',
+    searchQuery: 'Maniac Men Checkered Casual Cotton Shirt',
+    image: IMAGES.shirt_check,
+    tags: 'meesho shirt maniac checkered cotton slim fit casual full sleeve men',
+    offers: [
+      { seller: 'Meesho', price: 349, originalPrice: 1199, rating: 4.4, reviewCount: 42100 },
+      { seller: 'Shopsy', price: 379, originalPrice: 1199, rating: 4.3, reviewCount: 19800 },
+      { seller: 'Flipkart', price: 449, originalPrice: 1199, rating: 4.4, reviewCount: 32100 },
+      { seller: 'Amazon India', price: 499, originalPrice: 1199, rating: 4.4, reviewCount: 18400 }
+    ]
+  },
+  {
+    title: 'Men Stretchable Lycra Dry-Fit Gym Track Pants with Zipper Pockets',
+    brand: 'ActiveFit',
+    searchQuery: 'Men Lycra Dry Fit Gym Track Pants',
+    image: IMAGES.jeans,
+    tags: 'meesho track pants lower joggers lycra stretch gym workout running men',
+    offers: [
+      { seller: 'Meesho', price: 249, originalPrice: 899, rating: 4.4, reviewCount: 84200 },
+      { seller: 'Shopsy', price: 279, originalPrice: 899, rating: 4.3, reviewCount: 38100 },
+      { seller: 'Flipkart', price: 349, originalPrice: 899, rating: 4.4, reviewCount: 52400 },
+      { seller: 'Amazon India', price: 399, originalPrice: 899, rating: 4.4, reviewCount: 26800 }
+    ]
+  },
+
+  // =====================================================================
+  // MEESHO FOOTWEAR & SLIPPERS
+  // =====================================================================
+  {
+    title: 'Kraasa Men Lightweight Breathable Mesh Slip-On Loafers (Navy)',
+    brand: 'Kraasa',
+    searchQuery: 'Kraasa Men Mesh Slip-On Loafers',
+    image: IMAGES.shoes_sports,
+    tags: 'meesho shoes loafers kraasa mesh slip on lightweight breathable daily walk',
+    offers: [
+      { seller: 'Meesho', price: 349, originalPrice: 999, rating: 4.4, reviewCount: 78900 },
+      { seller: 'Shopsy', price: 379, originalPrice: 999, rating: 4.3, reviewCount: 31200 },
+      { seller: 'Flipkart', price: 499, originalPrice: 999, rating: 4.4, reviewCount: 48900 },
+      { seller: 'Amazon India', price: 549, originalPrice: 999, rating: 4.4, reviewCount: 22800 }
+    ]
+  },
+  {
+    title: 'Denill Women Comfortable Block Heel Laser Cut Peep Toe Sandals',
+    brand: 'Denill',
+    searchQuery: 'Denill Women Block Heel Sandals',
+    image: IMAGES.puma_sneakers,
+    tags: 'meesho sandals footwear denill block heel peep toe laser cut women party daily',
+    offers: [
+      { seller: 'Meesho', price: 399, originalPrice: 1299, rating: 4.5, reviewCount: 42100 },
+      { seller: 'Shopsy', price: 429, originalPrice: 1299, rating: 4.4, reviewCount: 18900 },
+      { seller: 'Flipkart', price: 599, originalPrice: 1299, rating: 4.5, reviewCount: 34100 },
+      { seller: 'Amazon India', price: 649, originalPrice: 1299, rating: 4.4, reviewCount: 16800 }
+    ]
+  },
+  {
+    title: 'Shoetopia Women Open Toe Flat Slip-On Daily Kolhapuri Chappals',
+    brand: 'Shoetopia',
+    searchQuery: 'Shoetopia Women Kolhapuri Chappals',
+    image: IMAGES.puma_sneakers,
+    tags: 'meesho chappals kolhapuri flats shoetopia open toe slip on ethnic daily',
+    offers: [
+      { seller: 'Meesho', price: 279, originalPrice: 899, rating: 4.5, reviewCount: 52400 },
+      { seller: 'Shopsy', price: 299, originalPrice: 899, rating: 4.4, reviewCount: 24100 },
+      { seller: 'Flipkart', price: 399, originalPrice: 899, rating: 4.4, reviewCount: 38200 },
+      { seller: 'Amazon India', price: 449, originalPrice: 899, rating: 4.4, reviewCount: 19400 }
+    ]
+  },
+  {
+    title: 'Doctor Extra Soft Memory Foam Daily Orthopaedic Slippers for Women',
+    brand: 'Doctor Extra Soft',
+    searchQuery: 'Doctor Extra Soft Memory Foam Slippers',
+    image: IMAGES.shoes_sports,
+    tags: 'meesho slippers slides doctor extra soft memory foam ortho pain relief women',
+    offers: [
+      { seller: 'Meesho', price: 249, originalPrice: 799, rating: 4.5, reviewCount: 68400 },
+      { seller: 'Shopsy', price: 279, originalPrice: 799, rating: 4.4, reviewCount: 31200 },
+      { seller: 'Flipkart', price: 349, originalPrice: 799, rating: 4.5, reviewCount: 44900 },
+      { seller: 'Amazon India', price: 399, originalPrice: 799, rating: 4.4, reviewCount: 22100 }
+    ]
+  },
+
+  // =====================================================================
+  // MEESHO ELECTRONICS & CREATOR ACCESSORIES
+  // =====================================================================
+  {
+    title: 'Tygot 10-inch Portable LED Ring Light with 7 Feet Adjustable Tripod Stand',
+    brand: 'Tygot',
+    searchQuery: 'Tygot 10 inch LED Ring Light 7 Feet Tripod',
+    image: IMAGES.tripod || IMAGES.neutral_product,
+    tags: 'meesho ring light tripod tygot 10 inch led stand video recording youtube reels vlogging',
+    offers: [
+      { seller: 'Meesho', price: 449, originalPrice: 1499, rating: 4.5, reviewCount: 94200 },
+      { seller: 'Shopsy', price: 479, originalPrice: 1499, rating: 4.4, reviewCount: 42100 },
+      { seller: 'Flipkart', price: 599, originalPrice: 1499, rating: 4.4, reviewCount: 68400 },
+      { seller: 'Amazon India', price: 649, originalPrice: 1499, rating: 4.5, reviewCount: 39800 }
+    ]
+  },
+  {
+    title: 'pTron Tangent Lite Bluetooth 5.0 Wireless Neckband with Mic (8H Playtime)',
+    brand: 'pTron',
+    searchQuery: 'pTron Tangent Lite Bluetooth Neckband',
+    image: IMAGES.boat_headphones,
+    tags: 'meesho neckband earphones ptron tangent lite bluetooth wireless magnetic earbuds',
+    offers: [
+      { seller: 'Meesho', price: 399, originalPrice: 1299, rating: 4.4, reviewCount: 112000 },
+      { seller: 'Shopsy', price: 429, originalPrice: 1299, rating: 4.3, reviewCount: 48900 },
+      { seller: 'Flipkart', price: 499, originalPrice: 1299, rating: 4.4, reviewCount: 84200 },
+      { seller: 'Amazon India', price: 549, originalPrice: 1299, rating: 4.4, reviewCount: 51200 }
+    ]
+  },
+  {
+    title: 'Ubon SP-6500 Wireless Portable Bluetooth Speaker with Dynamic Bass Boost',
+    brand: 'Ubon',
+    searchQuery: 'Ubon SP-6500 Portable Bluetooth Speaker',
+    image: IMAGES.neutral_product,
+    tags: 'meesho speaker bluetooth ubon sp 6500 portable bass wireless audio usb aux',
+    offers: [
+      { seller: 'Meesho', price: 349, originalPrice: 999, rating: 4.4, reviewCount: 48900 },
+      { seller: 'Shopsy', price: 379, originalPrice: 999, rating: 4.3, reviewCount: 22100 },
+      { seller: 'Flipkart', price: 449, originalPrice: 999, rating: 4.4, reviewCount: 38200 },
+      { seller: 'Amazon India', price: 499, originalPrice: 999, rating: 4.4, reviewCount: 19800 }
+    ]
+  },
+  {
+    title: 'Portronics MODESK Universal Aluminum Mobile Phone Stand Holder with Anti-Skid Base',
+    brand: 'Portronics',
+    searchQuery: 'Portronics MODESK Aluminum Phone Stand',
+    image: IMAGES.neutral_product,
+    tags: 'meesho phone stand holder portronics modesk aluminum desk cradle mobile table',
+    offers: [
+      { seller: 'Meesho', price: 149, originalPrice: 499, rating: 4.6, reviewCount: 89200 },
+      { seller: 'Shopsy', price: 169, originalPrice: 499, rating: 4.5, reviewCount: 38400 },
+      { seller: 'Flipkart', price: 219, originalPrice: 499, rating: 4.6, reviewCount: 64100 },
+      { seller: 'Amazon India', price: 249, originalPrice: 499, rating: 4.6, reviewCount: 42800 }
+    ]
+  },
+  {
+    title: 'Universal 3-in-1 Fast Charging Nylon Braided Multi Cable (Type-C, Micro USB, Lightning)',
+    brand: 'Portronics',
+    searchQuery: 'Universal 3 in 1 Fast Charging Cable',
+    image: IMAGES.fast_charger || IMAGES.neutral_product,
+    tags: 'meesho cable fast charger 3 in 1 usb type c micro lightning braided cord',
+    offers: [
+      { seller: 'Meesho', price: 129, originalPrice: 499, rating: 4.5, reviewCount: 76400 },
+      { seller: 'Shopsy', price: 149, originalPrice: 499, rating: 4.4, reviewCount: 32100 },
+      { seller: 'Flipkart', price: 199, originalPrice: 499, rating: 4.4, reviewCount: 48200 },
+      { seller: 'Amazon India', price: 249, originalPrice: 499, rating: 4.4, reviewCount: 29400 }
+    ]
+  },
+
+  // =====================================================================
+  // MEESHO HOME FURNISHING & CURTAINS
+  // =====================================================================
+  {
+    title: 'BSB Home 100% Microfiber Glace Cotton Double Bedsheet with 2 Pillow Covers (Geometric Blue)',
+    brand: 'BSB Home',
+    searchQuery: 'BSB Home Microfiber Double Bedsheet 2 Pillow Covers',
+    image: IMAGES.bedsheet || IMAGES.neutral_product,
+    tags: 'meesho bedsheet double bed microfiber bsb home glace cotton bedding pillow covers',
+    offers: [
+      { seller: 'Meesho', price: 249, originalPrice: 999, rating: 4.5, reviewCount: 88400 },
+      { seller: 'Shopsy', price: 279, originalPrice: 999, rating: 4.4, reviewCount: 38200 },
+      { seller: 'Flipkart', price: 349, originalPrice: 999, rating: 4.4, reviewCount: 52100 },
+      { seller: 'Amazon India', price: 399, originalPrice: 999, rating: 4.4, reviewCount: 28400 }
+    ]
+  },
+  {
+    title: 'Urban Space Heavy Polyester Blackout Eyelet Window Curtains 7 Feet (Set of 2, Grey)',
+    brand: 'Urban Space',
+    searchQuery: 'Urban Space Blackout Eyelet Window Curtains 7 Feet Set of 2',
+    image: IMAGES.curtains || IMAGES.neutral_product,
+    tags: 'meesho curtains window door blackout 7 feet eyelet polyester urban space living room',
+    offers: [
+      { seller: 'Meesho', price: 349, originalPrice: 1299, rating: 4.5, reviewCount: 52400 },
+      { seller: 'Shopsy', price: 379, originalPrice: 1299, rating: 4.4, reviewCount: 24800 },
+      { seller: 'Flipkart', price: 499, originalPrice: 1299, rating: 4.4, reviewCount: 41200 },
+      { seller: 'Amazon India', price: 549, originalPrice: 1299, rating: 4.4, reviewCount: 21900 }
+    ]
   }
+
 ];
 
 function generateSlug(str) {
@@ -3093,7 +3598,7 @@ const KNOWN_BRANDS = [
   "l'oreal", 'loreal', 'bella vita', 'sandisk', 'logitech', 'ambrane', 'urbn', 'portronics',
   'american tourister', 'wildcraft', 'safari', 'skybags', 'sg', 'ss', 'yonex', 'li-ning',
   'nivia', 'firefox', 'vincent chase', 'fort collins', 'alan jones', 'tresemme', 'indulekha',
-  'fogg', 'wild stone', 'nova', 'infinix', 'zebronics', 'thomson', 'blaupunkt', 'butterfly', 'metronaut', 'tokyo talkies', 'webby'
+  'fogg', 'wild stone', 'nova', 'zaveri pearls', 'shining diva', 'youbella', 'sukkhi', 'yellow chimes', 'atasi', 'ganesh', 'signoraware', 'spotzero', 'leotude', 'veirdo', 'maniac', 'klosia', 'royal export', 'kraasa', 'denill', 'shoetopia', 'ptron', 'tygot', 'ubon', 'bsb home', 'infinix', 'zebronics', 'thomson', 'blaupunkt', 'butterfly', 'metronaut', 'tokyo talkies', 'webby'
 ];
 
 export function searchCatalog(query = '', { category, minPrice, maxPrice, brand, seller } = {}) {
@@ -3189,6 +3694,12 @@ export function searchCatalog(query = '', { category, minPrice, maxPrice, brand,
           if (prod.title.toLowerCase().includes(t)) score += 6;
           if (text.includes(t) || text.includes(rawT)) score += 3;
         });
+        if (q === 'meesho') {
+          const MEESHO_CORE_BRANDS = ['zaveri pearls', 'shining diva', 'youbella', 'sukkhi', 'yellow chimes', 'atasi', 'ganesh', 'signoraware', 'spotzero', 'leotude', 'veirdo', 'maniac', 'klosia', 'royal export', 'kraasa', 'denill', 'shoetopia', 'ptron', 'tygot', 'ubon', 'bsb home', 'urban space'];
+          if (prod.brand && MEESHO_CORE_BRANDS.includes(prod.brand.toLowerCase())) score += 150;
+          if (prod.lowestOffer?.seller?.toLowerCase().includes('meesho')) score += 50;
+          if (prod.tags && prod.tags.includes('meesho')) score += 30;
+        }
         return score;
       };
       return scoreProd(bText, b) - scoreProd(aText, a);
