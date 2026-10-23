@@ -47,7 +47,10 @@ export const IMAGES = {
   oneplus12: 'https://rukmini1.flixcart.com/image/612/612/xif0q/mobile/7/z/j/12-cph2573-oneplus-original-imahjngudb3jjkew.jpeg?q=70',
 
   // Laptops & Computers
-  hp_pavilion: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500&auto=format&fit=crop',
+  hp_laptop: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&auto=format&fit=crop',
+  hp_pavilion: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&auto=format&fit=crop',
+  hp_victus: 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=500&auto=format&fit=crop',
+  hp_envy: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop',
   macbook_air: 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=500&auto=format&fit=crop',
   dell_xps: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&auto=format&fit=crop',
 
@@ -347,13 +350,13 @@ export const RAW_PRODUCTS = [
   {
     title: 'SONY WH-ULT900N Wireless Active Noise Cancelling Headphones',
     brand: 'Sony',
-    searchQuery: 'Sony WH-1000XM4 Headphones',
+    searchQuery: 'Sony WH-ULT900N Wireless Headphones',
     image: IMAGES.sony_headphones,
-    tags: 'croma popular sony wh 1000xm4 headphones over ear anc wireless bluetooth audio flipkart amazon',
+    tags: 'croma popular sony wh ult900n headphones over ear anc wireless bluetooth audio flipkart amazon',
     offers: [
-      { seller: 'Flipkart', price: 12990, originalPrice: 24990, rating: 4.6, reviewCount: 3410, url: 'https://dl.flipkart.com/dl/sony-wh-ult900n-wireless-noise-cancellation-bluetooth/p/itm6c5e638dbf5b1?pid=ACCHFH5R4U4ZZZYG' },
-      { seller: 'Amazon India', price: 22990, originalPrice: 29990, rating: 4.8, reviewCount: 18400, url: 'https://www.amazon.in/dp/B0863TXGM3' },
-      { seller: 'Croma', price: 22990, originalPrice: 29990, rating: 4.8, reviewCount: 2200, url: 'https://www.croma.com/sony-wh-1000xm4-bluetooth-headphone-with-mic-over-ear-active-noise-cancellation-silver-/p/228965' },
+      { seller: 'Flipkart', price: 12990, originalPrice: 24990, rating: 4.6, reviewCount: 3410 },
+      { seller: 'Amazon India', price: 12990, originalPrice: 24990, rating: 4.7, reviewCount: 5200 },
+      { seller: 'Croma', price: 13490, originalPrice: 24990, rating: 4.6, reviewCount: 1100 },
     ]
   },
   {
@@ -433,7 +436,7 @@ export const RAW_PRODUCTS = [
   {
     title: 'Allen Solly Men Solid Casual White Pure Cotton Shirt',
     brand: 'Allen Solly',
-    searchQuery: 'Allen Solly Men Formal Shirt',
+    searchQuery: 'Allen Solly Men White Cotton Shirt',
     image: 'https://rukmini1.flixcart.com/image/612/612/xif0q/shirt/r/z/h/40-assfsmofl12788-allen-solly-original-imahf3gy7hgyzyfg.jpeg?q=70',
     tags: 'shirt formal allen solly men regular fit cotton office wear clothing apparel flipkart amazon myntra meesho',
     offers: [
@@ -584,9 +587,9 @@ export const RAW_PRODUCTS = [
   {
     title: 'NIKE Interact Run Running Shoes For Men (Black/White)',
     brand: 'Nike',
-    searchQuery: 'Nike Revolution Shoes',
+    searchQuery: 'Nike Interact Run Running Shoes Men',
     image: IMAGES.nike_shoes,
-    tags: 'popular shoes footwear sneakers running nike revolution interact men sports flipkart amazon myntra',
+    tags: 'popular shoes footwear sneakers running nike interact run men sports flipkart amazon myntra',
     offers: [
       { seller: 'Flipkart', price: 3548, originalPrice: 7095, rating: 4.5, reviewCount: 4210 },
       { seller: 'Amazon India', price: 3795, originalPrice: 7095, rating: 4.6, reviewCount: 11200 },
@@ -647,27 +650,159 @@ export const RAW_PRODUCTS = [
   // LAPTOPS & COMPUTERS (Croma, Flipkart, Amazon)
   // =====================================================================
   {
-    title: 'Apple MacBook Air M2 (13.6-inch Liquid Retina, 8GB RAM, 256GB SSD, Midnight)',
-    brand: 'Apple',
-    searchQuery: 'MacBook Air M2',
-    image: IMAGES.macbook_air,
-    tags: 'croma popular macbook air m2 apple laptop computer macos croma flipkart amazon',
+    title: 'HP 15 (14th Gen) Intel Core 5 120U Laptop (16GB RAM, 512GB SSD, Backlit KB, fd0682tu)',
+    brand: 'HP',
+    searchQuery: 'HP 15 fd0682tu Intel Core 5 120U Laptop',
+    image: IMAGES.hp_laptop,
+    tags: 'croma popular hp 15 14th gen intel core 5 120u fd0682tu backlit office24 laptop croma flipkart amazon',
     offers: [
-      { seller: 'Amazon India', price: 89900, originalPrice: 99900, rating: 4.8, reviewCount: 4200, url: 'https://www.amazon.in/dp/B0B3C83RBH' },
-      { seller: 'Flipkart', price: 89900, originalPrice: 99900, rating: 4.7, reviewCount: 3800, url: 'https://dl.flipkart.com/dl/apple-2022-macbook-air-m2-8-gb-256-gb-ssd-mac-os-monterey-mly33hn-a/p/itmd66b60882e564?pid=COMGFB2GPJG5C85H' },
-      { seller: 'Croma', price: 89900, originalPrice: 99900, rating: 4.8, reviewCount: 920, url: 'https://www.croma.com/apple-macbook-air-2022-m2-8gb-256gb-ssd-macos-34-54cm-mly33hn-a-midnight-/p/256608' },
+      { seller: 'Amazon India', price: 71990, originalPrice: 82990, rating: 4.6, reviewCount: 5200 },
+      { seller: 'Flipkart', price: 71990, originalPrice: 82990, rating: 4.5, reviewCount: 4800 },
+      { seller: 'Croma', price: 72990, originalPrice: 82990, rating: 4.6, reviewCount: 1100 },
     ]
   },
   {
     title: 'HP 15s 12th Gen Intel Core i5 Laptop (16GB RAM, 512GB SSD, Windows 11)',
     brand: 'HP',
-    searchQuery: 'HP Pavilion 15 Laptop',
-    image: IMAGES.hp_pavilion,
-    tags: 'croma popular hp pavilion 15 laptop computer windows 11 intel core i5 croma flipkart amazon',
+    searchQuery: 'HP 15s 12th Gen Intel Core i5 16GB Laptop',
+    image: IMAGES.hp_laptop,
+    tags: 'croma popular hp 15s laptop computer windows 11 intel core i5 fq5111tu croma flipkart amazon',
     offers: [
-      { seller: 'Amazon India', price: 54990, originalPrice: 68250, rating: 4.5, reviewCount: 6200, url: 'https://www.amazon.in/dp/B0B6F7LC3Q' },
-      { seller: 'Flipkart', price: 56990, originalPrice: 68250, rating: 4.4, reviewCount: 8400, url: 'https://dl.flipkart.com/dl/hp-15s-intel-core-i5-12th-gen-16-gb-512-gb-ssd/p/itmeff0c48e894aa?pid=COMGH8GEKAWPTYGG' },
-      { seller: 'Croma', price: 56990, originalPrice: 68250, rating: 4.6, reviewCount: 1400, url: 'https://www.croma.com/hp-15s-fq5111tu-intel-core-i5-12th-gen-15-6-inch-16gb-512gb-ssd-windows-11-home-ms-office-2021-intel-iris-xe-graphics-fhd-display-natural-silver-6t2k3pa-/p/260714' },
+      { seller: 'Amazon India', price: 54990, originalPrice: 68250, rating: 4.5, reviewCount: 6200 },
+      { seller: 'Flipkart', price: 56990, originalPrice: 68250, rating: 4.4, reviewCount: 8400 },
+      { seller: 'Croma', price: 56990, originalPrice: 68250, rating: 4.6, reviewCount: 1400 },
+    ]
+  },
+  {
+    title: 'HP 15s AMD Ryzen 5 5500U Thin & Light Laptop (16GB RAM, 512GB SSD, 15.6" FHD)',
+    brand: 'HP',
+    searchQuery: 'HP 15s AMD Ryzen 5 5500U 16GB Laptop',
+    image: IMAGES.hp_pavilion,
+    tags: 'croma popular hp 15s ryzen 5 5500u amd laptop computer 16gb fhd croma flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 41990, originalPrice: 54990, rating: 4.4, reviewCount: 12400 },
+      { seller: 'Amazon India', price: 42990, originalPrice: 54990, rating: 4.5, reviewCount: 9200 },
+      { seller: 'Croma', price: 43990, originalPrice: 54990, rating: 4.5, reviewCount: 1800 },
+    ]
+  },
+  {
+    title: 'HP Victus Gaming Laptop AMD Ryzen 5 5600H (16GB RAM, 512GB SSD, 4GB RTX 3050)',
+    brand: 'HP',
+    searchQuery: 'HP Victus Gaming Laptop AMD Ryzen 5 RTX 3050',
+    image: IMAGES.hp_victus,
+    tags: 'croma popular hp victus gaming laptop ryzen 5 5600h rtx 3050 graphics 144hz croma flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 57990, originalPrice: 79990, rating: 4.5, reviewCount: 16800 },
+      { seller: 'Amazon India', price: 58990, originalPrice: 79990, rating: 4.5, reviewCount: 14200 },
+      { seller: 'Croma', price: 59990, originalPrice: 79990, rating: 4.6, reviewCount: 2200 },
+    ]
+  },
+  {
+    title: 'HP 14s 12th Gen Intel Core i3 Thin & Light Laptop (8GB RAM, 512GB SSD, 14-inch FHD)',
+    brand: 'HP',
+    searchQuery: 'HP 14s 12th Gen Intel Core i3 Laptop 8GB',
+    image: IMAGES.hp_laptop,
+    tags: 'croma popular hp 14s intel core i3 student budget laptop lightweight croma flipkart amazon',
+    offers: [
+      { seller: 'Amazon India', price: 37990, originalPrice: 47990, rating: 4.4, reviewCount: 8900 },
+      { seller: 'Flipkart', price: 38990, originalPrice: 47990, rating: 4.3, reviewCount: 11400 },
+      { seller: 'Croma', price: 38990, originalPrice: 47990, rating: 4.5, reviewCount: 1600 },
+    ]
+  },
+  {
+    title: 'HP Pavilion 14 13th Gen Intel Core i5 Laptop (16GB RAM, 512GB SSD, Backlit KB)',
+    brand: 'HP',
+    searchQuery: 'HP Pavilion 14 13th Gen Intel Core i5 Laptop',
+    image: IMAGES.hp_pavilion,
+    tags: 'croma popular hp pavilion 14 13th gen intel core i5 backlit eye-safe croma flipkart amazon',
+    offers: [
+      { seller: 'Amazon India', price: 64990, originalPrice: 78990, rating: 4.6, reviewCount: 4200 },
+      { seller: 'Flipkart', price: 65990, originalPrice: 78990, rating: 4.5, reviewCount: 5600 },
+      { seller: 'Croma', price: 66990, originalPrice: 78990, rating: 4.6, reviewCount: 890 },
+    ]
+  },
+  {
+    title: 'HP Envy x360 2-in-1 Touchscreen Laptop (Intel Core i5 13th Gen, 16GB, OLED)',
+    brand: 'HP',
+    searchQuery: 'HP Envy x360 2-in-1 Intel Core i5 Laptop',
+    image: IMAGES.hp_envy,
+    tags: 'croma popular hp envy x360 2 in 1 convertible touchscreen oled evo intel i5 croma flipkart amazon',
+    offers: [
+      { seller: 'Amazon India', price: 82990, originalPrice: 99990, rating: 4.7, reviewCount: 1800 },
+      { seller: 'Croma', price: 83990, originalPrice: 99990, rating: 4.7, reviewCount: 650 },
+      { seller: 'Flipkart', price: 84990, originalPrice: 99990, rating: 4.6, reviewCount: 1200 },
+    ]
+  },
+  {
+    title: 'HP Victus 15 Intel Core i5 12th Gen Gaming Laptop (16GB RAM, 512GB SSD, RTX 2050)',
+    brand: 'HP',
+    searchQuery: 'HP Victus 15 Intel Core i5 RTX 2050 Gaming Laptop',
+    image: IMAGES.hp_victus,
+    tags: 'croma popular hp victus 15 intel core i5 rtx 2050 gaming 144hz display croma flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 51990, originalPrice: 72990, rating: 4.4, reviewCount: 18900 },
+      { seller: 'Amazon India', price: 52990, originalPrice: 72990, rating: 4.5, reviewCount: 12400 },
+      { seller: 'Croma', price: 53990, originalPrice: 72990, rating: 4.5, reviewCount: 1400 },
+    ]
+  },
+  {
+    title: 'HP Chromebook 14a Intel Celeron Dual Core (4GB RAM, 64GB eMMC, ChromeOS)',
+    brand: 'HP',
+    searchQuery: 'HP Chromebook 14a Intel Celeron',
+    image: IMAGES.hp_laptop,
+    tags: 'croma popular hp chromebook 14a laptop celeron chrome os student online classes croma flipkart amazon',
+    offers: [
+      { seller: 'Amazon India', price: 21990, originalPrice: 28990, rating: 4.3, reviewCount: 6400 },
+      { seller: 'Flipkart', price: 22990, originalPrice: 28990, rating: 4.2, reviewCount: 8900 },
+      { seller: 'Croma', price: 22990, originalPrice: 28990, rating: 4.4, reviewCount: 950 },
+    ]
+  },
+  {
+    title: 'Apple MacBook Air M2 (13.6-inch Liquid Retina, 8GB RAM, 256GB SSD, Midnight)',
+    brand: 'Apple',
+    searchQuery: 'Apple MacBook Air M2 256GB',
+    image: IMAGES.macbook_air,
+    tags: 'croma popular macbook air m2 apple laptop computer macos croma flipkart amazon',
+    offers: [
+      { seller: 'Amazon India', price: 89900, originalPrice: 99900, rating: 4.8, reviewCount: 4200 },
+      { seller: 'Flipkart', price: 89900, originalPrice: 99900, rating: 4.7, reviewCount: 3800 },
+      { seller: 'Croma', price: 89900, originalPrice: 99900, rating: 4.8, reviewCount: 920 },
+    ]
+  },
+  {
+    title: 'Apple MacBook Air M3 (13.6-inch Liquid Retina, 16GB RAM, 512GB SSD, Starlight)',
+    brand: 'Apple',
+    searchQuery: 'Apple MacBook Air M3 512GB',
+    image: IMAGES.macbook_air,
+    tags: 'croma popular macbook air m3 apple laptop computer macos croma flipkart amazon',
+    offers: [
+      { seller: 'Amazon India', price: 124900, originalPrice: 134900, rating: 4.9, reviewCount: 1800 },
+      { seller: 'Flipkart', price: 124900, originalPrice: 134900, rating: 4.8, reviewCount: 1400 },
+      { seller: 'Croma', price: 124900, originalPrice: 134900, rating: 4.9, reviewCount: 650 },
+    ]
+  },
+  {
+    title: 'Dell 15 Intel Core i5 12th Gen Thin & Light Laptop (16GB RAM, 512GB SSD, Windows 11)',
+    brand: 'Dell',
+    searchQuery: 'Dell 15 Intel Core i5 12th Gen 16GB Laptop',
+    image: IMAGES.dell_xps,
+    tags: 'croma popular dell 15 laptop intel core i5 12th gen 16gb 512gb ssd windows 11 croma flipkart amazon',
+    offers: [
+      { seller: 'Amazon India', price: 48990, originalPrice: 62990, rating: 4.4, reviewCount: 6800 },
+      { seller: 'Flipkart', price: 49990, originalPrice: 62990, rating: 4.3, reviewCount: 9200 },
+      { seller: 'Croma', price: 49990, originalPrice: 62990, rating: 4.5, reviewCount: 1100 },
+    ]
+  },
+  {
+    title: 'Lenovo IdeaPad Slim 3 12th Gen Intel Core i5 (16GB RAM, 512GB SSD, 15.6" FHD)',
+    brand: 'Lenovo',
+    searchQuery: 'Lenovo IdeaPad Slim 3 12th Gen Intel Core i5 Laptop',
+    image: IMAGES.hp_pavilion,
+    tags: 'croma popular lenovo ideapad slim 3 intel core i5 16gb fhd windows 11 croma flipkart amazon',
+    offers: [
+      { seller: 'Flipkart', price: 50990, originalPrice: 68990, rating: 4.4, reviewCount: 11400 },
+      { seller: 'Amazon India', price: 51990, originalPrice: 68990, rating: 4.5, reviewCount: 8900 },
+      { seller: 'Croma', price: 52990, originalPrice: 68990, rating: 4.5, reviewCount: 1400 },
     ]
   },
 
@@ -690,14 +825,14 @@ export const RAW_PRODUCTS = [
   {
     title: 'CUTOZ Kitchen Dori Handy Vegetable & Fruit Chopper (450ml)',
     brand: 'Cutoz',
-    searchQuery: 'Ganesh Vegetable Chopper',
+    searchQuery: 'CUTOZ Kitchen Dori Handy Vegetable Chopper',
     image: IMAGES.chopper,
     tags: 'meesho shopsy kitchen chopper vegetable cutter manual hand pull food home cutter flipkart amazon',
     offers: [
-      { seller: 'Flipkart', price: 125, originalPrice: 499, rating: 4.2, reviewCount: 28940, url: 'https://dl.flipkart.com/dl/cutoz-kitchen-dori-handy-vegetable-chopper-450-ml/p/itm84fb59d5c4146?pid=CPRGTAGPXUWEXXWY' },
-      { seller: 'Meesho', price: 189, originalPrice: 499, rating: 4.6, reviewCount: 48900, url: 'https://www.meesho.com/s/p/1j8k2p' },
-      { seller: 'Shopsy', price: 149, originalPrice: 499, rating: 4.5, reviewCount: 32100, url: 'https://www.shopsy.in/kitchen-dori-vegetable-chopper/p/itm84fb59d5c4146' },
-      { seller: 'Amazon India', price: 249, originalPrice: 499, rating: 4.6, reviewCount: 28400, url: 'https://www.amazon.in/dp/B07N3Z9G8S' },
+      { seller: 'Flipkart', price: 125, originalPrice: 499, rating: 4.2, reviewCount: 28940 },
+      { seller: 'Shopsy', price: 149, originalPrice: 499, rating: 4.5, reviewCount: 32100 },
+      { seller: 'Meesho', price: 189, originalPrice: 499, rating: 4.6, reviewCount: 48900 },
+      { seller: 'Amazon India', price: 199, originalPrice: 499, rating: 4.6, reviewCount: 28400 },
     ]
   },
 
@@ -707,14 +842,14 @@ export const RAW_PRODUCTS = [
   {
     title: 'boAt Wave Sigma 3 Smartwatch with Bluetooth Calling & 1.96" HD Display',
     brand: 'boAt',
-    searchQuery: 'boAt Wave Call Smartwatch',
+    searchQuery: 'boAt Wave Sigma 3 Smartwatch',
     image: IMAGES.smartwatch_boat,
-    tags: 'popular boat smartwatch wave call sigma watch calling bluetooth display flipkart amazon croma shopsy',
+    tags: 'popular boat smartwatch wave sigma 3 watch calling bluetooth display flipkart amazon croma shopsy',
     offers: [
-      { seller: 'Flipkart', price: 1499, originalPrice: 8999, rating: 4.2, reviewCount: 14200, url: 'https://dl.flipkart.com/dl/boat-wave-sigma-3-smartwatch/p/itm84fb59d5c4146?pid=SMWGTAGPXUWEXXWY' },
-      { seller: 'Amazon India', price: 1399, originalPrice: 7990, rating: 4.5, reviewCount: 16800, url: 'https://www.amazon.in/dp/B09V7N7R7M' },
-      { seller: 'Croma', price: 1499, originalPrice: 7990, rating: 4.4, reviewCount: 1200, url: 'https://www.croma.com/boat-wave-call-smartwatch/p/261295' },
-      { seller: 'Shopsy', price: 1349, originalPrice: 8999, rating: 4.3, reviewCount: 9500, url: 'https://www.shopsy.in/boat-wave-smartwatch/p/itm84fb59d5c4146' },
+      { seller: 'Flipkart', price: 1499, originalPrice: 8999, rating: 4.2, reviewCount: 14200 },
+      { seller: 'Amazon India', price: 1499, originalPrice: 7990, rating: 4.5, reviewCount: 16800 },
+      { seller: 'Croma', price: 1499, originalPrice: 7990, rating: 4.4, reviewCount: 1200 },
+      { seller: 'Shopsy', price: 1349, originalPrice: 8999, rating: 4.3, reviewCount: 9500 },
     ]
   }
 ];
@@ -1411,6 +1546,16 @@ const SEARCH_TYPO_MAP = {
   jeens: 'jeans'
 };
 
+const KNOWN_BRANDS = [
+  'apple', 'hp', 'dell', 'lenovo', 'samsung', 'oneplus', 'xiaomi', 'mi',
+  'nike', 'puma', 'asian', 'sparx', 'campus', 'boat', 'sony', 'aroma',
+  'dennis lingo', 'allen solly', 'roadster', 'levis', "levi's", 'bewakoof',
+  'raymond', 'highlander', 'peter england', 'us polo', 'u.s. polo assn.',
+  'louis philippe', 'flying machine', 'eyebogler', 'milton', 'cutoz', 'vega',
+  'oral-b', 'maybelline', 'lakme', 'mamaearth', 'plum', 'cetaphil',
+  'avantika fashion', 'houseofcommon', 'hisham'
+];
+
 export function searchCatalog(query = '', { category, minPrice, maxPrice, brand, seller } = {}) {
   let rawQ = String(query).trim();
   let q = rawQ.toLowerCase();
@@ -1428,41 +1573,76 @@ export function searchCatalog(query = '', { category, minPrice, maxPrice, brand,
   let list = ALL_PRODUCTS;
 
   if (terms.length > 0 && q !== 'popular' && q !== 'all') {
-    list = list.filter(g => {
-      const text = `${g.title} ${g.brand} ${g.tags} ${g.searchQuery || ''}`.toLowerCase();
-      const words = text.split(/[^a-z0-9]+/);
-      return terms.some((t, idx) => {
-        const rawT = rawTerms[idx] || t;
-
-        // 1. Exact word or title substring
-        if (words.includes(t) || words.includes(rawT)) return true;
-        if (g.title.toLowerCase().includes(t) || (g.searchQuery && g.searchQuery.toLowerCase().includes(t))) return true;
-
-        // 2. Singular / Plural
-        if (t.endsWith('s') && words.includes(t.slice(0, -1))) return true;
-        if (!t.endsWith('s') && words.includes(t + 's')) return true;
-
-        // 3. Trailing typo on word (e.g. "shirtr" -> "shirt", "watche" -> "watch")
-        if (rawT.length >= 5 && words.includes(rawT.slice(0, -1))) return true;
-
-        // 4. Word-level prefix matching (e.g. "charg" -> "charger")
-        if (t.length >= 4 && words.some(w => w.startsWith(t))) return true;
-
-        return false;
-      });
+    // 1. Brand Exclusivity: if user explicitly requested a known brand, retain only products of that brand
+    const requestedBrands = KNOWN_BRANDS.filter(b => {
+      const escaped = b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      return new RegExp(`(^|[^a-z0-9])${escaped}([^a-z0-9]|$)`, 'i').test(q);
     });
 
+    if (requestedBrands.length > 0) {
+      const brandFiltered = list.filter(g => {
+        const pb = (g.brand || '').toLowerCase();
+        return requestedBrands.some(rb => pb.includes(rb) || rb.includes(pb));
+      });
+      if (brandFiltered.length > 0) {
+        list = brandFiltered;
+      }
+    }
+
+    // 2. Term matcher helper
+    const matchTerm = (g, t, rawT) => {
+      const text = `${g.title} ${g.brand} ${g.tags} ${g.searchQuery || ''}`.toLowerCase();
+      const words = text.split(/[^a-z0-9]+/);
+
+      // A. Word or substring match
+      if (words.includes(t) || (rawT && words.includes(rawT))) return true;
+      if (g.title.toLowerCase().includes(t) || (g.searchQuery && g.searchQuery.toLowerCase().includes(t))) return true;
+
+      // B. Singular / Plural
+      if (t.endsWith('s') && words.includes(t.slice(0, -1))) return true;
+      if (!t.endsWith('s') && words.includes(t + 's')) return true;
+
+      // C. Trailing typo on word
+      if (rawT && rawT.length >= 5 && words.includes(rawT.slice(0, -1))) return true;
+
+      // D. Word-level prefix matching (e.g. "charg" -> "charger")
+      if (t.length >= 4 && words.some(w => w.startsWith(t))) return true;
+
+      return false;
+    };
+
+    // 3. Multi-word precision: prioritize products matching ALL terms
+    if (terms.length > 1) {
+      const fullMatches = list.filter(g =>
+        terms.every((t, idx) => matchTerm(g, t, rawTerms[idx]))
+      );
+      if (fullMatches.length > 0) {
+        list = fullMatches;
+      } else {
+        list = list.filter(g =>
+          terms.some((t, idx) => matchTerm(g, t, rawTerms[idx]))
+        );
+      }
+    } else {
+      list = list.filter(g => matchTerm(g, terms[0], rawTerms[0]));
+    }
+
+    // 4. Relevance ranking
     list.sort((a, b) => {
-      const aText = `${a.title} ${a.brand} ${a.tags}`.toLowerCase();
-      const bText = `${b.title} ${b.brand} ${b.tags}`.toLowerCase();
-      const scoreTerm = (t, text) => {
-        if (text.includes(t)) return 2;
-        if (t.length >= 4 && text.includes(t.slice(0, -1))) return 1;
-        return 0;
+      const aText = `${a.title} ${a.brand} ${a.tags} ${a.searchQuery || ''}`.toLowerCase();
+      const bText = `${b.title} ${b.brand} ${b.tags} ${b.searchQuery || ''}`.toLowerCase();
+      const scoreProd = (text, prod) => {
+        let score = 0;
+        if (text.includes(q)) score += 20;
+        terms.forEach((t, idx) => {
+          const rawT = rawTerms[idx] || t;
+          if (prod.brand && prod.brand.toLowerCase() === t) score += 10;
+          if (prod.title.toLowerCase().includes(t)) score += 6;
+          if (text.includes(t) || text.includes(rawT)) score += 3;
+        });
+        return score;
       };
-      const aScore = terms.reduce((acc, t) => acc + scoreTerm(t, aText), 0);
-      const bScore = terms.reduce((acc, t) => acc + scoreTerm(t, bText), 0);
-      return bScore - aScore;
+      return scoreProd(bText, b) - scoreProd(aText, a);
     });
 
     // If no static match, generate category-accurate verified products for this term!
