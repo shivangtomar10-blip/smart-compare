@@ -1,0 +1,415 @@
+/* ====================================================================
+   SMARTCOMPARE - ALERTS & PRICE ALARMS PAGE (MATCHING REFERENCE MOCKUP)
+   ==================================================================== */
+
+.alerts-page-wrap {
+  max-width: 1220px;
+  margin: 1.5rem auto 3.5rem;
+  padding: 0 1.25rem;
+}
+
+/* ================= 1. HERO BANNER CARD ================= */
+.alerts-hero-card {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e0e7ff 50%, #eff6ff 100%);
+  border: 1px solid #dbeafe;
+  border-radius: 22px;
+  padding: 2.2rem 2.4rem;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.05);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.alerts-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Left Hero Content */
+.alerts-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.alerts-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.85rem;
+}
+
+.alerts-bell-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+  flex-shrink: 0;
+}
+
+.alerts-hero-title {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.alerts-hero-title span {
+  color: #2563eb;
+}
+
+.alerts-hero-desc {
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 1.6rem;
+  max-width: 540px;
+}
+
+/* Button & Action bar */
+.alerts-action-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-check-prices-pill {
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 24px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.btn-check-prices-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.45);
+}
+
+.btn-check-prices-pill:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-simulate-test {
+  background: #ffffff;
+  color: #b45309;
+  border: 1px solid #fde68a;
+  border-radius: 9999px;
+  padding: 9px 18px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
+}
+
+.btn-simulate-test:hover {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  transform: translateY(-1px);
+}
+
+/* Right Column Visual Graphic */
+.alerts-hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alerts-img-frame {
+  width: 100%;
+  max-width: 440px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.8);
+  transition: transform 0.25s ease;
+  background: #ffffff;
+}
+
+.alerts-img-frame:hover {
+  transform: translateY(-3px) scale(1.01);
+}
+
+.alerts-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ================= 4-FEATURE PILL CARDS STRIP ================= */
+.alerts-features-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  border-top: 1px solid rgba(199, 210, 254, 0.6);
+  padding-top: 1.6rem;
+}
+
+.alert-feat-card {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  transition: all 0.2s ease;
+}
+
+.alert-feat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+  border-color: #bfdbfe;
+}
+
+.feat-circle-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.feat-circle-icon.tag { background: #dcfce7; color: #16a34a; }
+.feat-circle-icon.bell { background: #f3e8ff; color: #9333ea; }
+.feat-circle-icon.chart { background: #e0f2fe; color: #0284c7; }
+.feat-circle-icon.save { background: #ffe4e6; color: #e11d48; }
+
+.feat-text-wrap h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 3px;
+}
+
+.feat-text-wrap p {
+  font-size: 0.76rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* ================= 2. ACTIVE PRICE ALARMS LIST ================= */
+.active-alerts-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.section-main-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.section-subtext {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 4px 0 0;
+}
+
+.btn-manage-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #2563eb;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.btn-manage-pill:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+}
+
+/* ================= 3. NOTIFICATIONS & EMPTY STATES ================= */
+.notifications-section {
+  margin-top: 2rem;
+}
+
+.empty-state-modern-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.empty-state-modern-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(219, 234, 254, 0.4) 0%, rgba(238, 242, 255, 0) 70%);
+  pointer-events: none;
+  filter: blur(20px);
+}
+
+.empty-bell-icon-badge {
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+  border: 1px solid #bfdbfe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: #2563eb;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.25s;
+}
+
+.empty-bell-icon-badge:hover {
+  transform: scale(1.08) rotate(5deg);
+}
+
+.empty-state-heading {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.45rem;
+  position: relative;
+  z-index: 2;
+}
+
+.empty-state-sub {
+  font-size: 0.88rem;
+  color: #64748b;
+  max-width: 440px;
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-explore-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 26px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-explore-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.45);
+  color: #ffffff;
+}
+
+/* Status Banner */
+.alarm-status-banner {
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alarm-status-banner.triggered {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+/* ================= RESPONSIVE QUERIES ================= */
+@media (max-width: 1024px) {
+  .alerts-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .alerts-features-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .alerts-img-frame {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 640px) {
+  .alerts-hero-card {
+    padding: 1.6rem 1.2rem;
+  }
+  
+  .alerts-features-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .alerts-hero-title {
+    font-size: 1.5rem;
+  }
+}
